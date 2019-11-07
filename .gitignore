@@ -1,5 +1,8 @@
 firefox*
+firefox/
 emacs/
+backups/
+dwm/
 st/
 patches/
-firefox/
+.vscode/

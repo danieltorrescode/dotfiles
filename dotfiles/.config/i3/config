@@ -174,7 +174,9 @@ bindsym $mod+r mode "resize"
 
 # personal binds
 # start a terminal
-bindsym $mod+Return exec st /usr/bin/screen
+bindsym $mod+Shift+Ctrl+Return exec st
+#start terminal with screen session
+bindsym $mod+Shift+Ctrl+s exec st /usr/bin/screen
 # start firefox
 bindsym $mod+Shift+Ctrl+f exec /opt/firefox/firefox
 # open ranger
@@ -184,7 +186,7 @@ bindsym $mod+Shift+Ctrl+e exec emacs
 # open pavucontrol
 bindsym $mod+Shift+Ctrl+p exec pavucontrol
 # open surf browser
-bindsym $mod+Shift+Ctrl+s exec firejail --name=jailed_surf  --nonewprivs --nogroups --noexec=/temp --x11=xorg --apparmor --seccomp --dns=8.8.8.8 surf
+bindsym $mod+Shift+Ctrl+b exec firejail --name=jailed_surf  --nonewprivs --nogroups --noexec=/temp --x11=xorg --apparmor --seccomp --dns=8.8.8.8 surf
 # i3lock
 bindsym $mod+Shift+x exec i3lock --color "#5F676A"
 

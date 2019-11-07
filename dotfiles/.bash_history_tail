@@ -1,0 +1,17 @@
+systemctl poweroff
+systemctl reboot
+systemctl suspend
+screen 
+source /home/daniel/.venv/youtube-dl/bin/activate
+source /home/daniel/.venv/python/bin/activate
+youtube-dl  --verbose -f mp4 tmpl
+youtube-dl  --verbose -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'
+git clone https://gitlab.com/danieltorresgitlab/
+git log --all --decorate --oneline --graph
+git log --graph
+git config -l
+git remote add origin 
+git remote add github
+bind -P | less
+man readline
+ip link set enp0s29f7u7 up && dhclient enp0s29f7u7
