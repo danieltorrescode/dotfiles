@@ -9,6 +9,11 @@ lsb_release -a
 alias SO="systemctl poweroff"
 alias SR="systemctl reboot"
 alias SS="systemctl suspend"
+alias SH="systemctl hibernate"
+alias SSH="systemctl suspend-then-hibernate"
+
+alias testing="/opt/firefox/firefox -P testing  2>/dev/null &"
+alias testing2="/opt/firefox/firefox -P testing2  2>/dev/null &"
 
 alias youtube="source /home/daniel/.venv/youtube-dl/bin/activate"
 alias py="source /home/daniel/.venv/python/bin/activate"
