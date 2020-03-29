@@ -3,6 +3,7 @@ firefox/
 emacs/
 backups/
 dwm/
+/bspwm/
 st/
 patches/
 .vscode/

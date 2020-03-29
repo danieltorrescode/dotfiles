@@ -13,6 +13,7 @@ aptitude install -y zathura mpv imagemagick
 aptitude install -y python-pip python3-pip virtualenv
 aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
+aptitude install -y simple-scan
 #aptitude install -y ufw gufw firejail apparmor
 #aptitude install -y i3-wm i3blocks i3lock 
 #aptitude install -y qemu qemu-kvm docker.io docker-compose lxc

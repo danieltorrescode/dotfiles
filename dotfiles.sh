@@ -18,7 +18,7 @@ su daniel -c "cp -Trv dotfiles/ /home/daniel/"
 
 su daniel -c "sed -i '/daniel torres/,"\$"d' /home/daniel/.bashrc"
 su daniel -c "cat dotfiles/.bashrc_tail >> /home/daniel/.bashrc"
-su daniel -c "cat dotfiles/.bash_history_tail >> /home/daniel/.bash_history"
+su daniel -c "cat dotfiles/.history >> /home/daniel/.bash_history"
 
 echo "###########################################"
 echo "cloning .emacs.d config"
@@ -32,17 +32,17 @@ else
 fi
 su daniel -c "cp -r emacs/ /home/daniel/.emacs.d"
 
-echo "###########################################" 
-echo "downloading firefox" 
-echo "###########################################" 
-firefox=`ls | grep firefox`
-if [ $firefox ]
-then
-    echo "firefox already exist in directory"
-else
-    firefox="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US"
-    # su daniel -c "wget $firefox"
-    firefox=$(ls | grep firefox)
-    su daniel -c "tar -xvf $firefox"
-    mv firefox/ /opt/
-fi
+# echo "###########################################" 
+# echo "downloading firefox" 
+# echo "###########################################" 
+# firefox=`ls | grep firefox`
+# if [ $firefox ]
+# then
+#     echo "firefox already exist in directory"
+# else
+#     firefox="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US"
+#     # su daniel -c "wget $firefox"
+#     firefox=$(ls | grep firefox)
+#     su daniel -c "tar -xvf $firefox"
+#     mv firefox/ /opt/
+# fi

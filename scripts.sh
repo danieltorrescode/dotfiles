@@ -19,7 +19,8 @@ bash colors.sh
 bash essentials.sh
 bash time.sh
 bash dotfiles.sh
-bash wm.sh
+bash dwm.sh
+bash st.sh
 bash environments.sh
 
 echo "###########################################" 
