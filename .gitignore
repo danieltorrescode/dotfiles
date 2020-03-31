@@ -4,6 +4,13 @@ emacs/
 backups/
 dwm/
 /bspwm/
+/sxhkd/
+/fonts/
+/polybar/
+/xdo/
+/sutils/
+/xtitle/
+/bar/
 st/
 patches/
 .vscode/

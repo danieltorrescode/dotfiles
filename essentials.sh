@@ -4,7 +4,8 @@ echo "updating repositories and installing essentials"
 echo "###########################################" 
 apt-get update
 apt-get install -y aptitude
-aptitude install -y build-essential screen curl htop wget ranger xorg
+aptitude install -y build-essential screen curl htop wget ranger xorg 
+aptitude install -y xdo xtitle gcc-c++ clang git cmake
 aptitude install -y vim vim-syntastic vim-snippets vim-youcompleteme
 aptitude install -y emacs emacs-goodies-el
 aptitude install -y compton feh arandr playerctl pavucontrol

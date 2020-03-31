@@ -8,12 +8,6 @@
 #. /etc/X11/Xsession
 
 
-# setting wallpaper
-feh --bg-scale ~/.config/wallpaper.png
-
-# starting compton
-compton --config ~/.config/compton/compton.conf &
-
 # dwm status bar
 dte(){
     dte="$(date '+%d-%m-%Y %I:%M:%S')"
@@ -29,14 +23,32 @@ keysindicator(){
     echo "$STATUS"
 }
 
-while true; do
-    xsetroot -name "$(dte) | $(keysindicator)"
-    sleep 1s # Update time every ten seconds
-done &
+WM="bspwm"
 
-# starting dwm
+case $WM in
+    "dwm")
+        # setting wallpaper
+        feh --bg-scale ~/.config/wallpaper.png
+
+        # starting compton
+        compton --config ~/.config/compton/compton.conf &
+
+        while true; do
+            xsetroot -name "$(dte) | $(keysindicator)"
+            sleep 1s # Update time every ten seconds
+        done &
+        ;;
+    "bspwm")
+        echo $WM
+        ;;
+    "i3")
+        exec /usr/bin/i3
+        ;;
+esac
+
+
+# starting window manager
 while true; do
-    exec /usr/local/bin/dwm 2> /dev/null
+    exec /usr/local/bin/$WM 2> /dev/null
 done
-# starting i3
-# exec /usr/bin/i3
+
