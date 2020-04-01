@@ -26,3 +26,23 @@
 # xwd -out screenshot3.xwd
 # xwud -in screenshot3.xwd
 # convert screenshot.xwd screen.png
+
+
+# Import the colors.
+# . "${HOME}/.cache/wal/colors.sh"
+
+# Create the alias.
+# alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
+
+
+
+# dwm
+
+#     Delete all defined colors in your config.h
+
+#     Delete the static const char *colors[] array.
+
+#     In its place, include wal's exported colors via:
+
+#     #include "/home/<USER>/.cache/wal/colors-wal-dwm.h"
+

@@ -7,6 +7,9 @@
 # invoke global X session script
 #. /etc/X11/Xsession
 
+# Load Xresource file
+xrdb -remove *
+xrdb ~/.Xresources
 
 # dwm status bar
 dte(){
@@ -45,7 +48,6 @@ case $WM in
         exec /usr/bin/i3
         ;;
 esac
-
 
 # starting window manager
 while true; do

@@ -15,13 +15,10 @@ echo "script.sh start"
 date +'%d/%m/%Y %I:%M:%S'
 echo "###########################################" 
 
-bash colors.sh
 bash essentials.sh
-bash time.sh
 bash dotfiles.sh
-bash dwm.sh
 bash st.sh
-bash environments.sh
+bash pip.sh
 
 echo "###########################################" 
 echo "script.sh end" 

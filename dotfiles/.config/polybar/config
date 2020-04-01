@@ -17,14 +17,29 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
+black = ${xrdb:color0:#1d2021}
+darkred = ${xrdb:color1:#cc241d}
+darkgreen = ${xrdb:color2:#98971a}
+darkyellow = ${xrdb:color3:#d79921}
+darkblue = ${xrdb:color4:#458588}
+darkmagenta = ${xrdb:color5:#b16286}
+darkcyan = ${xrdb:color6:#689d6a}
+lightgray = ${xrdb:color7:#a89984}
+gray = ${xrdb:color8:#928374}
+red = ${xrdb:color9:#fb4934}
+green = ${xrdb:color10:#b8bb26}
+yellow = ${xrdb:color11:#fabd2f}
+blue = ${xrdb:color12:#83a598}
+magenta = ${xrdb:color13:#d3869b}
+cyan = ${xrdb:color14:#8ec07c}
+white = ${xrdb:color15:#ffffff}
+
+background = ${xrdb:background:#222}
+foreground = ${xrdb:foreground:#dfdfdf}
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
-secondary = #e60053
+secondary = #e60053 
 alert = #bd2c40
 
 [bar/example]
@@ -58,7 +73,7 @@ font-3 = "Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular"
 
 modules-left = bspwm
 modules-center =  xwindow
-modules-right =  xkeyboard memory cpu date
+modules-right =  xkeyboard date
 
 tray-position = right
 tray-padding = 2
@@ -90,13 +105,9 @@ format-spacing = 2
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.primary}
+label-indicator-background = ${colors.background}
 label-indicator-underline = ${colors.primary}
 
-label-indicator-on-capslock = caps
-label-indicator-off-capslock =
-label-indicator-on-numlock = num
-label-indicator-off-numlock = 
 
 [module/filesystem]
 type = internal/fs
@@ -295,7 +306,7 @@ time = %I:%M
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.primary}
 
 label = %date% %time%
 

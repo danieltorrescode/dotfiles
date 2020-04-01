@@ -1,10 +1,9 @@
 #!/bin/bash
 echo "###########################################" 
-echo "creating virtualenv for python" 
+echo "installing containers and virtual machine tools" 
 echo "###########################################" 
 
-su daniel -c "virtualenv -p python3 /home/daniel/.venv/python"
-su daniel -c "pip install --upgrade pip"
-su daniel -c "virtualenv -p python3 /home/daniel/.venv/youtube-dl"
-su daniel -c "pip install --upgrade pip"
-su daniel -c "pip install youtube-dl"
+aptitude install -y qemu qemu-kvm docker.io docker-compose  
+#aptitude install -y ufw gufw firejail apparmor lxc
+#aptitude install -y i3-wm i3blocks i3lock 
+
