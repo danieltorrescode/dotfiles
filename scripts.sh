@@ -1,6 +1,6 @@
 #!/bin/bash
 ## enter su mode
-## chmod 766 -R /home/daniel/Documentos/bash/
+## chmod 764 -R /home/daniel/Documentos/bash/
 # #   rwx
 # 0   000
 # 1   001

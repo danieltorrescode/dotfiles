@@ -24,4 +24,4 @@ su daniel -c "mkdir polybar/build"
 su daniel -c "cmake .. --build polybar/build/"
 su daniel -c "make -j$(nproc) -C polybar/build/"
 make install -C polybar/build/
-su daniel -c "chmod +x /home/daniel/.config/polybar/launch.sh"
+su daniel -c "chmod 774 /home/daniel/.config/polybar/launch.sh"

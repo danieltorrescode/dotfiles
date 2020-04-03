@@ -25,7 +25,7 @@ fi
 
 make -C sxhkd/
 
-su daniel -c "chmod +x /home/daniel/.config/bspwm/bspwmrc"
-su daniel -c "chmod +x /home/daniel/.config/sxhkd/sxhkdrc"
+su daniel -c "chmod 774 /home/daniel/.config/bspwm/bspwmrc"
+su daniel -c "chmod 774 /home/daniel/.config/sxhkd/sxhkdrc"
 
 bash panel.sh
