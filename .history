@@ -9,6 +9,7 @@ youtube-dl  --verbose -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'
 git clone https://gitlab.com/danieltorresgitlab/
 git log --all --decorate --oneline --graph
 git log --graph
+git ls-tree -r master --name-only
 git config -l
 git remote add origin 
 git remote add github
