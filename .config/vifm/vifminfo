@@ -1,7 +1,660 @@
 # You can edit this file by hand, but it's recommended not to do that.
 
 # Marks:
+'b
+	/home/daniel/bin/
+	..
+1586839824
+'h
+	/home/daniel/
+	..
+1586839824
 
 # Bookmarks:
 
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l15,2
+r15,2
+
+# Left window history (oldest to newest):
+d/home/daniel/.local/share
+	vifm
+7
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share/vifm/Trash
+	..
+0
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share
+	applications
+2
+d/home/daniel/.local/share/applications
+	..
+0
+d/home/daniel/.local/share
+	Trash
+1
+d/home/daniel/.local/share/Trash
+	files
+1
+d/home/daniel/.local/share/Trash/files
+	CMakeFiles
+1
+d/home/daniel/.local/share/Trash/files/CMakeFiles
+	..
+0
+d/home/daniel/.local/share/Trash/files
+	CMakeFiles.2
+2
+d/home/daniel/.local/share/Trash/files/CMakeFiles.2
+	..
+0
+d/home/daniel/.local/share/Trash/files
+	CMakeFiles.2
+2
+d/home/daniel/.local/share/Trash/files/CMakeFiles.2
+	..
+0
+d/home/daniel/.local/share/Trash/files
+	include
+9
+d/home/daniel/.local/share/Trash/files/include
+	..
+0
+d/home/daniel/.local/share/Trash/files
+	..
+0
+d/home/daniel/.local/share/Trash
+	info
+2
+d/home/daniel/.local/share/Trash/info
+	..
+0
+d/home/daniel/.local/share/Trash
+	files
+1
+d/home/daniel/.local/share/Trash/files
+	..
+0
+d/home/daniel/.local/share/Trash
+	files
+1
+d/home/daniel/.local/share
+	applications
+2
+d/home/daniel/.local/share/applications
+	..
+0
+d/home/daniel/.local/share
+	ranger
+6
+d/home/daniel/.local/share/ranger
+	..
+0
+d/home/daniel/.local/share
+	vifm
+7
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share
+	vifm
+7
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share/vifm/Trash
+	..
+0
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share/vifm/Trash
+	..
+0
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share
+	zsh
+10
+d/home/daniel/.local/share/zsh
+	site-functions
+1
+d/home/daniel/.local/share/zsh/site-functions
+	..
+0
+d/home/daniel/.local/share/zsh
+	site-functions
+1
+d/home/daniel/.local/share
+	fonts
+4
+d/home/daniel/.local
+	lib
+3
+d/home/daniel/.local/lib
+	..
+0
+d/home/daniel/.local
+	etc
+2
+d/home/daniel/.local/etc
+	..
+0
+d/home/daniel/.local
+	etc
+2
+d/home/daniel/.local/etc
+	..
+0
+d/home/daniel/.local
+	bin
+1
+d/home/daniel/.local/bin
+	..
+0
+d/home/daniel/.local
+	bin
+1
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	..
+0
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	st2
+2
+d/home/daniel/backups/st2
+	..
+0
+d/home/daniel/backups
+	.Xresources
+3
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	.gitattributes
+8
+d/home/daniel
+	scripts
+23
+d/home/daniel/scripts
+	..
+0
+d/home/daniel
+	scripts
+23
+d/home/daniel/scripts
+	config
+1
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	test.txt
+22
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	st
+13
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	st
+14
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	.bash_history_tail
+4
+d/home/daniel
+	scripts
+23
+d/home/daniel/scripts
+	config
+1
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	.Xresources
+2
+d/home/daniel
+	backups
+17
+d/home
+	daniel
+1
+d/home/daniel
+	.gnupg
+5
+d/home/daniel/.gnupg
+	..
+0
+d/home/daniel
+	.local
+6
+d/home/daniel/.local
+	share
+4
+d/home/daniel/.local/share
+	vifm
+7
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share/vifm/Trash
+	..
+0
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share
+	Trash
+1
+d/home/daniel/.local/share/Trash
+	files
+1
+d/home/daniel/.local/share/Trash/files
+	..
+0
+d/home/daniel/.local/share/Trash
+	info
+2
+d/home/daniel/.local/share/Trash/info
+	..
+0
+d/home/daniel/.local/share/Trash
+	info
+2
+d/home/daniel/.local/share
+	Trash
+1
+d/home/daniel/.local
+	share
+4
+d/home/daniel
+	backups
+17
+d/home/daniel/backups
+	.Xresources
+2
+d/home/daniel
+	Projects
+16
+d/home/daniel/Projects
+	bash
+2
+d/home/daniel/Projects/bash
+	scripts
+9
+d/home/daniel/Projects/bash/scripts
+	bwm.sh
+2
+d/home/daniel/Projects/bash
+	scripts
+9
+d/home/daniel/Projects
+	bash
+2
+d/home/daniel
+	scripts
+23
+d/home/daniel/scripts
+	testing
+3
+d
+
+# Right window history (oldest to newest):
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books/Sciences/Calculus
+	
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books/Sciences/Calculus
+	
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads/Books/Sciences
+	Statistics
+3
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads/Books/Sciences
+	Statistics
+3
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads/Books/Sciences
+	Physics
+2
+D/home/daniel/Downloads/Books/Sciences/Physics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books/Sciences/Calculus
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Statistics
+3
+D/home/daniel/Downloads/Books/Sciences/Statistics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Statistics
+3
+D/home/daniel/Downloads/Books/Sciences/Statistics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Physics
+2
+D/home/daniel/Downloads/Books/Sciences/Physics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books/Sciences/Calculus
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Physics
+2
+D/home/daniel/Downloads/Books/Sciences/Physics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Statistics
+3
+D/home/daniel/Downloads/Books/Sciences/Statistics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Physics
+2
+D/home/daniel/Downloads/Books/Sciences/Physics
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books/Sciences/Calculus
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	Projects
+2
+D/home/daniel/Downloads/Projects
+	bash
+2
+D/home/daniel/Downloads/Projects/bash
+	arch.sh
+13
+D/home/daniel/Downloads/Projects
+	bash
+2
+D/home/daniel/Downloads
+	Projects
+2
+D/home/daniel/Downloads/Projects
+	python
+11
+D/home/daniel/Downloads
+	Videos
+2
+D/home/daniel
+	Desktop
+13
+D/home/daniel/Desktop
+	..
+0
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books/Sciences/Calculus
+	..
+0
+D/home/daniel/Downloads/Books/Sciences
+	Calculus
+1
+D/home/daniel/Downloads/Books
+	Sciences
+1
+D/home/daniel/Downloads
+	text.txt
+10
+D/home/daniel
+	Downloads
+14
+D/home
+	daniel
+1
+D/
+	home
+3
+D/home
+	daniel
+1
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	text.txt
+12
+D/home/daniel
+	Projects
+15
+D/home/daniel/Projects
+	bash
+2
+D/home/daniel/Projects/bash
+	.config
+1
+D/home/daniel/Projects
+	bash
+2
+D/home/daniel
+	Downloads
+15
+D/home/daniel/Downloads
+	Videos
+2
+D/home/daniel/Downloads/Videos
+	Jexi
+2
+D/home/daniel/Downloads
+	Wallpapers
+3
+D/home/daniel/Downloads/Wallpapers
+	..
+0
+D/home/daniel/Downloads
+	cheatsheet_vim.png
+7
+D
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+pGoogle-Clone
+pPlatzi_Google-Clone
+p.bash_profile2
+
+# Local filter history (oldest to newest):
+
+# Registers:
+
+# Directory stack (oldest to newest):
+
 # Trash content:
+t/home/daniel/.local/share/vifm/Trash/000_python.c
+	/home/daniel/Downloads/python.c
+t/home/daniel/.local/share/vifm/Trash/000_python.css
+	/home/daniel/Downloads/python.css
+t/home/daniel/.local/share/vifm/Trash/000_python.js
+	/home/daniel/Downloads/python.js
+t/home/daniel/.local/share/vifm/Trash/000_python.php
+	/home/daniel/Downloads/python.php
+t/home/daniel/.local/share/vifm/Trash/000_python.py
+	/home/daniel/Downloads/python.py
+t/home/daniel/.local/share/vifm/Trash/000_utf8-markus-kuhn-plus-webdevicon-glyphs.txt
+	/home/daniel/Downloads/utf8-markus-kuhn-plus-webdevicon-glyphs.txt
+t/home/daniel/.local/share/vifm/Trash/000_winehq.key
+	/home/daniel/Downloads/winehq.key
+t/home/daniel/.local/share/vifm/Trash/000_Platzi_Google-Clone
+	/home/daniel/Downloads/Platzi_Google-Clone
+t/home/daniel/.local/share/vifm/Trash/000_backups
+	/home/daniel/backups
+t/home/daniel/.local/share/vifm/Trash/000_.vimrc-plugins.trashinfo
+	/home/daniel/.local/share/Trash/info/.vimrc-plugins.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_CMakeCache.txt.trashinfo
+	/home/daniel/.local/share/Trash/info/CMakeCache.txt.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_CMakeFiles.2.trashinfo
+	/home/daniel/.local/share/Trash/info/CMakeFiles.2.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_CMakeFiles.3.trashinfo
+	/home/daniel/.local/share/Trash/info/CMakeFiles.3.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_CMakeFiles.trashinfo
+	/home/daniel/.local/share/Trash/info/CMakeFiles.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_Xresources.trashinfo
+	/home/daniel/.local/share/Trash/info/Xresources.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_arch.trashinfo
+	/home/daniel/.local/share/Trash/info/arch.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_bin.trashinfo
+	/home/daniel/.local/share/Trash/info/bin.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_bwm.trashinfo
+	/home/daniel/.local/share/Trash/info/bwm.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_cmake.trashinfo
+	/home/daniel/.local/share/Trash/info/cmake.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_colors.trashinfo
+	/home/daniel/.local/share/Trash/info/colors.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_cont.sh.trashinfo
+	/home/daniel/.local/share/Trash/info/cont.sh.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_contrib.trashinfo
+	/home/daniel/.local/share/Trash/info/contrib.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_dotfiles.2.trashinfo
+	/home/daniel/.local/share/Trash/info/dotfiles.2.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_dotfiles.trashinfo
+	/home/daniel/.local/share/Trash/info/dotfiles.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_dwm.trashinfo
+	/home/daniel/.local/share/Trash/info/dwm.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_emacs-config.el.trashinfo
+	/home/daniel/.local/share/Trash/info/emacs-config.el.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_environments.trashinfo
+	/home/daniel/.local/share/Trash/info/environments.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_generated-sources.trashinfo
+	/home/daniel/.local/share/Trash/info/generated-sources.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_include.trashinfo
+	/home/daniel/.local/share/Trash/info/include.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_lib.trashinfo
+	/home/daniel/.local/share/Trash/info/lib.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_org-mode-bullets.el.trashinfo
+	/home/daniel/.local/share/Trash/info/org-mode-bullets.el.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_panel.trashinfo
+	/home/daniel/.local/share/Trash/info/panel.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_py_env.trashinfo
+	/home/daniel/.local/share/Trash/info/py_env.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_st.trashinfo
+	/home/daniel/.local/share/Trash/info/st.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_time.trashinfo
+	/home/daniel/.local/share/Trash/info/time.trashinfo
+t/home/daniel/.local/share/vifm/Trash/000_vu.trashinfo
+	/home/daniel/.local/share/Trash/info/vu.trashinfo
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].0
+]F
+s0
