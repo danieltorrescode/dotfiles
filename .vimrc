@@ -31,6 +31,11 @@ nmap <C-x> :sp<CR>
 nmap <C-y> :vsp<CR>
 nmap <C-k> :tabnew<CR>
 
+nnoremap <Up> :resize +2<CR> 
+nnoremap <Down> :resize -2<CR>
+nnoremap <Left> :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
+
 "SyntasticReset
 "SyntasticCheck
 "set list

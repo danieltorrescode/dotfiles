@@ -25,6 +25,7 @@ fi
 
 export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="${PATH}:${HOME}/scripts/"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL="st"
