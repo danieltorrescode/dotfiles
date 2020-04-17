@@ -60,6 +60,7 @@ bspc config urgent_border_color 	      "#dd2727"
 
 bspc rule -a Emacs state=tiled follow=on
 bspc rule -a Surf state=tiled follow=on
+bspc rule -a Zathura state=tiled follow=on
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 

@@ -23,9 +23,8 @@ mkdir  ~/.local/share/Trash
 mkdir ~/backups/
 cp -v ~/* ~/backups/
 cp -v ~/.* ~/backups/
-cp -rv ~/.config ~/backups/
 # generate default config files for ranger with
-#su daniel -c "ranger --copy-config=all"
+#ranger --copy-config=all
 
 sed -i '/daniel torres/,$d' ~/.bashrc
 cat ~/.bashrc_tail >> ~/.bashrc

@@ -15,7 +15,6 @@ aptitude install -y python-pip python3-pip virtualenv
 aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
 aptitude install -y simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
-# aptitude install -y i3-wm i3blocks i3lock ranger
 # aptitude install -y ufw gufw firejail apparmor lxc
 
 echo "###########################################" 
@@ -83,6 +82,10 @@ case $WM in
         su daniel -c "cmake .. --build $folder/polybar/build/"
         su daniel -c "make -j$(nproc) -C $folder/polybar/build/"
         make install -C $folder/polybar/build/
+        ;;
+    "i3")
+        echo $WM
+        aptitude install -y i3-wm i3blocks i3lock ranger
         ;;
     *)
         echo $WM
