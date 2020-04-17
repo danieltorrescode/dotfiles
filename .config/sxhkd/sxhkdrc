@@ -18,7 +18,7 @@ super + Escape
 ######################################################################
 
 super + shift + f
-        /opt/firefox/firefox
+        ~/firefox/firefox
 
 super + shift + v
         st vifm
@@ -27,7 +27,7 @@ super + shift + s
         st screen
 
 super + shift + r
-        st ranger --confdir=/home/daniel/.config/ranger
+        st ranger --confdir=~/.config/ranger
 
 super + shift + u
         surf

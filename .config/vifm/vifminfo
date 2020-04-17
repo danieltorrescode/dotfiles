@@ -13,7 +13,7 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -22,75 +22,6 @@ l15,2
 r15,2
 
 # Left window history (oldest to newest):
-d/home/daniel/.local/share
-	vifm
-7
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share/vifm/Trash
-	..
-0
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share
-	applications
-2
-d/home/daniel/.local/share/applications
-	..
-0
-d/home/daniel/.local/share
-	Trash
-1
-d/home/daniel/.local/share/Trash
-	files
-1
-d/home/daniel/.local/share/Trash/files
-	CMakeFiles
-1
-d/home/daniel/.local/share/Trash/files/CMakeFiles
-	..
-0
-d/home/daniel/.local/share/Trash/files
-	CMakeFiles.2
-2
-d/home/daniel/.local/share/Trash/files/CMakeFiles.2
-	..
-0
-d/home/daniel/.local/share/Trash/files
-	CMakeFiles.2
-2
-d/home/daniel/.local/share/Trash/files/CMakeFiles.2
-	..
-0
-d/home/daniel/.local/share/Trash/files
-	include
-9
-d/home/daniel/.local/share/Trash/files/include
-	..
-0
-d/home/daniel/.local/share/Trash/files
-	..
-0
-d/home/daniel/.local/share/Trash
-	info
-2
-d/home/daniel/.local/share/Trash/info
-	..
-0
-d/home/daniel/.local/share/Trash
-	files
-1
-d/home/daniel/.local/share/Trash/files
-	..
-0
-d/home/daniel/.local/share/Trash
-	files
-1
-d/home/daniel/.local/share
-	applications
-2
 d/home/daniel/.local/share/applications
 	..
 0
@@ -322,6 +253,75 @@ d/home/daniel
 d/home/daniel/scripts
 	testing
 3
+d/home/daniel
+	..
+0
+d/home
+	daniel
+1
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel/.config/sxhkd
+	sxhkdrc
+1
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel/.config/sxhkd
+	sxhkdrc
+1
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel/.config/sxhkd
+	sxhkdrc
+1
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel/.config/sxhkd
+	sxhkdrc
+1
+d/home/daniel/.config
+	sxhkd
+15
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	vifm
+18
+d/home/daniel/.config/vifm
+	vifminfo
+6
+d/home/daniel/.config
+	vifm
+18
+d/home/daniel
+	.config
+2
 d
 
 # Right window history (oldest to newest):
@@ -555,7 +555,7 @@ D/home/daniel/Downloads/Wallpapers
 0
 D/home/daniel/Downloads
 	cheatsheet_vim.png
-7
+8
 D
 
 # Command line history (oldest to newest):
@@ -564,6 +564,8 @@ D
 # Search history (oldest to newest):
 
 # Prompt history (oldest to newest):
+pkb6uu0lz.firefox2
+pctva0otv.firefox3
 pGoogle-Clone
 pPlatzi_Google-Clone
 p.bash_profile2
