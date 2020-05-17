@@ -71,7 +71,7 @@ font-1 = "Font Awesome 5 Free,Font Awesome 5 Free Regular: style=Regular: size=1
 
 modules-left = bspwm
 modules-center =  xwindow
-modules-right =  xkeyboard date
+modules-right =  xkeyboard eth date
 
 tray-position = right
 tray-padding = 2
@@ -260,8 +260,9 @@ interface =
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+format-connected-underline = ${colors.primary}
+;format-connected-underline = #9f78e1
+label-connected = %essid% %ifname% %local_ip% %upspeed% %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -278,13 +279,15 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = enp1s0
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-underline = ${colors.primary}
+;format-connected-underline = #55aa55
+format-connected-prefix = 
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %upspeed% %downspeed% %local_ip%
+;label-connected = %ifname% %local_ip% %upspeed% %downspeed% %linkspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>

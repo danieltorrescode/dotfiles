@@ -1,6 +1,10 @@
 # You can edit this file by hand, but it's recommended not to do that.
 
 # Marks:
+'a
+	/home/daniel/Downloads/Books/Programming
+	Functional Programming for Dummies ( PDFDrive.com ).pdf
+1589341958
 'b
 	/home/daniel/bin/
 	..
@@ -13,7 +17,7 @@
 # Bookmarks:
 
 # TUI:
-ar
+al
 q0
 v2
 ov
@@ -22,309 +26,423 @@ l15,2
 r15,2
 
 # Left window history (oldest to newest):
-d/home/daniel/.local/share/applications
+d/home/daniel/usb
 	..
 0
-d/home/daniel/.local/share
-	ranger
-6
-d/home/daniel/.local/share/ranger
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	wallpaper_snow_mountain.jpg
+2
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	casa_de_papel
+1
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
 	..
 0
-d/home/daniel/.local/share
-	vifm
-7
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share
-	vifm
-7
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share/vifm/Trash
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
 	..
 0
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share/vifm/Trash
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
 	..
 0
-d/home/daniel/.local/share/vifm
-	Trash
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	wallpaper_snow_mountain.jpg
+2
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	casa_de_papel
 1
-d/home/daniel/.local/share
-	zsh
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	casa_de_papel
+1
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	casa_de_papel
+1
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	casa_de_papel
+1
+d/home/daniel
+	usb
+25
+d/home
+	daniel
+2
+d/
+	home
+3
+d/home
+	daniel
+2
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	casa_de_papel
+1
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	sxhkd
+24
+d/home/daniel/sxhkd
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	wallpaper_mountain.jpg
+2
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	i3status
 10
-d/home/daniel/.local/share/zsh
-	site-functions
-1
-d/home/daniel/.local/share/zsh/site-functions
-	..
-0
-d/home/daniel/.local/share/zsh
-	site-functions
-1
-d/home/daniel/.local/share
-	fonts
-4
-d/home/daniel/.local
-	lib
-3
-d/home/daniel/.local/lib
-	..
-0
-d/home/daniel/.local
-	etc
-2
-d/home/daniel/.local/etc
-	..
-0
-d/home/daniel/.local
-	etc
-2
-d/home/daniel/.local/etc
-	..
-0
-d/home/daniel/.local
-	bin
-1
-d/home/daniel/.local/bin
-	..
-0
-d/home/daniel/.local
-	bin
-1
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	..
-0
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	st2
-2
-d/home/daniel/backups/st2
-	..
-0
-d/home/daniel/backups
-	.Xresources
-3
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	.gitattributes
-8
-d/home/daniel
-	scripts
-23
-d/home/daniel/scripts
-	..
-0
-d/home/daniel
-	scripts
-23
-d/home/daniel/scripts
+d/home/daniel/.config/i3status
 	config
 1
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	test.txt
-22
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	st
+d/home/daniel/.config
+	i3
+9
+d/home/daniel/.config/i3
+	i3blocks
+1
+d/home/daniel/.config/i3/i3blocks
+	wifi
 13
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	st
-14
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	.bash_history_tail
-4
-d/home/daniel
-	scripts
-23
-d/home/daniel/scripts
-	config
+d/home/daniel/.config/i3
+	i3blocks
 1
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	.Xresources
-2
-d/home/daniel
-	backups
-17
-d/home
-	daniel
-1
-d/home/daniel
-	.gnupg
+d/home/daniel/.config/i3/i3blocks
+	iface
 5
-d/home/daniel/.gnupg
+d/home/daniel/.config/i3
+	i3blocks
+1
+d/home/daniel/.config
+	polybar
+12
+d/home/daniel/.config/polybar
 	..
 0
+d/home/daniel/.config
+	polybar
+12
 d/home/daniel
-	.local
-6
-d/home/daniel/.local
-	share
-4
-d/home/daniel/.local/share
-	vifm
+	polybar
+22
+d/home/daniel/polybar
+	src
+10
+d/home/daniel/polybar/src
+	utils
 7
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share/vifm/Trash
+d/home/daniel/polybar/src/utils
 	..
 0
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share
-	Trash
-1
-d/home/daniel/.local/share/Trash
-	files
-1
-d/home/daniel/.local/share/Trash/files
+d/home/daniel/polybar/src
+	utils
+7
+d/home/daniel/polybar
+	tests
+11
+d/home/daniel/polybar/tests
 	..
 0
-d/home/daniel/.local/share/Trash
-	info
-2
-d/home/daniel/.local/share/Trash/info
-	..
-0
-d/home/daniel/.local/share/Trash
-	info
-2
-d/home/daniel/.local/share
-	Trash
-1
-d/home/daniel/.local
-	share
-4
-d/home/daniel
-	backups
-17
-d/home/daniel/backups
-	.Xresources
-2
-d/home/daniel
-	Projects
-16
-d/home/daniel/Projects
-	bash
-2
-d/home/daniel/Projects/bash
-	scripts
-9
-d/home/daniel/Projects/bash/scripts
-	bwm.sh
-2
-d/home/daniel/Projects/bash
-	scripts
-9
-d/home/daniel/Projects
-	bash
-2
-d/home/daniel
-	scripts
-23
-d/home/daniel/scripts
-	testing
+d/home/daniel/polybar
+	build
 3
-d/home/daniel
+d/home/daniel/polybar/build
 	..
 0
-d/home
-	daniel
-1
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel/.config/sxhkd
-	sxhkdrc
-1
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel/.config/sxhkd
-	sxhkdrc
-1
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel/.config/sxhkd
-	sxhkdrc
-1
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel/.config/sxhkd
-	sxhkdrc
-1
-d/home/daniel/.config
-	sxhkd
-15
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	vifm
-18
-d/home/daniel/.config/vifm
-	vifminfo
+d/home/daniel/polybar
+	tests
+11
+d/home/daniel/polybar/tests
+	..
+0
+d/home/daniel/polybar
+	build
+3
+d/home/daniel/polybar/build
+	include
 6
-d/home/daniel/.config
-	vifm
-18
+d/home/daniel/polybar/build/include
+	..
+0
+d/home/daniel/polybar/build
+	include
+6
+d/home/daniel/polybar
+	common
+5
+d/home/daniel/polybar/common
+	travis
+1
+d/home/daniel/polybar/common/travis
+	..
+0
+d/home/daniel/polybar/common
+	travis
+1
+d/home/daniel/polybar
+	contrib
+6
+d/home/daniel/polybar/contrib
+	bash
+1
+d/home/daniel/polybar/contrib/bash
+	..
+0
+d/home/daniel/polybar/contrib
+	polybar.aur
+3
+d/home/daniel/polybar
+	include
+8
+d/home/daniel/polybar/include
+	..
+0
+d/home/daniel/polybar
+	lib
+9
+d/home/daniel/polybar/lib
+	..
+0
+d/home/daniel/polybar
+	src
+10
+d/home/daniel/polybar/src
+	utils
+7
+d/home/daniel/polybar
+	src
+10
 d/home/daniel
-	.config
-2
+	.emacs.d
+3
+d/home/daniel/.emacs.d
+	elpa
+4
+d/home/daniel/.emacs.d/elpa
+	exwm-0.23
+8
 d
 
 # Right window history (oldest to newest):
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	s02
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
+	578662.zip
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	The.End.of.the.Fucking.World.S02E01.Episode 1 (Español (Latinoamérica)).srt
+5
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	s02
+1
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+5
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	s02
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
+	..
+0
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	s02
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Gnu_Linux
+1
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+5
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	s02
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
+	The.End.of.the.Fucking.World.S02E02.Episode 2 (Español (España)).srt
+2
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
+	The.End.of.the.Fucking.World.S02E03.Episode 3 (Español (España)).srt
+2
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
+	The.End.of.the.Fucking.World.S02E04.Episode 4 (Español (España)).srt
+2
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	The.End.of.the.Fucking.World.S02E07.720p.WEB.X264-STARZ[eztv].mkv
+5
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	s02
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
+	..
+0
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/subs
+	The.End.of.the.Fucking.World.S02E05.Episode 5 (Español (España)).srt
+2
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/subs
+	The.End.of.the.Fucking.World.S02E08.Episode 8 (Español (España)).srt
+2
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	subs
+1
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+4
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	subs
+1
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+4
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	subs
+1
+D/home/daniel/Downloads/The.End.of.the.Fucking.World/subs
+	..
+0
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	subs
+1
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+4
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	578663.zip
+2
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+4
 D/home/daniel
 	Downloads
 14
@@ -332,35 +450,80 @@ D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	Sciences
+	Programming
+4
+D/home/daniel/Downloads/Books/Programming
+	Rust
+2
+D/home/daniel/Downloads/Books/Programming/Rust
+	Programming WebAssembly with Rust.pdf
 1
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
+D/home/daniel/Downloads/Books/Programming
+	Rust
+2
+D/home/daniel/Downloads/Books
+	Programming
+4
+D/home/daniel/Downloads
+	Books
 1
-D/home/daniel/Downloads/Books/Sciences/Calculus
-	
-1
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	Inferno
+2
+D/home/daniel/Downloads/Inferno
+	..
+0
+D/home/daniel/Downloads
+	The.End.of.the.Fucking.World
+4
+D/home/daniel/Downloads/The.End.of.the.Fucking.World
+	The.End.Of.The.Fucking.World.S02E08.720p.HDTV.x264-LiNKLE[eztv].mkv
+3
 D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	Sciences
-1
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books/Sciences/Calculus
-	
-1
+	Programming
+4
+D/home/daniel/Downloads/Books/Programming
+	Rust
+2
 D/home/daniel/Downloads/Books
-	Sciences
-1
+	Maths
+3
+D/home/daniel/Downloads/Books/Maths
+	schaum's Outlines of Probability and Statistics.pdf
+7
+D/home/daniel/Downloads/Books
+	French_Beginners.pdf
+5
 D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	Sciences
+	Programming
+4
+D/home/daniel/Downloads/Books/Programming
+	Rust
+2
+D/home/daniel/Downloads/Books
+	Maths
+3
+D/home/daniel/Downloads/Books/Maths
+	..
+0
+D/home/daniel/Downloads/Books
+	Maths
+3
+D/home/daniel/Downloads
+	Books
 1
+D/home/daniel/Downloads/Books
+	French_dummies.pdf
+7
 D/home/daniel/Downloads
 	Books
 1
@@ -371,208 +534,236 @@ D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	Sciences
-1
-D/home/daniel/Downloads/Books/Sciences
-	Statistics
-3
-D/home/daniel/Downloads/Books
-	Sciences
-1
-D/home/daniel/Downloads/Books/Sciences
-	Statistics
-3
-D/home/daniel/Downloads/Books
-	Sciences
-1
-D/home/daniel/Downloads/Books/Sciences
-	Physics
-2
-D/home/daniel/Downloads/Books/Sciences/Physics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books/Sciences/Calculus
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Statistics
-3
-D/home/daniel/Downloads/Books/Sciences/Statistics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Statistics
-3
-D/home/daniel/Downloads/Books/Sciences/Statistics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Physics
-2
-D/home/daniel/Downloads/Books/Sciences/Physics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books/Sciences/Calculus
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Physics
-2
-D/home/daniel/Downloads/Books/Sciences/Physics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Statistics
-3
-D/home/daniel/Downloads/Books/Sciences/Statistics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Physics
-2
-D/home/daniel/Downloads/Books/Sciences/Physics
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books/Sciences/Calculus
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books
-	Sciences
-1
+	French_dummies.pdf
+7
 D/home/daniel/Downloads
 	Books
 1
+D/home/daniel/Downloads/Books
+	Programming
+4
+D/home/daniel/Downloads/Books/Programming
+	Rust
+2
+D/home/daniel/Downloads/Books
+	Maths
+3
+D/home/daniel/Downloads/Books/Maths
+	algebra_linear_2.pdf
+3
+D/home/daniel/Downloads/Books
+	Maths
+3
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	french_Dummies_Grammar.pdf
+7
+D/home/daniel/Downloads
+	Justice_League
+3
 D/home/daniel
 	Downloads
 14
 D/home/daniel/Downloads
-	Projects
-2
-D/home/daniel/Downloads/Projects
-	bash
-2
-D/home/daniel/Downloads/Projects/bash
-	arch.sh
+	Books
+1
+D/home/daniel/Downloads/Books
+	french_Dummies_Grammar.pdf
+7
+D/home/daniel/Downloads
+	Justice_League
+3
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	wallpaper_snow_mountain.jpg
 13
-D/home/daniel/Downloads/Projects
-	bash
-2
-D/home/daniel/Downloads
-	Projects
-2
-D/home/daniel/Downloads/Projects
-	python
-11
-D/home/daniel/Downloads
-	Videos
-2
-D/home/daniel
-	Desktop
-13
-D/home/daniel/Desktop
-	..
-0
 D/home/daniel
 	Downloads
 14
+D/home/daniel/Downloads
+	Inferno
+2
+D/home/daniel/Downloads/Inferno
+	..
+0
 D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	Sciences
-1
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books/Sciences/Calculus
-	..
-0
-D/home/daniel/Downloads/Books/Sciences
-	Calculus
-1
-D/home/daniel/Downloads/Books
-	Sciences
-1
+	french_Dummies_Grammar.pdf
+7
 D/home/daniel/Downloads
-	text.txt
-10
-D/home/daniel
-	Downloads
-14
-D/home
-	daniel
-1
-D/
-	home
-3
-D/home
-	daniel
-1
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	text.txt
+	wallpaper_mountain.jpg
 12
 D/home/daniel
-	Projects
-15
-D/home/daniel/Projects
-	bash
-2
-D/home/daniel/Projects/bash
 	.config
-1
-D/home/daniel/Projects
-	bash
 2
+D/home/daniel/.config
+	polybar
+12
+D/home/daniel/.config/polybar
+	scripts
+1
+D/home/daniel/.config/polybar/scripts
+	check-all-updates.sh
+1
+D/home/daniel/.config/polybar
+	scripts
+1
+D/home/daniel/.config/polybar/scripts
+	check-all-updates.sh
+1
+D/home/daniel/.config/polybar
+	scripts
+1
+D/home/daniel/.config
+	polybar
+12
 D/home/daniel
 	Downloads
-15
+14
 D/home/daniel/Downloads
-	Videos
-2
-D/home/daniel/Downloads/Videos
-	Jexi
-2
-D/home/daniel/Downloads
-	Wallpapers
-3
-D/home/daniel/Downloads/Wallpapers
-	..
-0
-D/home/daniel/Downloads
-	cheatsheet_vim.png
-8
+	wallpaper_mountain.jpg
+12
 D
 
 # Command line history (oldest to newest):
+:mkdir s02
+:mkdir subs
+:mkdir segunda
+:mkdir dark
+:mkdir tercera
+:mkdir magicians
+:mkdir Calculus
+:mkdir
+:Emacs
+:mkdir Machine_learning
+:mkdir GNU
+:mkdir Stat
+:mkdir French
+:Fundamentals
+:mkdir Fundaments
+:Vue
+:mkdir Vue
+:mkdir Javascript
+:mkdir Emacs
+:mkdir Rust
+:Programming
+:mkdir Programming
 :q
 
 # Search history (oldest to newest):
 
 # Prompt history (oldest to newest):
-pkb6uu0lz.firefox2
-pctva0otv.firefox3
-pGoogle-Clone
-pPlatzi_Google-Clone
-p.bash_profile2
+pTeoria_probabilidades_estadistica.pdf
+pland.jpg
+pspa
+psingle_page_app
+psingle_page_app_router
+pBaldor_aritmetica.pdf
+pfisica_electromagnetismo.pdf
+pfisica_fundamentos.pdf
+pcalculo_vectorial.pdf
+pcalculo.pdf
+palgebra.pdf
+pprobabilidades_vol.I.pdf
+pprobabilidades_vol.II.pdf
+pprobabilidades_estadistica.pdf
+pstoicism.pdf
+pmachine_learning_dummies.pdf
+ptensorflow_dummies.pdf
+pThe.End.of.the.Fucking.World
+pformulario-calculo-platzi.pdf
+pcheatsheet_calculus_platzi.pdf
+pNeural_networks__deep_earning.pdf
+pneural_networks_deep_learning.pdf
+pneural_networks.pdf
+pemacs_extensions.pdf
+pvim.pdf
+pemacs_mastering.pdf
+plisp_common.pdf
+pLearning GNU Emacs.pdf
+pemacs_learning.pdf
+plisp_advanced.pdf
+plisp_ia.pdf
+pCold_Mountain.jpg
+pwallpaper_mountain.jpg
+pwallpaper_snow_mountain.jpg
+pwallpaper_earth.jpg
+pvim_text.txt
+pvim_testing.txt
+pJustice_League
+pInferno
+pelisp_intr.pdf
+pKS_365.pdf
+pSP_101.pdf
+pSP_365.pdf
+pSP_365_2.pdf
+pCalculus
+pgnu_c_programming.pdf
+pHTML5 and CSS3 Design Patterns.pdf
+pDesign Patterns.pdf
+pRegExp_Reference.pdf
+pStatistics
+pOReilly_Programming_Embedded_Systems_Second.pdf
+pProgramming_Embedded_Systems.pdf
+pThe Rust Programming Language.pdf
+pFractured
+pFast
+pJavascript
+psp_101.pdf
+psp_365_2.pdf
+psp_365.pdf
+pGnu_Emacs
+pProgramming
+pMaths
+pGnu_Linux
+pSpeed_Reading.pdf
+prust_programming.pdf
+prust_language.pdf
+pParadigms of artificial intelligence programming case studies in Common Lisp.pdf
+plinux_commands.pdf
+pshell_scripting.pdf
+pC Programming The Ultimate Way to Learn The Funda.pdf
+pc_programming_fundamentals.pdf
+pc_gnu_programming.pdf
+pc_Programming_Embedded_Systems.pdf
+pc.pdf
+pc_programming_.pdf
+pLearn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
+p.pdf
+partificial_intelligence_elements_lisp.pdf
+partificial_intelligence_paradigms_lisp.pdf
+partificial_intelligence_elements.pdf
+partificial_intelligence_paradigms.pdf
+pFrench_Grammar_Dummies.pdf
+pFrench_dummies.pdf
+pFrench_Dummies_Grammar.pdf
+pFrench_Beginners.pdf
+pSystem_Administration_Handbook.pdf
+psystem_administration_handbook.pdf
+pThe.End.of.the.Fucking.World.S02E01.Episode 1 (Espaol (Latinoamrica)).srt
+pProgramming WebAssembly with Rust.pdf
+palgebra_linear.pdf
+pSchaum's Outlines of Probability and Statistics.pdf
+pschaum's Outlines of Probability and Statistics.pdf
+pmaths_fundamentals.pdf
+pstatistics.pdf
+patomic_habits.pdf
+palgebra_linear_2.pdf
+pfrench_Beginners.pdf
+pfrench_Dummies_Grammar.pdf
+pfrench_dummies.pdf
+pspeed_reading.pdf
 
 # Local filter history (oldest to newest):
 
 # Registers:
+""/home/daniel/Downloads/wallpaper_mountain.jpg
 
 # Directory stack (oldest to newest):
 

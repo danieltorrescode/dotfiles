@@ -11,24 +11,15 @@
 xrdb -remove *
 xrdb ~/.Xresources
 
-# dwm status bar
-dte(){
-    dte="$(date '+%d-%m-%Y %I:%M:%S')"
-    echo "$dte"
-}
-
-keysindicator(){
-    CAPS_STATUS=`xset q | grep -i caps | cut -c 22-24`
-    STATUS="Caps:$CAPS_STATUS"
-
-    NUM_STATUS=`xset q | grep -i caps | cut -c 46-48`
-    STATUS="$STATUS | Num:$NUM_STATUS"
-    echo "$STATUS"
-}
-
 WM="bspwm"
 
 case $WM in
+    "bspwm")
+        echo $WM
+        ;;
+    "emacs")
+        exec emacs
+        ;;
     "dwm")
         # setting wallpaper
         feh --bg-scale ~/.config/wallpaper.png
@@ -37,12 +28,9 @@ case $WM in
         compton --config ~/.config/compton/compton.conf &
 
         while true; do
-            xsetroot -name "$(dte) | $(keysindicator)"
+            xsetroot -name "$(info)"
             sleep 1s # Update time every ten seconds
         done &
-        ;;
-    "bspwm")
-        echo $WM
         ;;
     "i3")
         exec /usr/bin/i3

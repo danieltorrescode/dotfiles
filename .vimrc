@@ -26,9 +26,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {'mode':'passive'}
 
 " re-mapped keys
-nmap <C-e> :Explore<CR>
+nmap <C-n> :Explore<CR>
 nmap <C-x> :sp<CR>
-nmap <C-y> :vsp<CR>
+nmap <C-l> :vsp<CR>
 nmap <C-k> :tabnew<CR>
 
 nnoremap <Up> :resize +2<CR> 
@@ -87,5 +87,5 @@ Plugin 'ryanoasis/vim-devicons'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-map <C-e> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
