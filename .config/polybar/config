@@ -71,7 +71,7 @@ font-1 = "Font Awesome 5 Free,Font Awesome 5 Free Regular: style=Regular: size=1
 
 modules-left = bspwm
 modules-center =  xwindow
-modules-right =  xkeyboard eth date
+modules-right =  xkeyboard wlan eth date
 
 tray-position = right
 tray-padding = 2
@@ -256,13 +256,14 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = 
+interface = wlp3s2
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.primary}
 ;format-connected-underline = #9f78e1
-label-connected = %essid% %ifname% %local_ip% %upspeed% %downspeed%
+label-connected = %upspeed% %downspeed% %local_ip%
+;label-connected = %essid% %ifname% %local_ip% %upspeed% %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -270,11 +271,13 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 0😭
+ramp-signal-1 = 1😠
+ramp-signal-2 = 2☹️
+ramp-signal-3 = 3😊
+ramp-signal-4 = 4😃
+ramp-signal-5 = 5😎
+
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]

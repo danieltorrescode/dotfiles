@@ -26,210 +26,6 @@ l15,2
 r15,2
 
 # Left window history (oldest to newest):
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	wallpaper_snow_mountain.jpg
-2
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	casa_de_papel
-1
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	wallpaper_snow_mountain.jpg
-2
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	casa_de_papel
-1
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	casa_de_papel
-1
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	casa_de_papel
-1
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	casa_de_papel
-1
-d/home/daniel
-	usb
-25
-d/home
-	daniel
-2
-d/
-	home
-3
-d/home
-	daniel
-2
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	casa_de_papel
-1
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	sxhkd
-24
-d/home/daniel/sxhkd
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	wallpaper_mountain.jpg
-2
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	i3status
-10
-d/home/daniel/.config/i3status
-	config
-1
-d/home/daniel/.config
-	i3
-9
-d/home/daniel/.config/i3
-	i3blocks
-1
-d/home/daniel/.config/i3/i3blocks
-	wifi
-13
-d/home/daniel/.config/i3
-	i3blocks
-1
-d/home/daniel/.config/i3/i3blocks
-	iface
-5
-d/home/daniel/.config/i3
-	i3blocks
-1
-d/home/daniel/.config
-	polybar
-12
-d/home/daniel/.config/polybar
-	..
-0
-d/home/daniel/.config
-	polybar
-12
-d/home/daniel
-	polybar
-22
 d/home/daniel/polybar
 	src
 10
@@ -326,195 +122,213 @@ d/home/daniel/.emacs.d
 d/home/daniel/.emacs.d/elpa
 	exwm-0.23
 8
+d/home/daniel/.emacs.d
+	elpa
+4
+d/home/daniel/.emacs.d/elpa
+	exwm-0.23
+8
+d/home/daniel/.emacs.d/elpa/exwm-0.23
+	xinitrc
+31
+d/home/daniel/.emacs.d/elpa
+	exwm-0.23
+8
+d/home/daniel/.emacs.d
+	elpa
+4
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	wallpaper.png
+25
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	Books
+1
+d/home/daniel/usb/Books
+	Gnu_Linux
+1
+d/home/daniel/usb/Books/Gnu_Linux
+	..
+0
+d/home/daniel/usb/Books
+	Hacking
+2
+d/home/daniel/usb/Books/Hacking
+	..
+0
+d/home/daniel/usb/Books
+	Learning
+3
+d/home/daniel/usb/Books/Learning
+	..
+0
+d/home/daniel/usb/Books
+	Learning
+3
+d/home/daniel/usb
+	wallpaper_mountain.jpg
+14
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	Dante's Inferno
+2
+d/home/daniel/usb/Dante's Inferno
+	..
+0
+d/home/daniel/usb
+	Dante's Inferno
+2
+d/home/daniel/usb/Dante's Inferno
+	..
+0
+d/home/daniel/usb
+	curriculum_vitae_v.2.ott
+13
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	daniel
+1
+d/home/daniel/usb/daniel
+	Descargas
+14
+d/home/daniel/usb/daniel/Descargas
+	ISO
+2
+d/home/daniel/usb/daniel/Descargas/ISO
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	librepago
+4
+d/home/daniel/usb/daniel/Descargas/librepago
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	Actividades
+1
+d/home/daniel/usb/daniel/Descargas/Actividades
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	ISO
+2
+d/home/daniel/usb/daniel/Descargas/ISO
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	env
+3
+d/home/daniel/usb/daniel/Descargas/env
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	librepago
+4
+d/home/daniel/usb/daniel/Descargas/librepago
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	librepago
+4
+d/home/daniel/usb/daniel/Descargas/librepago
+	..
+0
+d/home/daniel/usb/daniel/Descargas
+	VPN Clientes Remotos Canzanese.pdf
+5
+d/home/daniel/usb/daniel
+	Descargas
+14
+d/home/daniel/usb
+	daniel
+1
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	var
+17
+d/home/daniel/usb/var
+	www
+10
+d/home/daniel/usb/var/www
+	html
+1
+d/home/daniel/usb/var/www/html
+	librepago
+3
+d/home/daniel/usb/var/www
+	html
+1
+d/home/daniel/usb/var
+	www
+10
+d/home/daniel/usb
+	var
+17
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	librepago
+7
+d/home/daniel/usb/librepago
+	libreadmin
+3
+d/home/daniel/usb
+	librepago
+7
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+25
 d
 
 # Right window history (oldest to newest):
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	s02
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
-	578662.zip
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	The.End.of.the.Fucking.World.S02E01.Episode 1 (Español (Latinoamérica)).srt
-5
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	s02
-1
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-5
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	s02
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
-	..
-0
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	s02
-1
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Gnu_Linux
-1
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-5
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	s02
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
-	The.End.of.the.Fucking.World.S02E02.Episode 2 (Español (España)).srt
-2
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
-	The.End.of.the.Fucking.World.S02E03.Episode 3 (Español (España)).srt
-2
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02/subs
-	The.End.of.the.Fucking.World.S02E04.Episode 4 (Español (España)).srt
-2
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	The.End.of.the.Fucking.World.S02E07.720p.WEB.X264-STARZ[eztv].mkv
-5
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	s02
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/s02
-	..
-0
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/subs
-	The.End.of.the.Fucking.World.S02E05.Episode 5 (Español (España)).srt
-2
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/subs
-	The.End.of.the.Fucking.World.S02E08.Episode 8 (Español (España)).srt
-2
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	subs
-1
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-4
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	subs
-1
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-4
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	subs
-1
-D/home/daniel/Downloads/The.End.of.the.Fucking.World/subs
-	..
-0
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	subs
-1
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-4
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	578663.zip
-2
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-4
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Programming
-4
-D/home/daniel/Downloads/Books/Programming
-	Rust
-2
-D/home/daniel/Downloads/Books/Programming/Rust
-	Programming WebAssembly with Rust.pdf
-1
-D/home/daniel/Downloads/Books/Programming
-	Rust
-2
-D/home/daniel/Downloads/Books
-	Programming
-4
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	Inferno
-2
-D/home/daniel/Downloads/Inferno
-	..
-0
-D/home/daniel/Downloads
-	The.End.of.the.Fucking.World
-4
-D/home/daniel/Downloads/The.End.of.the.Fucking.World
-	The.End.Of.The.Fucking.World.S02E08.720p.HDTV.x264-LiNKLE[eztv].mkv
-3
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Programming
-4
-D/home/daniel/Downloads/Books/Programming
-	Rust
-2
-D/home/daniel/Downloads/Books
-	Maths
-3
-D/home/daniel/Downloads/Books/Maths
-	schaum's Outlines of Probability and Statistics.pdf
-7
-D/home/daniel/Downloads/Books
-	French_Beginners.pdf
-5
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Programming
-4
-D/home/daniel/Downloads/Books/Programming
-	Rust
-2
-D/home/daniel/Downloads/Books
-	Maths
-3
-D/home/daniel/Downloads/Books/Maths
-	..
-0
 D/home/daniel/Downloads/Books
 	Maths
 3
@@ -627,8 +441,194 @@ D/home/daniel
 	Downloads
 14
 D/home/daniel/Downloads
-	wallpaper_mountain.jpg
+	Peaky Blinders S01 Complete Season 1 720p BRRip DD2.0 x264-PSYPHER
+4
+D/home/daniel/Downloads/Peaky Blinders S01 Complete Season 1 720p BRRip DD2.0 x264-PSYPHER
+	Peaky Blinders S01E01 720p BRRip DD2.0 x264-PSYPHER.mkv
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	french_Dummies_Grammar.pdf
+7
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	speed_reading.pdf
 12
+D/home/daniel/Downloads
+	Duplica tu Velocidad de Lectura [Curso Multimedia]-LV
+2
+D/home/daniel/Downloads/Duplica tu Velocidad de Lectura [Curso Multimedia]-LV
+	Bono TEEA
+1
+D/home/daniel/Downloads/Duplica tu Velocidad de Lectura [Curso Multimedia]-LV/Bono TEEA
+	..
+0
+D/home/daniel/Downloads/Duplica tu Velocidad de Lectura [Curso Multimedia]-LV
+	Bono TEEA
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	speed_reading.pdf
+13
+D/home/daniel/Downloads
+	Hacking
+2
+D/home/daniel/Downloads/Hacking
+	167 - The Basics Of Hacking And Penetration Testing Ethical Hacking And Penetration Testing Made Easy [-PUNISHER-].pdf
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Hacking
+2
+D/home/daniel/Downloads/Books/Hacking
+	Tribe of Hackers Cybersecurity Advice from the Best Hackers in the World ( PDFDrive.com ).pdf
+10
+D/home/daniel/Downloads/Books
+	math_hacking.pdf
+11
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	El monje que vendiÃ³ su ferrari ( PDFDrive.com ).pdf
+9
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	french_dummies.pdf
+24
+D/home/daniel/Downloads
+	Dante's Inferno
+2
+D/home/daniel/Downloads/Dante's Inferno
+	Dante's.Inferno.An.Animated.Epic.2010.720p.BluRay.x264-[YTS.AM].mp4
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	idea-mapping-access-your-hidden-brain-power.pdf
+25
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	idea-mapping-access-your-hidden-brain-power.pdf
+25
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	idea-mapping-access-your-hidden-brain-power.pdf
+25
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads/Books/Learning
+	advanced_learning.pdf
+1
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads/Books/Learning
+	atomic_habits.pdf
+2
+D/home/daniel/Downloads/Books
+	Daily Inspiration From The Monk Who Sold His Ferrari.pdf
+7
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Programming
+6
+D/home/daniel/Downloads
+	librepago
+6
+D/home/daniel/Downloads/librepago
+	Actividades
+1
+D/home/daniel/Downloads/librepago/Actividades
+	..
+0
+D/home/daniel/Downloads/librepago
+	env
+2
+D/home/daniel/Downloads
+	librepago
+6
+D/home/daniel/Downloads/librepago
+	Actividades
+1
+D/home/daniel/Downloads/librepago/Actividades
+	..
+0
+D/home/daniel/Downloads/librepago
+	zips
+3
+D/home/daniel/Downloads/librepago/zips
+	Desktop.zip
+1
+D/home/daniel/Downloads/librepago
+	zips
+3
+D/home/daniel/Downloads/librepago/zips
+	htdocs(1).zip
+2
+D/home/daniel/Downloads/librepago
+	zips
+3
+D/home/daniel/Downloads/librepago/zips
+	panel_todoticket.zip
+4
+D/home/daniel/Downloads/librepago
+	env
+2
+D/home/daniel/Downloads
+	librepago
+6
+D/home/daniel/Downloads/librepago
+	Actividades
+1
+D/home/daniel/Downloads/librepago/Actividades
+	..
+0
+D/home/daniel/Downloads/librepago
+	env
+2
+D/home/daniel/Downloads/librepago/env
+	..
+0
+D/home/daniel/Downloads/librepago
+	zips
+3
+D/home/daniel/Downloads/librepago/zips
+	panel_todoticket.zip
+4
+D/home/daniel/Downloads/librepago
+	zips
+3
+D/home/daniel/Downloads
+	librepago
+6
+D/home/daniel/Downloads/librepago
+	libreadmin
+3
+D/home/daniel/Downloads
+	librepago
+6
 D
 
 # Command line history (oldest to newest):
@@ -655,29 +655,13 @@ D
 :Programming
 :mkdir Programming
 :q
+:mkdir Hacking
+:zips
+:mkdir zips
 
 # Search history (oldest to newest):
 
 # Prompt history (oldest to newest):
-pTeoria_probabilidades_estadistica.pdf
-pland.jpg
-pspa
-psingle_page_app
-psingle_page_app_router
-pBaldor_aritmetica.pdf
-pfisica_electromagnetismo.pdf
-pfisica_fundamentos.pdf
-pcalculo_vectorial.pdf
-pcalculo.pdf
-palgebra.pdf
-pprobabilidades_vol.I.pdf
-pprobabilidades_vol.II.pdf
-pprobabilidades_estadistica.pdf
-pstoicism.pdf
-pmachine_learning_dummies.pdf
-ptensorflow_dummies.pdf
-pThe.End.of.the.Fucking.World
-pformulario-calculo-platzi.pdf
 pcheatsheet_calculus_platzi.pdf
 pNeural_networks__deep_earning.pdf
 pneural_networks_deep_learning.pdf
@@ -759,11 +743,30 @@ pfrench_Beginners.pdf
 pfrench_Dummies_Grammar.pdf
 pfrench_dummies.pdf
 pspeed_reading.pdf
+pmath_hacking.pdf
+pwallpapel.png
+pwallpaper.png
+pwallpaper_world.png
+pDante's Inferno
+pwallpaper_hexagonal_rocks.png
+pwallpaper_graims.png
+pwallpaper_desert.png
+plearn_in_48_hours.pdf
+pidea_mapping.pdf
+pmind_map.pdf
+pmind_map_ideas.pdf
+pAdvanced_Learning.pdf
+ptrain_mind_change_brain.pdf
+padvanced_learning.pdf
+parte_de_la _guerra.pdf
+pEl monje que vendiÃ³ su ferrari.pdf
+part_of_war.pdf
+pDaily Inspiration From The Monk Who Sold His Ferrari.pdf
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/daniel/Downloads/wallpaper_mountain.jpg
+""/home/daniel/Downloads/librepago
 
 # Directory stack (oldest to newest):
 
