@@ -17,7 +17,7 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -26,234 +26,6 @@ l15,2
 r15,2
 
 # Left window history (oldest to newest):
-d/home/daniel/polybar
-	src
-10
-d/home/daniel/polybar/src
-	utils
-7
-d/home/daniel/polybar/src/utils
-	..
-0
-d/home/daniel/polybar/src
-	utils
-7
-d/home/daniel/polybar
-	tests
-11
-d/home/daniel/polybar/tests
-	..
-0
-d/home/daniel/polybar
-	build
-3
-d/home/daniel/polybar/build
-	..
-0
-d/home/daniel/polybar
-	tests
-11
-d/home/daniel/polybar/tests
-	..
-0
-d/home/daniel/polybar
-	build
-3
-d/home/daniel/polybar/build
-	include
-6
-d/home/daniel/polybar/build/include
-	..
-0
-d/home/daniel/polybar/build
-	include
-6
-d/home/daniel/polybar
-	common
-5
-d/home/daniel/polybar/common
-	travis
-1
-d/home/daniel/polybar/common/travis
-	..
-0
-d/home/daniel/polybar/common
-	travis
-1
-d/home/daniel/polybar
-	contrib
-6
-d/home/daniel/polybar/contrib
-	bash
-1
-d/home/daniel/polybar/contrib/bash
-	..
-0
-d/home/daniel/polybar/contrib
-	polybar.aur
-3
-d/home/daniel/polybar
-	include
-8
-d/home/daniel/polybar/include
-	..
-0
-d/home/daniel/polybar
-	lib
-9
-d/home/daniel/polybar/lib
-	..
-0
-d/home/daniel/polybar
-	src
-10
-d/home/daniel/polybar/src
-	utils
-7
-d/home/daniel/polybar
-	src
-10
-d/home/daniel
-	.emacs.d
-3
-d/home/daniel/.emacs.d
-	elpa
-4
-d/home/daniel/.emacs.d/elpa
-	exwm-0.23
-8
-d/home/daniel/.emacs.d
-	elpa
-4
-d/home/daniel/.emacs.d/elpa
-	exwm-0.23
-8
-d/home/daniel/.emacs.d/elpa/exwm-0.23
-	xinitrc
-31
-d/home/daniel/.emacs.d/elpa
-	exwm-0.23
-8
-d/home/daniel/.emacs.d
-	elpa
-4
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	wallpaper.png
-25
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	Books
-1
-d/home/daniel/usb/Books
-	Gnu_Linux
-1
-d/home/daniel/usb/Books/Gnu_Linux
-	..
-0
-d/home/daniel/usb/Books
-	Hacking
-2
-d/home/daniel/usb/Books/Hacking
-	..
-0
-d/home/daniel/usb/Books
-	Learning
-3
-d/home/daniel/usb/Books/Learning
-	..
-0
-d/home/daniel/usb/Books
-	Learning
-3
-d/home/daniel/usb
-	wallpaper_mountain.jpg
-14
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	Dante's Inferno
-2
-d/home/daniel/usb/Dante's Inferno
-	..
-0
-d/home/daniel/usb
-	Dante's Inferno
-2
-d/home/daniel/usb/Dante's Inferno
-	..
-0
-d/home/daniel/usb
-	curriculum_vitae_v.2.ott
-13
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	daniel
-1
-d/home/daniel/usb/daniel
-	Descargas
-14
-d/home/daniel/usb/daniel/Descargas
-	ISO
-2
-d/home/daniel/usb/daniel/Descargas/ISO
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	librepago
-4
-d/home/daniel/usb/daniel/Descargas/librepago
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	Actividades
-1
-d/home/daniel/usb/daniel/Descargas/Actividades
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	ISO
-2
-d/home/daniel/usb/daniel/Descargas/ISO
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	env
-3
-d/home/daniel/usb/daniel/Descargas/env
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	librepago
-4
-d/home/daniel/usb/daniel/Descargas/librepago
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	librepago
-4
-d/home/daniel/usb/daniel/Descargas/librepago
-	..
-0
-d/home/daniel/usb/daniel/Descargas
-	VPN Clientes Remotos Canzanese.pdf
-5
-d/home/daniel/usb/daniel
-	Descargas
-14
 d/home/daniel/usb
 	daniel
 1
@@ -324,293 +96,239 @@ d/home/daniel/usb
 	..
 0
 d/home/daniel
+	..
+0
+d/home
+	daniel
+2
+d/home/daniel
+	.config
+2
+d/home/daniel/.config
+	polybar
+11
+d/home/daniel/.config/polybar
+	config
+2
+d/home/daniel/.config
+	polybar
+11
+d/home/daniel
+	usb
+14
+d/home/daniel/usb
+	purechess
+7
+d/home/daniel
+	usb
+19
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+19
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+19
+d/home/daniel/usb
+	vim_testing.txt
+9
+d/home/daniel
+	usb
+19
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+19
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+12
+d/home/daniel/usb
+	..
+0
+d/home/daniel
 	usb
 25
+d/home/daniel/usb
+	Inferno
+1
+d/home/daniel/usb/Inferno
+	Inferno 2016 1080p KORSUB HDRip x264 AAC2.0-STUTTERSHIT.ssa
+3
+d/home/daniel/usb
+	Justice_League
+2
+d/home/daniel/usb/Justice_League
+	Justice.League.2017.1080p.BluRay.x264-[YTS.AM].mp4
+6
+d/home/daniel/usb
+	Justice_League
+2
+d/home/daniel
+	usb
+25
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	.local
+6
+d/home/daniel/.local
+	share
+4
+d/home/daniel/.local/share
+	Trash
+1
+d/home/daniel/.local/share/Trash
+	files
+1
+d/home/daniel/.local/share/Trash/files
+	..
+0
+d/home/daniel/.local/share/Trash
+	info
+2
+d/home/daniel/.local/share/Trash/info
+	..
+0
+d/home/daniel/.local/share/Trash
+	info
+2
+d/home/daniel/.local/share
+	ranger
+6
+d/home/daniel/.local/share/ranger
+	..
+0
+d/home/daniel/.local/share
+	vifm
+7
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share/vifm/Trash
+	..
+0
+d/home/daniel/.local/share/vifm
+	Trash
+1
+d/home/daniel/.local/share
+	vifm
+7
+d/home/daniel/.local
+	share
+4
+d/home/daniel
+	.local
+6
+d/home
+	daniel
+2
+d/
+	home
+3
+d/home
+	daniel
+2
+d/home/daniel
+	..
+0
+d/home
+	.vifm-Trash-1000
+1
+d/home/.vifm-Trash-1000
+	..
+0
+d/home
+	daniel
+2
+d/home/daniel
+	usb
+26
+d/home/daniel/usb
+	Fotos Graduación
+2
+d/home/daniel/usb/Fotos Graduación
+	..
+0
+d/home/daniel/usb
+	.Trash-1000
+1
+d/home/daniel/usb/.Trash-1000
+	files
+1
+d/home/daniel/usb/.Trash-1000/files
+	1-DANIEL
+1
+d/home/daniel/usb/.Trash-1000/files/1-DANIEL
+	..
+0
+d/home/daniel/usb/.Trash-1000/files
+	1-DANIEL
+1
+d/home/daniel/usb/.Trash-1000/files/1-DANIEL
+	..
+0
+d/home/daniel/usb/.Trash-1000/files
+	1-DANIEL
+1
+d/home/daniel/usb/.Trash-1000
+	info
+2
+d/home/daniel/usb/.Trash-1000/info
+	1-DANIEL.trashinfo
+1
+d/home/daniel/usb/.Trash-1000
+	info
+2
+d/home/daniel/usb
+	Impuestos
+2
+d/home/daniel
+	usb
+26
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+26
+d/home/daniel/usb
+	seniat.png
+18
+d/home/daniel
+	usb
+26
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+26
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+26
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	..
+0
 d
 
 # Right window history (oldest to newest):
-D/home/daniel/Downloads/Books
-	Maths
-3
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	French_dummies.pdf
-7
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	French_dummies.pdf
-7
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Programming
-4
-D/home/daniel/Downloads/Books/Programming
-	Rust
-2
-D/home/daniel/Downloads/Books
-	Maths
-3
-D/home/daniel/Downloads/Books/Maths
-	algebra_linear_2.pdf
-3
-D/home/daniel/Downloads/Books
-	Maths
-3
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	french_Dummies_Grammar.pdf
-7
-D/home/daniel/Downloads
-	Justice_League
-3
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	french_Dummies_Grammar.pdf
-7
-D/home/daniel/Downloads
-	Justice_League
-3
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	wallpaper_snow_mountain.jpg
-13
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	Inferno
-2
-D/home/daniel/Downloads/Inferno
-	..
-0
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	french_Dummies_Grammar.pdf
-7
-D/home/daniel/Downloads
-	wallpaper_mountain.jpg
-12
-D/home/daniel
-	.config
-2
-D/home/daniel/.config
-	polybar
-12
-D/home/daniel/.config/polybar
-	scripts
-1
-D/home/daniel/.config/polybar/scripts
-	check-all-updates.sh
-1
-D/home/daniel/.config/polybar
-	scripts
-1
-D/home/daniel/.config/polybar/scripts
-	check-all-updates.sh
-1
-D/home/daniel/.config/polybar
-	scripts
-1
-D/home/daniel/.config
-	polybar
-12
-D/home/daniel
-	Downloads
-14
-D/home/daniel/Downloads
-	Peaky Blinders S01 Complete Season 1 720p BRRip DD2.0 x264-PSYPHER
-4
-D/home/daniel/Downloads/Peaky Blinders S01 Complete Season 1 720p BRRip DD2.0 x264-PSYPHER
-	Peaky Blinders S01E01 720p BRRip DD2.0 x264-PSYPHER.mkv
-1
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	french_Dummies_Grammar.pdf
-7
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	speed_reading.pdf
-12
-D/home/daniel/Downloads
-	Duplica tu Velocidad de Lectura [Curso Multimedia]-LV
-2
-D/home/daniel/Downloads/Duplica tu Velocidad de Lectura [Curso Multimedia]-LV
-	Bono TEEA
-1
-D/home/daniel/Downloads/Duplica tu Velocidad de Lectura [Curso Multimedia]-LV/Bono TEEA
-	..
-0
-D/home/daniel/Downloads/Duplica tu Velocidad de Lectura [Curso Multimedia]-LV
-	Bono TEEA
-1
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	speed_reading.pdf
-13
-D/home/daniel/Downloads
-	Hacking
-2
-D/home/daniel/Downloads/Hacking
-	167 - The Basics Of Hacking And Penetration Testing Ethical Hacking And Penetration Testing Made Easy [-PUNISHER-].pdf
-1
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Hacking
-2
-D/home/daniel/Downloads/Books/Hacking
-	Tribe of Hackers Cybersecurity Advice from the Best Hackers in the World ( PDFDrive.com ).pdf
-10
-D/home/daniel/Downloads/Books
-	math_hacking.pdf
-11
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	El monje que vendió su ferrari ( PDFDrive.com ).pdf
-9
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	french_dummies.pdf
-24
-D/home/daniel/Downloads
-	Dante's Inferno
-2
-D/home/daniel/Downloads/Dante's Inferno
-	Dante's.Inferno.An.Animated.Epic.2010.720p.BluRay.x264-[YTS.AM].mp4
-1
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	idea-mapping-access-your-hidden-brain-power.pdf
-25
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	idea-mapping-access-your-hidden-brain-power.pdf
-25
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	idea-mapping-access-your-hidden-brain-power.pdf
-25
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	advanced_learning.pdf
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	atomic_habits.pdf
-2
-D/home/daniel/Downloads/Books
-	Daily Inspiration From The Monk Who Sold His Ferrari.pdf
-7
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Programming
-6
-D/home/daniel/Downloads
-	librepago
-6
-D/home/daniel/Downloads/librepago
-	Actividades
-1
-D/home/daniel/Downloads/librepago/Actividades
-	..
-0
-D/home/daniel/Downloads/librepago
-	env
-2
-D/home/daniel/Downloads
-	librepago
-6
-D/home/daniel/Downloads/librepago
-	Actividades
-1
-D/home/daniel/Downloads/librepago/Actividades
-	..
-0
-D/home/daniel/Downloads/librepago
-	zips
-3
-D/home/daniel/Downloads/librepago/zips
-	Desktop.zip
-1
-D/home/daniel/Downloads/librepago
-	zips
-3
-D/home/daniel/Downloads/librepago/zips
-	htdocs(1).zip
-2
-D/home/daniel/Downloads/librepago
-	zips
-3
-D/home/daniel/Downloads/librepago/zips
-	panel_todoticket.zip
-4
-D/home/daniel/Downloads/librepago
-	env
-2
-D/home/daniel/Downloads
-	librepago
-6
-D/home/daniel/Downloads/librepago
-	Actividades
-1
-D/home/daniel/Downloads/librepago/Actividades
-	..
-0
-D/home/daniel/Downloads/librepago
-	env
-2
-D/home/daniel/Downloads/librepago/env
-	..
-0
 D/home/daniel/Downloads/librepago
 	zips
 3
@@ -627,13 +345,294 @@ D/home/daniel/Downloads/librepago
 	libreadmin
 3
 D/home/daniel/Downloads
-	librepago
+	Books
+1
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads/Books/Learning
+	train_mind_change_brain.pdf
+8
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel
+	Downloads
+14
+D/home/daniel/Downloads
+	Dante's Inferno
+2
+D/home/daniel/Downloads/Dante's Inferno
+	Dante's.Inferno.An.Animated.Epic.2010.720p.BluRay.x264-[YTS.AM].mp4
+1
+D/home/daniel/Downloads
+	Dante's Inferno
+2
+D/home/daniel/Downloads/Dante's Inferno
+	Dante's.Inferno.An.Animated.Epic.2010.720p.BluRay.x264-[YTS.AM].mp4
+2
+D/home/daniel/Downloads
+	Dante's Inferno
+2
+D/home/daniel/Downloads/Dante's Inferno
+	Dante's.Inferno.An.Animated.Epic.2010.720p.BluRay.x264-[YTS.AM].mp4
+3
+D/home/daniel/Downloads
+	windows7
 6
+D/home/daniel/Downloads/windows7
+	W7E2020x64sft.part1.rar
+1
+D/home/daniel/Downloads
+	Peaky Blinders
+4
+D/home/daniel/Downloads/Peaky Blinders
+	Peaky Blinders S01E03 720p BRRip DD2.0 x264-PSYPHER.mkv
+1
+D/home/daniel/Downloads
+	age_of_empire
+5
+D/home/daniel/Downloads/age_of_empire
+	AgfEII-TRR-RLD-PGME.part1.rar
+1
+D/home/daniel/Downloads
+	Peaky Blinders
+4
+D/home/daniel/Downloads/Peaky Blinders
+	Peaky Blinders S01E03 720p BRRip DD2.0 x264-PSYPHER.mkv
+1
+D/home/daniel/Downloads
+	eu4
+6
+D/home/daniel/Downloads/eu4
+	..
+0
+D/home/daniel/Downloads
+	planetbase
+8
+D/home/daniel/Downloads/planetbase
+	Plntbs-134-PGME-ELMG.rar
+1
+D/home/daniel/Downloads
+	Peaky Blinders
+4
+D/home/daniel/Downloads/Peaky Blinders
+	Peaky Blinders S01E04 720p BRRip DD2.0 x264-PSYPHER.mkv
+2
+D/home/daniel/Downloads
+	purechess
+9
+D/home/daniel/Downloads/purechess
+	PGM16VS1136CAG.part1.rar
+1
+D/home/daniel/Downloads
+	Peaky Blinders
+4
+D/home/daniel/Downloads/Peaky Blinders
+	Peaky Blinders S01E04 720p BRRip DD2.0 x264-PSYPHER.mkv
+1
+D/home/daniel/Downloads
+	Peaky Blinders
+2
+D/home/daniel/Downloads/Peaky Blinders
+	Peaky Blinders S01E06 720p BRRip DD2.0 x264-PSYPHER.mkv
+3
+D/home/daniel/Downloads
+	subs
+5
+D/home/daniel/Downloads/subs
+	488809.rar
+3
+D/home/daniel/Downloads
+	subs
+5
+D/home/daniel/Downloads/subs
+	488809.rar
+3
+D/home/daniel/Downloads
+	subs
+5
+D/home/daniel/Downloads/subs
+	..
+0
+D/home/daniel/Downloads
+	subs
+5
+D/home/daniel/Downloads/subs
+	527804.rar
+3
+D/home/daniel/Downloads
+	subs
+5
+D/home/daniel/Downloads/subs
+	527804.rar
+3
+D/home/daniel/Downloads
+	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S02E01.720p.BluRay.x264-GalaxyTV.mkv
+1
+D/home/daniel/Downloads
+	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S02E06.720p.BluRay.x264-GalaxyTV.mkv
+6
+D/home/daniel/Downloads
+	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S02E02.720p.BluRay.x264-GalaxyTV.mkv
+2
+D/home/daniel/Downloads
+	plaza-total.war.rome.ii.empire.divided
+4
+D/home/daniel/Downloads/plaza-total.war.rome.ii.empire.divided
+	..
+0
+D/home/daniel/Downloads
+	Total.War.Rome.II.Empire.Divided-CODEX
+3
+D/home/daniel/Downloads/Total.War.Rome.II.Empire.Divided-CODEX
+	codex-total.war.rome.ii.empire.divided.iso.part
+2
+D/home/daniel/Downloads
+	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S02E04.720p.BluRay.x264-GalaxyTV.mkv
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	stoicism_daily.pdf
+25
+D/home/daniel/Downloads
+	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S02E04.720p.BluRay.x264-GalaxyTV.mkv
+1
+D/home/daniel/Downloads
+	..
+0
+D/home/daniel
+	Downloads
+15
+D/home/daniel/Downloads
+	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S02E06.720p.BluRay.x264-GalaxyTV.mkv
+3
+D/home/daniel/Downloads
+	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S03E02.720p.BluRay.x264-GalaxyTV.mkv
+2
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	..
+0
+D/home/daniel/Downloads
+	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S03E02.720p.BluRay.x264-GalaxyTV.mkv
+2
+D/home/daniel/Downloads
+	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S03E02.720p.BluRay.x264-GalaxyTV.mkv
+2
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads/Books/Learning
+	learn_in_48_hours.pdf
+3
+D/home/daniel/Downloads/Books
+	Gnu_Linux
+1
+D/home/daniel/Downloads/Books/Gnu_Linux
+	Programming
+2
+D/home/daniel/Downloads/Books/Gnu_Linux/Programming
+	..
+0
+D/home/daniel/Downloads/Books/Gnu_Linux
+	Emacs
+1
+D/home/daniel/Downloads/Books/Gnu_Linux/Emacs
+	..
+0
+D/home/daniel/Downloads/Books/Gnu_Linux
+	Emacs
+1
+D/home/daniel/Downloads/Books
+	Hacking
+2
+D/home/daniel/Downloads/Books/Hacking
+	..
+0
+D/home/daniel/Downloads/Books
+	Machine_learning
+4
+D/home/daniel/Downloads/Books/Machine_learning
+	..
+0
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads/Books/Learning
+	speed_reading_strategies.pdf
+6
+D/home/daniel/Downloads/Books
+	The 5 AM Club.pdf
+9
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel
+	Downloads
+15
+D/home/daniel/Downloads
+	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S03E04.720p.BluRay.x264-GalaxyTV.mkv
+4
+D/home/daniel/Downloads
+	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S03E05.720p.BluRay.x264-GalaxyTV.mkv
+5
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Learning
+3
+D/home/daniel/Downloads/Books/Learning
+	train_mind_change_brain.pdf
+7
 D
 
 # Command line history (oldest to newest):
 :mkdir s02
-:mkdir subs
 :mkdir segunda
 :mkdir dark
 :mkdir tercera
@@ -658,14 +657,17 @@ D
 :mkdir Hacking
 :zips
 :mkdir zips
+:mkdir windows7
+:mkdir age_of_empire
+:mkdir eu4
+:mkdir planetbase
+:mkdir purechess
+:mkdir subs
 
 # Search history (oldest to newest):
+/////
 
 # Prompt history (oldest to newest):
-pcheatsheet_calculus_platzi.pdf
-pNeural_networks__deep_earning.pdf
-pneural_networks_deep_learning.pdf
-pneural_networks.pdf
 pemacs_extensions.pdf
 pvim.pdf
 pemacs_mastering.pdf
@@ -701,7 +703,6 @@ pFast
 pJavascript
 psp_101.pdf
 psp_365_2.pdf
-psp_365.pdf
 pGnu_Emacs
 pProgramming
 pMaths
@@ -762,11 +763,15 @@ parte_de_la _guerra.pdf
 pEl monje que vendió su ferrari.pdf
 part_of_war.pdf
 pDaily Inspiration From The Monk Who Sold His Ferrari.pdf
+pPeaky Blinders
+psp_the_new.pdf
+psp_365.pdf
+pThe Grey
+pPeaky.Blinders.S04
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/daniel/Downloads/librepago
 
 # Directory stack (oldest to newest):
 
@@ -843,6 +848,8 @@ t/home/daniel/.local/share/vifm/Trash/000_time.trashinfo
 	/home/daniel/.local/share/Trash/info/time.trashinfo
 t/home/daniel/.local/share/vifm/Trash/000_vu.trashinfo
 	/home/daniel/.local/share/Trash/info/vu.trashinfo
+t/home/.vifm-Trash-1000/000_.config.swp
+	/home/daniel/.config/polybar/.config.swp
 
 # State:
 f

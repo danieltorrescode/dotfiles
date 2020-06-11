@@ -17,3 +17,4 @@ bind -P | less
 man readline
 ip link set enp0s29f7u7 up && dhclient enp0s29f7u7
 sudo mount /dev/sdc1 usb/ -o uid=daniel,gid=daniel,umask=0011
+sudo mount -o gid=daniel,fmask=113,dmask=002 /dev/sdc1 usb/
