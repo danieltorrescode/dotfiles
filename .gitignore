@@ -31,3 +31,6 @@
 !.config/sxhkd/**
 !.config/vifm/
 !.config/vifm/**
+
+.newsboat/*
+!.newsboat/config

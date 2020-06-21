@@ -16,6 +16,7 @@ aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-d
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
 aptitude install -y simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
 aptitude install -y sudo iw wireless-tools wpasupplicant wicd-curses
+aptitude install -y sudo newsboat mutt rtorrent transmission-cli
 # aptitude install -y ufw gufw firejail apparmor lxc
 
 echo "###########################################" 
