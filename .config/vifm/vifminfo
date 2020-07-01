@@ -17,7 +17,7 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -26,150 +26,6 @@ l15,2
 r15,2
 
 # Left window history (oldest to newest):
-d/home/daniel/usb
-	daniel
-1
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	var
-17
-d/home/daniel/usb/var
-	www
-10
-d/home/daniel/usb/var/www
-	html
-1
-d/home/daniel/usb/var/www/html
-	librepago
-3
-d/home/daniel/usb/var/www
-	html
-1
-d/home/daniel/usb/var
-	www
-10
-d/home/daniel/usb
-	var
-17
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	librepago
-7
-d/home/daniel/usb/librepago
-	libreadmin
-3
-d/home/daniel/usb
-	librepago
-7
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	..
-0
-d/home
-	daniel
-2
-d/home/daniel
-	.config
-2
-d/home/daniel/.config
-	polybar
-11
-d/home/daniel/.config/polybar
-	config
-2
-d/home/daniel/.config
-	polybar
-11
-d/home/daniel
-	usb
-14
-d/home/daniel/usb
-	purechess
-7
-d/home/daniel
-	usb
-19
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-19
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-19
-d/home/daniel/usb
-	vim_testing.txt
-9
-d/home/daniel
-	usb
-19
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-19
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-12
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	Inferno
-1
-d/home/daniel/usb/Inferno
-	Inferno 2016 1080p KORSUB HDRip x264 AAC2.0-STUTTERSHIT.ssa
-3
-d/home/daniel/usb
-	Justice_League
-2
-d/home/daniel/usb/Justice_League
-	Justice.League.2017.1080p.BluRay.x264-[YTS.AM].mp4
-6
 d/home/daniel/usb
 	Justice_League
 2
@@ -324,311 +180,455 @@ d/home/daniel/.newsboat
 	config
 2
 d/home/daniel
+	scripts
+26
+d/home/daniel/scripts
+	essentials
+2
+d/home/daniel
+	Projects
+18
+d/home/daniel/Projects
+	dotfiles
+2
+d/home/daniel/Projects/dotfiles
+	.newsboat
+13
+d/home/daniel/Projects/dotfiles/.newsboat
+	urls
+1
+d/home/daniel/Projects/dotfiles
+	.newsboat
+13
+d/home/daniel/Projects
+	dotfiles
+2
+d/home/daniel
 	.newsboat
 8
+d/home/daniel/.newsboat
+	urls
+5
+d/home/daniel
+	.newsboat
+8
+d/home
+	daniel
+2
+d/
+	home
+3
+d/home
+	daniel
+2
+d/home/daniel
+	scripts
+26
+d/home/daniel/scripts
+	essentials
+2
+d/home/daniel
+	scripts
+26
+d/home
+	daniel
+2
+d/home/daniel
+	usb
+28
+d/home/daniel/usb
+	daniel
+1
+d/home/daniel/usb/daniel
+	Descargas
+14
+d/home/daniel/usb/daniel/Descargas
+	..
+0
+d/home/daniel/usb/daniel
+	Descargas
+14
+d/home/daniel/usb
+	daniel
+1
+d/home/daniel
+	usb
+28
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	usb
+28
+d/home/daniel/usb
+	var
+17
+d/home/daniel/usb/var
+	lock
+11
+d/home/daniel/usb/var/lock
+	..
+0
+d/home/daniel/usb/var
+	www
+10
+d/home/daniel/usb/var/www
+	html
+1
+d/home/daniel/usb/var/www/html
+	librepago
+4
+d/home/daniel/usb/var/www/html/librepago
+	funciones base de datos
+7
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos
+	desarrollo
+2
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos/desarrollo
+	para schema public
+2
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos/desarrollo/para schema public
+	views
+1
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos/desarrollo/para schema public/views
+	parish_view.sql
+2
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos/desarrollo/para schema public
+	views
+1
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos/desarrollo
+	para schema public
+2
+d/home/daniel/usb/var/www/html/librepago/funciones base de datos
+	desarrollo
+2
+d/home/daniel/usb/var/www/html/librepago
+	funciones base de datos
+7
+d/home/daniel/usb/var/www/html
+	librepago
+4
+d/home/daniel/usb/var/www
+	html
+1
+d/home/daniel/usb/var
+	www
+10
+d/home/daniel/usb
+	var
+17
+d/home/daniel
+	usb
+28
+d/home/daniel/usb
+	..
+0
+d/home/daniel
+	..
+0
 d
 
 # Right window history (oldest to newest):
-D/home/daniel/Downloads
-	..
-0
-D/home/daniel
-	Downloads
-15
-D/home/daniel/Downloads
-	Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S02.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S02E06.720p.BluRay.x264-GalaxyTV.mkv
-3
-D/home/daniel/Downloads
-	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S03E02.720p.BluRay.x264-GalaxyTV.mkv
-2
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	..
-0
-D/home/daniel/Downloads
-	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S03E02.720p.BluRay.x264-GalaxyTV.mkv
-2
-D/home/daniel/Downloads
-	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S03E02.720p.BluRay.x264-GalaxyTV.mkv
-2
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	learn_in_48_hours.pdf
-3
-D/home/daniel/Downloads/Books
-	Gnu_Linux
-1
-D/home/daniel/Downloads/Books/Gnu_Linux
-	Programming
-2
-D/home/daniel/Downloads/Books/Gnu_Linux/Programming
-	..
-0
-D/home/daniel/Downloads/Books/Gnu_Linux
-	Emacs
-1
-D/home/daniel/Downloads/Books/Gnu_Linux/Emacs
-	..
-0
-D/home/daniel/Downloads/Books/Gnu_Linux
-	Emacs
-1
-D/home/daniel/Downloads/Books
-	Hacking
-2
-D/home/daniel/Downloads/Books/Hacking
-	..
-0
-D/home/daniel/Downloads/Books
-	Machine_learning
-4
-D/home/daniel/Downloads/Books/Machine_learning
-	..
-0
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	speed_reading_strategies.pdf
-6
-D/home/daniel/Downloads/Books
-	The 5 AM Club.pdf
-9
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel
-	Downloads
-15
-D/home/daniel/Downloads
-	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S03E04.720p.BluRay.x264-GalaxyTV.mkv
-4
-D/home/daniel/Downloads
-	Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S03.COMPLETE.720p.BluRay.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S03E05.720p.BluRay.x264-GalaxyTV.mkv
-5
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	train_mind_change_brain.pdf
-7
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	train_mind_change_brain.pdf
-7
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads
-	Peaky.Blinders.S04
-2
-D/home/daniel/Downloads/Peaky.Blinders.S04
-	Peaky.Blinders.S04E02.720p.BluRay.x264-GalaxyTV.mkv
-2
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	train_mind_change_brain.pdf
-7
-D/home/daniel/Downloads/Books
-	Machine_learning
-4
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads
-	The Grey
-3
-D/home/daniel/Downloads/The Grey
-	..
-0
-D/home/daniel/Downloads
-	The Grey
-3
-D/home/daniel/Downloads/The Grey
-	Other
-1
-D/home/daniel/Downloads/The Grey/Other
-	AhaShare.com.txt
-1
-D/home/daniel/Downloads/The Grey
-	The.Grey.2011.1080p.BluRay.x264.x264.YIFY.mp4
-5
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	atomic_habits.pdf
-2
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	advanced_learning.pdf
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	advanced_learning.pdf
-1
-D/home/daniel/Downloads/Books
-	Hacking
-2
-D/home/daniel/Downloads/Books/Hacking
-	Kali Linux ( PDFDrive.com ).pdf
-5
-D/home/daniel/Downloads/Books
-	Gnu_Linux
-1
-D/home/daniel/Downloads/Books/Gnu_Linux
-	Emacs
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	mind_map.pdf
-3
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	advanced_learning.pdf
-1
-D/home/daniel/Downloads/Books
-	Machine_learning
-4
-D/home/daniel/Downloads/Books/Machine_learning
-	..
-0
 D/home/daniel/Downloads/Books
 	Maths
+6
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books
+	Programming
+7
+D/home/daniel/Downloads/Books/Programming
+	Learn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
+9
+D/home/daniel/Downloads/Books
+	Languages
+4
+D/home/daniel/Downloads/Books/Languages
+	..
+0
+D/home/daniel/Downloads/Books
+	Hacking
+3
+D/home/daniel/Downloads/Books/Hacking
+	..
+0
+D/home/daniel/Downloads/Books
+	Languages
+4
+D/home/daniel/Downloads
+	2_Rust
+2
+D/home/daniel/Downloads/2_Rust
+	rust_programming.pdf
+2
+D/home/daniel/Downloads
+	3_WebDev
+3
+D/home/daniel/Downloads/3_WebDev
+	python-language-es.pdf
+3
+D/home/daniel/Downloads
+	2_Rust
+2
+D/home/daniel/Downloads/2_Rust
+	rust_language.pdf
+1
+D/home/daniel/Downloads
+	2_Rust
+2
+D/home/daniel/Downloads/2_Rust
+	rust_programming.pdf
+2
+D/home/daniel/Downloads
+	3_WebDev
+3
+D/home/daniel/Downloads/3_WebDev
+	python-language-es.pdf
+3
+D/home/daniel/Downloads
+	2_Rust
+2
+D/home/daniel/Downloads/2_Rust
+	rust_programming.pdf
+2
+D/home/daniel/Downloads
+	1_read
+1
+D/home/daniel/Downloads/1_read
+	sp_the_new.pdf
+3
+D/home/daniel/Downloads
+	2_Rust
+2
+D/home/daniel/Downloads/2_Rust
+	rust_programming.pdf
+2
+D/home/daniel/Downloads
+	Books
+4
+D/home/daniel/Downloads/Books
+	Languages
+4
+D/home/daniel/Downloads
+	Books
+3
+D/home/daniel/Downloads/Books
+	2_Rust
+1
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	sp_the_new.pdf
+3
+D/home/daniel/Downloads/Books
+	2_Rust
+2
+D/home/daniel/Downloads/Books/2_Rust
+	rust_language.pdf
+1
+D/home/daniel/Downloads/Books
+	2_Rust
+2
+D/home/daniel/Downloads/Books/2_Rust
+	..
+0
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	rust_language.pdf
+3
+D/home/daniel/Downloads/Books
+	2_Rust
+2
+D/home/daniel/Downloads/Books/2_Rust
+	..
+0
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	rust_language.pdf
+3
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
+1
+D/home/daniel/Downloads/Books
+	Blender
+2
+D/home/daniel/Downloads/Books/Blender
+	..
+0
+D/home/daniel/Downloads/Books
+	Gnu_Linux
+3
+D/home/daniel/Downloads/Books/Gnu_Linux
+	Emacs
+1
+D/home/daniel/Downloads/Books
+	Hacking
+4
+D/home/daniel/Downloads/Books/Hacking
+	..
+0
+D/home/daniel/Downloads/Books
+	Languages
 5
+D/home/daniel/Downloads/Books/Languages
+	..
+0
+D/home/daniel/Downloads/Books
+	Machine_learning
+6
+D/home/daniel/Downloads/Books/Machine_learning
+	machine_learning_introduccion.pdf
+3
+D/home/daniel/Downloads/Books
+	Maths
+7
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books
+	Programming
+8
+D/home/daniel/Downloads/Books/Programming
+	Learn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
+9
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
+1
+D/home/daniel/Downloads/Books
+	Maths
+7
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	matematica_avanzada.pdf
+10
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
+1
+D/home/daniel/Downloads/Books
+	Maths
+7
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books
+	Programming
+8
+D/home/daniel/Downloads/Books/Programming
+	Learn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
+9
+D/home/daniel/Downloads/Books
+	Maths
+7
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books
+	speed_reading.pdf
+11
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel
+	Downloads
+17
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	Languages
+5
+D/home/daniel/Downloads/Books/Languages
+	english_vocabulary.pdf
+1
+D/home/daniel/Downloads/Books
+	Hacking
+4
+D/home/daniel/Downloads/Books/Hacking
+	..
+0
+D/home/daniel/Downloads/Books
+	Hacking
+4
+D/home/daniel/Downloads/Books/Hacking
+	hacking_basics.pdf
+1
+D/home/daniel/Downloads/Books
+	Hacking
+4
+D/home/daniel/Downloads
+	Peaky.Blinders.S05.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]
+2
+D/home/daniel/Downloads/Peaky.Blinders.S05.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]
+	Peaky.Blinders.S05E02.720p.AMZN.WEBRip.x264-GalaxyTV.mkv
+2
+D/home/daniel/Downloads
+	Books
+1
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
+1
+D/home/daniel/Downloads/Books
+	Maths
+7
 D/home/daniel/Downloads/Books/Maths
 	..
 0
 D/home/daniel/Downloads/Books
-	Programming
-6
-D/home/daniel/Downloads/Books/Programming
-	..
-0
-D/home/daniel/Downloads/Books
-	Hacking
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	Un_Mundo_Feliz.pdf
 2
-D/home/daniel/Downloads/Books/Hacking
-	167 - The Basics Of Hacking And Penetration Testing Ethical Hacking And Penetration Testing Made Easy [-PUNISHER-].pdf
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
 1
 D/home/daniel/Downloads/Books
-	Gnu_Linux
+	1_read
 1
-D/home/daniel/Downloads/Books/Gnu_Linux
-	Emacs
-1
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	..
-0
-D/home/daniel/Downloads/Books
-	Learning
-3
-D/home/daniel/Downloads/Books/Learning
-	..
-0
-D/home/daniel/Downloads/Books
-	libros_es
-6
-D/home/daniel/Downloads/Books/libros_es
-	..
-0
-D/home/daniel/Downloads/Books
-	libros_es
-6
-D/home/daniel/Downloads/Books/libros_es
-	python-language-es.pdf
-19
-D/home/daniel/Downloads/Books
-	speed_reading_2.pdf
-19
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel
-	Downloads
-15
-D/home/daniel/Downloads
-	blender-2.83.0-linux64
-4
-D/home/daniel/Downloads/blender-2.83.0-linux64
-	..
-0
-D/home/daniel/Downloads
-	blender-2.83.0-linux64
-4
-D/home/daniel/Downloads/blender-2.83.0-linux64
-	blender
-3
-D/home/daniel/Downloads
-	blender
-4
-D/home/daniel/Downloads/blender
-	..
-0
 D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	speed_reading_2.pdf
-25
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
+1
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	The 5 AM Club.pdf
+1
 D
 
 # Command line history (oldest to newest):
@@ -663,45 +663,15 @@ D
 :mkdir planetbase
 :mkdir purechess
 :mkdir subs
+:mkdir z-readed
+:mkdir Language
+:mkdir Blender
+:mkdir 2_read
 
 # Search history (oldest to newest):
 /////
 
 # Prompt history (oldest to newest):
-pemacs_extensions.pdf
-pvim.pdf
-pemacs_mastering.pdf
-plisp_common.pdf
-pLearning GNU Emacs.pdf
-pemacs_learning.pdf
-plisp_advanced.pdf
-plisp_ia.pdf
-pCold_Mountain.jpg
-pwallpaper_mountain.jpg
-pwallpaper_snow_mountain.jpg
-pwallpaper_earth.jpg
-pvim_text.txt
-pvim_testing.txt
-pJustice_League
-pInferno
-pelisp_intr.pdf
-pKS_365.pdf
-pSP_101.pdf
-pSP_365.pdf
-pSP_365_2.pdf
-pCalculus
-pgnu_c_programming.pdf
-pHTML5 and CSS3 Design Patterns.pdf
-pDesign Patterns.pdf
-pRegExp_Reference.pdf
-pStatistics
-pOReilly_Programming_Embedded_Systems_Second.pdf
-pProgramming_Embedded_Systems.pdf
-pThe Rust Programming Language.pdf
-pFractured
-pFast
-pJavascript
-psp_101.pdf
 psp_365_2.pdf
 pGnu_Emacs
 pProgramming
@@ -770,6 +740,38 @@ pspeed_reading.pdf
 pmind_map.pdf
 pEl monje que vendió su ferrari.pdf
 pblender
+p1_readed
+pLanguages
+pblender_compositing.pdf
+pblender_cycles.pdf
+pblender_dummies.pdf
+pblender_modeling.pdf
+pblender_basics_3d.pdf
+pThe POWER of Your Subconscious Mind.pdf
+pSubconscious Mind Power How to Use the Hidden Power.pdf
+p1_read
+pchess.pdf
+pbash_guide.pdf
+pshell_guide.pdf
+phacking_dummies.pdf
+phacking_basics.pdf
+phacking_dummies_wireless.pdf
+pnetworking_dummies.pdf
+pnetworking_dummies_hacking.pdf
+pkali_linux.pdf
+pvue_js.pdf
+pFull-stack web development with Vue.js and Node build scalable and powerful web apps with modern web stack, MongoDB, Vue, Node.js, and Express ( PDFDrive.com ).pdf
+pfull_stack.pdf
+pWebDev
+ppdf
+prust_webassembly.pdf
+p3_WebDev
+pFunctional Programming for Dummies.pdf
+pData Structures and Algorithms in Python.pdf
+pData Structure and Algorithmic Thinking with Python Data Structure and Algorithmic Puzzles.pdf
+pSoftware Architecture for Developers.pdf
+pRust
+p2_Rust
 
 # Local filter history (oldest to newest):
 

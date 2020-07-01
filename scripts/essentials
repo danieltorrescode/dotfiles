@@ -43,7 +43,7 @@ echo "###########################################"
 folder="/home/daniel"
 WM="bspwm"
 
-su daniel -c "git clone https://gitlab.com/danieltorresgitlab/st.git $folder/st"
+su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
 rm $folder/st/config.h
 make -C $folder/st/
 make -C $folder/st/ clean install
@@ -57,18 +57,13 @@ make -C $folder/st/ clean install
 
 case $WM in
     "dwm")
-        su daniel -c "git clone https://gitlab.com/danieltorresgitlab/dwm.git $folder/dwm"
+        su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
         rm $folder/$package/config.h
         make -C $folder/$package/
         make -C $folder/$package/ clean install
         ;;
     "bspwm")
-        su daniel -c "git clone https://github.com/baskerville/bspwm $folder/bspwm"
-        make -C $folder/bspwm/
-
-        su daniel -c "git clone https://github.com/baskerville/sxhkd $folder/sxhkd"
-        make -C $folder/sxhkd/
-
+        aptitude install -y bspwm sxhkd
         su daniel -c "git clone https://github.com/polybar/polybar $folder/polybar"
 
         aptitude install -y cmake cmake-data pkg-config 
