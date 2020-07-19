@@ -26,72 +26,6 @@ l15,2
 r15,2
 
 # Left window history (oldest to newest):
-d/home/daniel/usb
-	Justice_League
-2
-d/home/daniel
-	usb
-25
-d/home/daniel/usb
-	..
-0
-d/home/daniel
-	.local
-6
-d/home/daniel/.local
-	share
-4
-d/home/daniel/.local/share
-	Trash
-1
-d/home/daniel/.local/share/Trash
-	files
-1
-d/home/daniel/.local/share/Trash/files
-	..
-0
-d/home/daniel/.local/share/Trash
-	info
-2
-d/home/daniel/.local/share/Trash/info
-	..
-0
-d/home/daniel/.local/share/Trash
-	info
-2
-d/home/daniel/.local/share
-	ranger
-6
-d/home/daniel/.local/share/ranger
-	..
-0
-d/home/daniel/.local/share
-	vifm
-7
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share/vifm/Trash
-	..
-0
-d/home/daniel/.local/share/vifm
-	Trash
-1
-d/home/daniel/.local/share
-	vifm
-7
-d/home/daniel/.local
-	share
-4
-d/home/daniel
-	.local
-6
-d/home
-	daniel
-2
-d/
-	home
-3
 d/home
 	daniel
 2
@@ -324,230 +258,143 @@ d/home/daniel/usb
 	..
 0
 d/home/daniel
+	Projects
+18
+d/home/daniel/Projects
+	python
+9
+d/home/daniel/Projects/python
+	daniel
+1
+d/home/daniel/Projects/python/daniel
+	django_rest
+3
+d/home/daniel/Projects/python/daniel/django_rest
+	public
+4
+d/home/daniel/Projects/python/daniel/django_rest/public
+	vue
+1
+d/home/daniel/Projects/python/daniel/django_rest/public/vue
+	src
+2
+d/home/daniel/Projects/python/daniel/django_rest/public/vue/src
+	assets
+1
+d/home/daniel/Projects/python/daniel/django_rest/public/vue
+	src
+2
+d/home/daniel/Projects/python/daniel/django_rest/public
+	vue
+1
+d/home/daniel/Projects/python/daniel/django_rest
+	public
+4
+d/home/daniel/Projects/python/daniel
+	django_rest
+3
+d/home/daniel/Projects/python
+	daniel
+1
+d/home/daniel/Projects
+	node
+5
+d/home/daniel/Projects/node
+	node
+1
+d/home/daniel/Projects/node/node
+	vue
+3
+d/home/daniel/Projects/node/node/vue
+	src
+3
+d/home/daniel/Projects/node/node/vue/src
+	App.vue
+7
+d/home/daniel/Projects/node/node/vue
+	src
+4
+d/home/daniel/Projects/node/node
+	vue
+3
+d/home/daniel/Projects/node
+	node
+1
+d/home/daniel/Projects
+	node
+5
+d/home/daniel
 	..
 0
 d
 
 # Right window history (oldest to newest):
-D/home/daniel/Downloads/Books
-	Maths
-6
-D/home/daniel/Downloads/Books/Maths
-	libros_es
-1
-D/home/daniel/Downloads/Books
-	Programming
-7
-D/home/daniel/Downloads/Books/Programming
-	Learn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
-9
-D/home/daniel/Downloads/Books
-	Languages
-4
 D/home/daniel/Downloads/Books/Languages
 	..
 0
 D/home/daniel/Downloads/Books
 	Hacking
-3
+6
 D/home/daniel/Downloads/Books/Hacking
-	..
-0
+	hacking_basics.pdf
+1
+D/home/daniel/Downloads/Books
+	Maths
+9
+D/home/daniel/Downloads/Books/Maths
+	calculo_vectorial.pdf
+7
 D/home/daniel/Downloads/Books
 	Languages
-4
-D/home/daniel/Downloads
-	2_Rust
-2
-D/home/daniel/Downloads/2_Rust
-	rust_programming.pdf
-2
-D/home/daniel/Downloads
-	3_WebDev
-3
-D/home/daniel/Downloads/3_WebDev
-	python-language-es.pdf
-3
-D/home/daniel/Downloads
-	2_Rust
-2
-D/home/daniel/Downloads/2_Rust
-	rust_language.pdf
-1
-D/home/daniel/Downloads
-	2_Rust
-2
-D/home/daniel/Downloads/2_Rust
-	rust_programming.pdf
-2
-D/home/daniel/Downloads
-	3_WebDev
-3
-D/home/daniel/Downloads/3_WebDev
-	python-language-es.pdf
-3
-D/home/daniel/Downloads
-	2_Rust
-2
-D/home/daniel/Downloads/2_Rust
-	rust_programming.pdf
-2
-D/home/daniel/Downloads
-	1_read
-1
-D/home/daniel/Downloads/1_read
-	sp_the_new.pdf
-3
-D/home/daniel/Downloads
-	2_Rust
-2
-D/home/daniel/Downloads/2_Rust
-	rust_programming.pdf
-2
-D/home/daniel/Downloads
-	Books
-4
+7
+D/home/daniel/Downloads/Books/Languages
+	french_dummies.pdf
+5
 D/home/daniel/Downloads/Books
-	Languages
-4
-D/home/daniel/Downloads
-	Books
-3
+	Gnu_Linux
+5
+D/home/daniel/Downloads/Books/Gnu_Linux
+	sed_and_awk.pdf
+5
 D/home/daniel/Downloads/Books
-	2_Rust
-1
-D/home/daniel/Downloads
-	Books
-1
-D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	sp_the_new.pdf
-3
-D/home/daniel/Downloads/Books
-	2_Rust
-2
-D/home/daniel/Downloads/Books/2_Rust
-	rust_language.pdf
-1
-D/home/daniel/Downloads/Books
-	2_Rust
-2
-D/home/daniel/Downloads/Books/2_Rust
+	Gnu_Linux
+5
+D/home/daniel/Downloads/Books/Gnu_Linux
 	..
 0
 D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	rust_language.pdf
-3
-D/home/daniel/Downloads/Books
-	2_Rust
+	Emacs
+4
+D/home/daniel/Downloads/Books/Emacs
+	elisp_intr.pdf
 2
-D/home/daniel/Downloads/Books/2_Rust
-	..
-0
-D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	rust_language.pdf
-3
-D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
-1
 D/home/daniel/Downloads/Books
 	Blender
 2
 D/home/daniel/Downloads/Books/Blender
-	..
-0
+	blender_compositing.pdf
+1
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads/Books/1_read
+	rust_language.pdf
+2
 D/home/daniel/Downloads/Books
 	Gnu_Linux
-3
-D/home/daniel/Downloads/Books/Gnu_Linux
-	Emacs
-1
-D/home/daniel/Downloads/Books
-	Hacking
-4
-D/home/daniel/Downloads/Books/Hacking
-	..
-0
-D/home/daniel/Downloads/Books
-	Languages
 5
-D/home/daniel/Downloads/Books/Languages
-	..
-0
+D/home/daniel/Downloads/Books/Gnu_Linux
+	vim_learning.pdf
+8
 D/home/daniel/Downloads/Books
-	Machine_learning
+	Emacs
+4
+D/home/daniel/Downloads/Books/Emacs
+	emacs_learning.pdf
 6
-D/home/daniel/Downloads/Books/Machine_learning
-	machine_learning_introduccion.pdf
-3
 D/home/daniel/Downloads/Books
-	Maths
-7
-D/home/daniel/Downloads/Books/Maths
-	libros_es
-1
-D/home/daniel/Downloads/Books
-	Programming
-8
-D/home/daniel/Downloads/Books/Programming
-	Learn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
-9
-D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
-1
-D/home/daniel/Downloads/Books
-	Maths
-7
-D/home/daniel/Downloads/Books/Maths
-	libros_es
-1
-D/home/daniel/Downloads/Books/Maths/libros_es
-	matematica_avanzada.pdf
-10
-D/home/daniel/Downloads/Books/Maths
-	libros_es
-1
-D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
-1
-D/home/daniel/Downloads/Books
-	Maths
-7
-D/home/daniel/Downloads/Books/Maths
-	libros_es
-1
-D/home/daniel/Downloads/Books
-	Programming
-8
-D/home/daniel/Downloads/Books/Programming
-	Learn to Program with C Learn to Program using the Popular C Programming Language ( PDFDrive.com ).pdf
-9
-D/home/daniel/Downloads/Books
-	Maths
-7
-D/home/daniel/Downloads/Books/Maths
-	libros_es
-1
-D/home/daniel/Downloads/Books
-	speed_reading.pdf
-11
+	Emacs
+4
 D/home/daniel/Downloads
 	Books
 1
@@ -558,77 +405,230 @@ D/home/daniel/Downloads
 	Books
 1
 D/home/daniel/Downloads/Books
-	Languages
-5
-D/home/daniel/Downloads/Books/Languages
-	english_vocabulary.pdf
+	Emacs
+4
+D/home/daniel/Downloads
+	Blender
+1
+D/home/daniel/Downloads/Blender
+	blender_robot_1.jpg
+2
+D/home/daniel/Downloads
+	Books
+2
+D/home/daniel/Downloads/Books
+	Blender
+2
+D/home/daniel/Downloads/Books/Blender
+	blender_compositing.pdf
 1
 D/home/daniel/Downloads/Books
-	Hacking
-4
-D/home/daniel/Downloads/Books/Hacking
+	DevOps
+3
+D/home/daniel/Downloads/Books/DevOps
+	devops.pdf
+1
+D/home/daniel/Downloads/Books
+	Maths
+9
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	algebra_es.pdf
+1
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	algebra_es.pdf
+1
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books
+	Blender
+2
+D/home/daniel/Downloads/Books/Blender
+	blender_cycles.pdf
+2
+D/home/daniel/Downloads/Books
+	Maths
+9
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	algebra_es.pdf
+1
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	calculo_diferencial_integral.pdf
+3
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	calculo_diferencial_integral.pdf
+3
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	..
+0
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	..
+0
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	..
+0
+D/home/daniel/Downloads/Books/Maths
+	libros_es
+1
+D/home/daniel/Downloads/Books/Maths/libros_es
+	..
+0
+D/home/daniel/Downloads/Books/Maths
+	matematica_fundamentos_ingenieria.pdf
+13
+D/home/daniel/Downloads/Books
+	Machine_learning
+8
+D/home/daniel/Downloads/Books/Machine_learning
 	..
 0
 D/home/daniel/Downloads/Books
 	Hacking
-4
+6
 D/home/daniel/Downloads/Books/Hacking
 	hacking_basics.pdf
 1
 D/home/daniel/Downloads/Books
-	Hacking
-4
-D/home/daniel/Downloads
-	Peaky.Blinders.S05.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]
-2
-D/home/daniel/Downloads/Peaky.Blinders.S05.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]
-	Peaky.Blinders.S05E02.720p.AMZN.WEBRip.x264-GalaxyTV.mkv
-2
-D/home/daniel/Downloads
-	Books
+	DevOps
+3
+D/home/daniel/Downloads/Books/DevOps
+	devops.pdf
 1
 D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
-1
+	DevOps
+3
+D/home/daniel/Downloads
+	Books
+2
 D/home/daniel/Downloads/Books
 	Maths
-7
+9
 D/home/daniel/Downloads/Books/Maths
-	..
-0
+	algebra.pdf
+1
+D/home/daniel/Downloads/Books
+	Emacs
+4
+D/home/daniel/Downloads/Books/Emacs
+	emacs_learning.pdf
+6
+D/home/daniel/Downloads/Books
+	Emacs
+4
+D/home/daniel/Downloads/Books/Emacs
+	emacs_learning.pdf
+6
+D/home/daniel/Downloads/Books
+	Emacs
+4
+D/home/daniel/Downloads
+	CheatSheets
+3
+D/home/daniel/Downloads/CheatSheets
+	emacs.png
+1
+D/home/daniel/Downloads
+	CheatSheets
+3
+D/home/daniel/Downloads/CheatSheets
+	emacs2.png
+2
+D/home/daniel/Downloads
+	Blender
+1
+D/home/daniel/Downloads/Blender
+	blender_robot_1.jpg
+3
+D/home/daniel/Downloads
+	Books
+2
+D/home/daniel/Downloads/Books
+	Emacs
+4
+D/home/daniel/Downloads/Books/Emacs
+	emacs_learning.pdf
+5
 D/home/daniel/Downloads/Books
 	1_read
 1
 D/home/daniel/Downloads/Books/1_read
-	Un_Mundo_Feliz.pdf
+	rust_language.pdf
 2
 D/home/daniel/Downloads/Books
 	1_read
 1
 D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
+	rust_language.pdf
+2
+D/home/daniel/Downloads/Books
+	1_read
+1
+D/home/daniel/Downloads
+	Books
+2
+D/home/daniel/Downloads/Books
+	Programming
+10
+D/home/daniel/Downloads/Books/Programming
+	RegExp_Reference.pdf
+12
+D/home/daniel/Downloads/Books
+	Programming
+10
+D/home/daniel/Downloads/Books/Programming
+	Data Structure and Algorithmic Thinking with Python Data Structure and Algorithmic Puzzles.pdf
+1
+D/home/daniel/Downloads/Books
+	Gnu_Linux
+5
+D/home/daniel/Downloads/Books/Gnu_Linux
+	c_gnu_programming.pdf
 1
 D/home/daniel/Downloads/Books
 	1_read
 1
 D/home/daniel/Downloads
 	Books
-1
+2
+D/home/daniel
+	Downloads
+17
+D/home/daniel/Downloads
+	Books
+2
 D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
-1
+	Emacs
+4
+D/home/daniel/Downloads/Books/Emacs
+	emacs_learning.pdf
+5
 D/home/daniel/Downloads/Books
-	1_read
-1
-D/home/daniel/Downloads/Books/1_read
-	The 5 AM Club.pdf
-1
+	Blender
+2
 D
 
 # Command line history (oldest to newest):
@@ -667,20 +667,12 @@ D
 :mkdir Language
 :mkdir Blender
 :mkdir 2_read
+:mkdir DevOps
 
 # Search history (oldest to newest):
 /////
 
 # Prompt history (oldest to newest):
-psp_365_2.pdf
-pGnu_Emacs
-pProgramming
-pMaths
-pGnu_Linux
-pSpeed_Reading.pdf
-prust_programming.pdf
-prust_language.pdf
-pParadigms of artificial intelligence programming case studies in Common Lisp.pdf
 plinux_commands.pdf
 pshell_scripting.pdf
 pC Programming The Ultimate Way to Learn The Funda.pdf
@@ -772,6 +764,15 @@ pData Structure and Algorithmic Thinking with Python Data Structure and Algorith
 pSoftware Architecture for Developers.pdf
 pRust
 p2_Rust
+pvim_learning.pdf
+pvim_practical.pdf
+psystem_administration_handbo.pdf
+plinux_system_administration.pdf
+pdevops.pdf
+pdocker.pdf
+palgebra_dummies.pdf
+palgebra_es.pdf
+pemacs_sheetcheat.pdf
 
 # Local filter history (oldest to newest):
 

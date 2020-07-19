@@ -12,32 +12,20 @@ set background=dark
 set t_Co=256
 set hlsearch
 
-let python_highlight_all=1
-syntax on
-" syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {'mode':'passive'}
-
 " re-mapped keys
 nmap <C-n> :Explore<CR>
 nmap <C-x> :sp<CR>
 nmap <C-l> :vsp<CR>
 nmap <C-k> :tabnew<CR>
 
+nnoremap <silent> [b :bprevious<CR> 
+nnoremap <silent> ]b :bnext<CR> 
+
 nnoremap <Up> :resize +2<CR> 
 nnoremap <Down> :resize -2<CR>
 nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
-"SyntasticReset
-"SyntasticCheck
 "set list
 "set list!
 "noh
@@ -68,14 +56,11 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'posva/vim-vue'
 Plugin 'digitaltoad/vim-pug'
 
-" python
-Plugin 'davidhalter/jedi-vim'
-Plugin 'nvie/vim-flake8'
-
 " snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " NerdTree
 Plugin 'preservim/nerdtree'
@@ -83,9 +68,37 @@ Plugin 'preservim/nerdtree'
 " vim-devicons
 Plugin 'ryanoasis/vim-devicons'
 
+" status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+
+"#################################################################
+"#################################################################
+
+let python_highlight_all=1
+syntax on
+" syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {'mode':'passive'}
+
+"SyntasticReset
+"SyntasticCheck
+
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+let g:airline_theme='behelit'
+let g:airline#extensions#tabline#enabled = 1
+

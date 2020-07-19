@@ -6,7 +6,7 @@ apt-get update
 apt-get install -y aptitude
 aptitude install -y build-essential screen curl htop wget xorg 
 aptitude install -y xdo xtitle clang git cmake
-aptitude install -y vim vim-syntastic vim-snippets vim-youcompleteme
+aptitude install -y vim vim-youcompleteme
 aptitude install -y emacs emacs-goodies-el
 aptitude install -y compton feh arandr playerctl pavucontrol
 aptitude install -y suckless-tools dmenu surf tabbed
@@ -41,7 +41,7 @@ echo "cloning and building packages"
 echo "###########################################" 
 
 folder="/home/daniel"
-WM="bspwm"
+WM="dwm"
 
 su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
 rm $folder/st/config.h
