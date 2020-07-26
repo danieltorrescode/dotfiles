@@ -482,6 +482,7 @@ colorscheme Custom
 set sort=+type
 set dotfiles
 set relativenumber
+set number
 set timefmt="%d-%m-%Y %I:%M"
 set statusline="%1* %A %2* %u:%g %1* %s %2* %d %= %a free"
 " ------------------------------------------------------------------------------
