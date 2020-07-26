@@ -58,9 +58,9 @@ make -C $folder/st/ clean install
 case $WM in
     "dwm")
         su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
-        rm $folder/$package/config.h
-        make -C $folder/$package/
-        make -C $folder/$package/ clean install
+        rm $folder/dwm/config.h
+        make -C $folder/dwm/
+        make -C $folder/dwm/ clean install
         ;;
     "bspwm")
         aptitude install -y bspwm sxhkd
