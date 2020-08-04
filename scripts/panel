@@ -1,0 +1,103 @@
+#! /bin/bash
+
+# modules
+warn(){
+    (($(echo "$1 > $2" |bc -l) )) && echo "%{F#dc0000}$1%{F-}" \
+					  || echo "$1"
+}
+
+label(){
+    echo "%{F#9a9aaa}$1%{F-}"
+}
+
+memused() {
+    read t f <<< `grep -E 'Mem(Total|Available)' /proc/meminfo |awk -v ORS=' ' '{print $2}'`
+    mem=`bc <<<"scale=2; 100 - ($f * 100/ $t) "`  #| cut -d. -f1
+    printf "MEM%s%%\n" "$(warn ${mem} 90)"
+}
+
+clock() {
+    time1="$(date +"%a %d %b %Y, %I:%M:%S")"
+    printf "CLK%s\n" "$time1"
+}
+
+load(){
+    load1=$(cat /proc/loadavg |awk '{print $1 " " $2  " " $3}')
+    printf "%s%s\n" "LOD" "${load1}"
+}
+
+web(){
+    ping -c 1 8.8.8.8 2>&1 >/dev/null && printf "%s%s\n" "WEB" "%{F#00dc00}eth0%{F-}" \
+	    || printf "%s%s\n" "WEB" "%{F#dc0000}eth0%{F-}"
+}
+
+up-time(){
+    upsec="$( cat /proc/uptime |awk '{print $1}' |cut -d'.' -f1)"
+    d=$((${upsec}/(60*60*24)))
+    h=$(((${upsec}%(60*60*24))/(60*60)))
+    m=$(((${upsec}%(60*60))/60))
+    printf "%s%02dd:%02dh:%02dm\n" "UPT" $d $h $m
+}
+
+cpu(){
+    A=($(sed -n '1p' /proc/stat))
+    # user         + nice     + system   + idle
+    B=$((${A[1]} + ${A[2]} + ${A[3]} + ${A[4]}))
+    sleep .2
+    C=($(sed -n '1p' /proc/stat))
+    # user         + nice     + system   + idle
+    D=$((${C[1]} + ${C[2]} + ${C[3]} + ${C[4]}))
+    # cpu usage
+    E=$(((100 * (B - D - ${A[4]} + ${C[4]})) / (B - D)))
+    printf "CPU%s%%\n" "$(warn $(printf '%02d' $E) 90 )"
+}
+
+# labels
+up_label="$(label "up:")"
+mem_label="$(label "mem:")"
+cpu_label="$(label "cpu:")"
+load_label="$(label "load:")"
+#music_label="$(label "   playing:")"
+
+# make the fifo
+fifo="/tmp/panel-fifo"
+[ -e $fifo ]  && rm $fifo  #zap pre-existing fifo
+mkfifo $fifo
+
+# pipe the data
+while :; do web; sleep 1s; done > $fifo &
+while :; do memused; sleep 0.5s; done > $fifo &
+while :; do clock; sleep 0.5s; done > $fifo &
+while :; do load; sleep 1s; done > $fifo &
+while :; do up-time; sleep 30s; done > $fifo &
+# conky > $fifo &
+
+# suck it back out
+while read -r line; do
+    case $line in
+	WIN*) groups="${line:3}" ;;
+	WEB*) web="${line:3}" ;;
+	NET*) net="${line:3}" ;;
+	MEM*) memused="${line:3}" ;;
+	CLK*) clock="${line:3}" ;;
+	LOD*) load="${line:3}" ;;
+	UPT*) uptime="${line:3}" ;;
+	CPU*) cpu="${line:3}" ;;
+	MUS*) music="${line:3}";;
+    esac
+    buf="%{l}"
+    buf="${buf}${groups}"
+    buf="${buf}     ${music}"
+    buf="${buf}%{r}${web}: ${net} "
+    buf="${buf}${up_label} ${uptime} "
+    buf="${buf}${mem_label} ${memused} "
+    buf="${buf}${cpu_label}${cpu} "
+    buf="${buf}[ ${load_label} ${load} ] "
+    buf="${buf} ${clock}"
+    printf "%s\n" "${buf}"
+done < $fifo
+
+
+    
+
+

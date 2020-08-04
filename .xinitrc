@@ -11,13 +11,22 @@
 xrdb -remove *
 xrdb ~/.Xresources
 
-WM="dwm"
+WM="emacs"
 
 case $WM in
     "bspwm")
         echo $WM
         ;;
     "emacs")
+        # setting wallpaper
+        feh --bg-scale ~/.config/wallpaper.png &
+
+        # starting compton
+        compton --config ~/.config/compton/compton.conf &
+
+        xsetroot -cursor_name left_ptr
+
+        panel |lemonbar  -B '#2f2f2f' -F '#dcdccc' &
         exec emacs
         ;;
     "dwm")

@@ -7,10 +7,10 @@ apt-get install -y aptitude
 aptitude install -y build-essential screen curl htop wget xorg 
 aptitude install -y xdo xtitle clang git cmake
 aptitude install -y vim vim-youcompleteme
-aptitude install -y emacs emacs-goodies-el
+aptitude install -y emacs emacs-goodies-el lemonbar
 aptitude install -y compton feh arandr playerctl pavucontrol
 aptitude install -y suckless-tools dmenu surf tabbed
-aptitude install -y zathura mpv imagemagick
+aptitude install -y zathura mpv imagemagick flameshot
 aptitude install -y python-pip python3-pip virtualenv
 aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
