@@ -11,7 +11,7 @@
 xrdb -remove *
 xrdb ~/.Xresources
 
-WM="emacs"
+WM="dwm"
 
 case $WM in
     "bspwm")

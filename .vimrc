@@ -3,7 +3,7 @@ set nu
 set relativenumber
 set ruler
 set textwidth=79
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set foldmethod=manual
 set splitbelow
@@ -53,8 +53,16 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'posva/vim-vue'
 Plugin 'digitaltoad/vim-pug'
+
+" react
+Plugin 'yuezk/vim-js'
+Plugin 'maxmellon/vim-jsx-pretty'
+
+" linter and prettier
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -93,8 +101,24 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {'mode':'passive'}
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
 "SyntasticReset
 "SyntasticCheck
+
+let g:gitgutter_sign_added = '✚'
+let g:gitgutter_sign_modified = '✹'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '-'
+let g:gitgutter_sign_modified_removed = '-'
 
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
