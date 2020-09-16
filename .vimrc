@@ -63,6 +63,7 @@ Plugin 'maxmellon/vim-jsx-pretty'
 
 " linter and prettier
 Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plugin 'dense-analysis/ale'
 
 " snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -100,19 +101,29 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {'mode':'passive'}
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 "SyntasticReset
 "SyntasticCheck
+
+" ALE
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+nmap <silent> [c <Plug>(ale_previous_wrap)
+nmap <silent> ]c <Plug>(ale_next_wrap)
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+let g:ale_linters = {'vue': ['eslint', 'vls']}
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+" Fix files automatically on save
+let g:ale_fix_on_save = 1
 
 let g:gitgutter_sign_added = '✚'
 let g:gitgutter_sign_modified = '✹'
