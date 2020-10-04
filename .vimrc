@@ -3,7 +3,7 @@ set nu
 set relativenumber
 set ruler
 set textwidth=79
-set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set foldmethod=manual
 set splitbelow
@@ -18,10 +18,10 @@ nmap <C-x> :sp<CR>
 nmap <C-l> :vsp<CR>
 nmap <C-k> :tabnew<CR>
 
-nnoremap <silent> [b :bprevious<CR> 
-nnoremap <silent> ]b :bnext<CR> 
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
 
-nnoremap <Up> :resize +2<CR> 
+nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
 nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
@@ -114,12 +114,20 @@ highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \}
-let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
-let g:ale_linters = {'vue': ['eslint', 'vls']}
+let g:ale_linter_aliases = {
+\  'vue': ['vue', 'javascript'],
+\  'jsx': ['css', 'javascript']
+\}
+let g:ale_linters = {
+\  'vue': ['eslint', 'vls'],
+\  'jsx': ['stylelint', 'eslint']
+\}
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
 " Fix files automatically on save
@@ -136,4 +144,3 @@ let NERDTreeShowHidden=1
 
 let g:airline_theme='behelit'
 let g:airline#extensions#tabline#enabled = 1
-
