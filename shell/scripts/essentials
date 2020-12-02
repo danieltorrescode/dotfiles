@@ -4,7 +4,7 @@ echo "updating repositories and installing essentials"
 echo "###########################################" 
 apt-get update
 apt-get install -y aptitude
-aptitude install -y build-essential screen curl htop wget xorg 
+aptitude install -y build-essential screen curl htop wget xorg stow
 aptitude install -y xdo xtitle clang git cmake
 aptitude install -y vim vim-youcompleteme
 aptitude install -y emacs emacs-goodies-el lemonbar
@@ -16,7 +16,7 @@ aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-d
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
 aptitude install -y simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
 aptitude install -y sudo iw wireless-tools wpasupplicant wicd-curses
-aptitude install -y sudo newsboat mutt rtorrent transmission-cli
+# aptitude install -y sudo mutt rtorrent transmission-cli
 # aptitude install -y ufw gufw firejail apparmor lxc
 
 echo "###########################################" 
