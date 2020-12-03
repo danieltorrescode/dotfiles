@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "###########################################" 
-echo "updating repositories and installing essentials" 
-echo "###########################################" 
+echo "###########################################"
+echo "updating repositories and installing essentials"
+echo "###########################################"
 apt-get update
 apt-get install -y aptitude
 aptitude install -y build-essential screen curl htop wget xorg stow
@@ -16,19 +16,20 @@ aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-d
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
 aptitude install -y simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
 aptitude install -y sudo iw wireless-tools wpasupplicant wicd-curses
+aptitude install -y sudo udisks2
 # aptitude install -y sudo mutt rtorrent transmission-cli
 # aptitude install -y ufw gufw firejail apparmor lxc
 
-echo "###########################################" 
-echo "installing containers and virtual machine tools" 
-echo "###########################################" 
+echo "###########################################"
+echo "installing containers and virtual machine tools"
+echo "###########################################"
 
-aptitude install -y docker.io docker-compose  
+aptitude install -y docker.io docker-compose
 # aptitude install -y qemu qemu-kvm
 
-echo "###########################################" 
-echo "creating virtualenv for python" 
-echo "###########################################" 
+echo "###########################################"
+echo "creating virtualenv for python"
+echo "###########################################"
 
 virtualenv -p python3 ~/.venv/python
 pip install --upgrade pip
@@ -36,9 +37,9 @@ virtualenv -p python3 ~/.venv/youtube-dl
 pip install --upgrade pip
 pip install youtube-dl
 
-echo "###########################################" 
-echo "cloning and building packages" 
-echo "###########################################" 
+echo "###########################################"
+echo "cloning and building packages"
+echo "###########################################"
 
 folder="/home/daniel"
 WM="dwm"
@@ -50,7 +51,7 @@ make -C $folder/st/ clean install
 
 # to add color to st use http://terminal.sexy/
 # generate palette with pywall or colorz
-# and edit st/config.def.h and rebuild 
+# and edit st/config.def.h and rebuild
 # patching ex:
 # patch < $patch
 # su daniel -c "patch -d st/ < patches/$patch"
@@ -66,13 +67,13 @@ case $WM in
         aptitude install -y bspwm sxhkd
         su daniel -c "git clone https://github.com/polybar/polybar $folder/polybar"
 
-        aptitude install -y cmake cmake-data pkg-config 
-        aptitude install -y python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev 
-        aptitude install -y libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen 
+        aptitude install -y cmake cmake-data pkg-config
+        aptitude install -y python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev
+        aptitude install -y libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen
         aptitude install -y xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
-        
-        aptitude install -y libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev 
-        aptitude install -y libasound2-dev libpulse-dev libmpdclient-dev 
+
+        aptitude install -y libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev
+        aptitude install -y libasound2-dev libpulse-dev libmpdclient-dev
         aptitude install -y libcurl4-openssl-dev libnl-genl-3-dev
 
         su daniel -c "mkdir $folder/polybar/build"
