@@ -7,10 +7,10 @@ apt-get install -y aptitude
 aptitude install -y build-essential screen curl htop wget xorg stow
 aptitude install -y xdo xtitle clang git cmake
 aptitude install -y vim vim-youcompleteme
-aptitude install -y emacs emacs-goodies-el lemonbar
+aptitude install -y emacs emacs-goodies-el gnutls-bin lemonbar
 aptitude install -y compton feh arandr playerctl pavucontrol
 aptitude install -y suckless-tools dmenu surf tabbed
-aptitude install -y zathura mpv imagemagick flameshot
+aptitude install -y zathura mpv imagemagick flameshot vifm
 aptitude install -y python-pip python3-pip virtualenv
 aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
@@ -31,11 +31,10 @@ echo "###########################################"
 echo "creating virtualenv for python"
 echo "###########################################"
 
-virtualenv -p python3 ~/.venv/python
-pip install --upgrade pip
-virtualenv -p python3 ~/.venv/youtube-dl
-pip install --upgrade pip
-pip install youtube-dl
+# pip install --upgrade pip
+# virtualenv -p python3 ~/.venv/youtube-dl
+# pip install --upgrade pip
+# pip install youtube-dl
 
 echo "###########################################"
 echo "cloning and building packages"

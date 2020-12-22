@@ -1,5 +1,10 @@
 config/.config/vifm/vifminfo
-
+config/.config/chromium/
+config/.config/mimeapps.list
+config/.config/pavucontrol.ini
+config/.config/pulse/
+config/.config/wallpaper.png
+config/.config/dconf
 
 
 # Ignore everything
