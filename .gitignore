@@ -5,6 +5,8 @@ config/.config/pavucontrol.ini
 config/.config/pulse/
 config/.config/wallpaper.png
 config/.config/dconf
+config/.config/htop
+config/.config/neofetch
 
 
 # Ignore everything

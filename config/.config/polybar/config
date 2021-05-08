@@ -71,7 +71,7 @@ font-1 = "Font Awesome 5 Free,Font Awesome 5 Free Regular: style=Regular: size=1
 
 modules-left = bspwm
 modules-center =  xwindow
-modules-right =  xkeyboard wlan eth date
+modules-right =  xkeyboard wlan date
 
 tray-position = right
 tray-padding = 2
@@ -256,7 +256,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s2
+interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -282,7 +282,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp1s0
+interface = enp3s0
 interval = 3.0
 
 format-connected-underline = ${colors.primary}

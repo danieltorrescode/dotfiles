@@ -21,4 +21,6 @@ IF_STATE=$(cat /sys/class/net/$IF/operstate)
 
 IPADDR=$(ip addr show $IF | perl -n -e "/inet ([^\/]+).* scope global/ && print \$1 and exit")
 
-echo "$(keysindicator) | $IF $IF_STATE $IPADDR | $(dte)"
+BATTERY=$(acpi -i | grep 1 | cut -d, -f-2 | cut -d: -f2-)
+
+echo "$(keysindicator) | $IF $IF_STATE $IPADDR | $BATTERY | $(dte)"

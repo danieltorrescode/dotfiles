@@ -10,6 +10,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 #     WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m polybar --reload mainbar-i3 &
 # done
 
-for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar default & done
+for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar example & done
 
 polybar example &
