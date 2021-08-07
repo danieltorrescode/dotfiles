@@ -6,11 +6,11 @@ apt-get update
 apt-get install -y aptitude
 aptitude install -y build-essential screen curl htop wget xorg stow
 aptitude install -y xdo xtitle clang git cmake
-aptitude install -y vim vim-youcompleteme
+aptitude install -y vim vim-youcompleteme vifm
 aptitude install -y emacs emacs-goodies-el gnutls-bin lemonbar
 aptitude install -y compton feh arandr playerctl pavucontrol
 aptitude install -y suckless-tools dmenu surf tabbed
-aptitude install -y zathura mpv imagemagick flameshot vifm
+aptitude install -y zathura mpv imagemagick flameshot 
 aptitude install -y python-pip python3-pip virtualenv
 aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
 aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
@@ -24,7 +24,7 @@ echo "###########################################"
 echo "installing containers and virtual machine tools"
 echo "###########################################"
 
-aptitude install -y docker.io docker-compose
+# aptitude install -y docker.io docker-compose
 # aptitude install -y qemu qemu-kvm
 
 echo "###########################################"
@@ -63,22 +63,7 @@ case $WM in
         make -C $folder/dwm/ clean install
         ;;
     "bspwm")
-        aptitude install -y bspwm sxhkd
-        su daniel -c "git clone https://github.com/polybar/polybar $folder/polybar"
-
-        aptitude install -y cmake cmake-data pkg-config
-        aptitude install -y python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev
-        aptitude install -y libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen
-        aptitude install -y xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
-
-        aptitude install -y libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev
-        aptitude install -y libasound2-dev libpulse-dev libmpdclient-dev
-        aptitude install -y libcurl4-openssl-dev libnl-genl-3-dev
-
-        su daniel -c "mkdir $folder/polybar/build"
-        su daniel -c "cmake .. --build $folder/polybar/build/"
-        su daniel -c "make -j$(nproc) -C $folder/polybar/build/"
-        make install -C $folder/polybar/build/
+        aptitude install -y bspwm sxhkd polybar
         ;;
     "i3")
         echo $WM
