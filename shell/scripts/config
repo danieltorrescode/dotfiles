@@ -10,14 +10,14 @@
 # 5   101
 # 6   110
 # 7   111
-echo "###########################################" 
-echo "start" 
+echo "###########################################"
+echo "start"
 date +'%d/%m/%Y %I:%M:%S'
-echo "###########################################" 
+echo "###########################################"
 
-echo "###########################################" 
-echo "coping config files" 
-echo "###########################################" 
+echo "###########################################"
+echo "coping config files"
+echo "###########################################"
 
 mkdir  ~/.local/share/Trash
 mkdir ~/backups/
@@ -34,7 +34,9 @@ chmod 774 ~/.config/bspwm/bspwmrc
 chmod 774 ~/.config/sxhkd/sxhkdrc
 chmod 774 ~/.config/polybar/launch.sh
 
-git clone https://gitlab.com/danieltorresgitlab/emacs.git ~/.emacs.d
+git clone https://github.com/danieltorrescode/emacs.git ~/.emacs.d
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # # disable time automatic synchronization
 # timedatectl set-ntp 0
@@ -44,7 +46,7 @@ git clone https://gitlab.com/danieltorresgitlab/emacs.git ~/.emacs.d
 # cp /usr/share/zoneinfo/America/Caracas /etc/localtime
 
 # timedatectl set-timezone "America/Caracas"
-# # set date and time with: 
+# # set date and time with:
 # # timedatectl set-time '2015-11-20 16:14:50'
 # timedatectl status
 # # set hardware clock from system clock
@@ -52,7 +54,7 @@ git clone https://gitlab.com/danieltorresgitlab/emacs.git ~/.emacs.d
 # # read hardware clock
 # hwclock --show
 
-echo "###########################################" 
-echo "end" 
+echo "###########################################"
+echo "end"
 date +'%d/%m/%Y %I:%M:%S'
-echo "###########################################" 
+echo "###########################################"
