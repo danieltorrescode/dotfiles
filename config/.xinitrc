@@ -11,7 +11,7 @@
 xrdb -remove *
 xrdb ~/.Xresources
 
-WM="dwm"
+WM="bspwm"
 
 case $WM in
     "bspwm")

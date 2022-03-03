@@ -1,8 +1,8 @@
-# "from here all is added and edited by daniel torres" 
+# "from here all is added and edited by daniel torres"
 # uncomment the line above to set to yes force_color_prompt=yes
-# default .bashrc config files at /etc/skel/ 
+# default .bashrc config files at /etc/skel/
 
-set -o vi
+# set -o vi
 uname -a
 lsb_release -a
 
