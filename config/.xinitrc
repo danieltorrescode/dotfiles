@@ -5,7 +5,7 @@
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
 # invoke global X session script
-#. /etc/X11/Xsession
+. /etc/X11/Xsession
 
 # Load Xresource file
 xrdb -remove *
@@ -26,7 +26,7 @@ case $WM in
 
         xsetroot -cursor_name left_ptr
 
-        panel |lemonbar  -B '#2f2f2f' -F '#dcdccc' &
+        panel | lemonbar  -B '#2f2f2f' -F '#dcdccc' &
         exec emacs
         ;;
     "dwm")

@@ -41,7 +41,6 @@ echo "cloning and building packages"
 echo "###########################################"
 
 folder="/home/daniel"
-WM="bspwm"
 
 su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
 rm $folder/st/config.h
@@ -55,21 +54,17 @@ make -C $folder/st/ clean install
 # patch < $patch
 # su daniel -c "patch -d st/ < patches/$patch"
 
-case $WM in
-    "dwm")
-        su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
-        rm $folder/dwm/config.h
-        make -C $folder/dwm/
-        make -C $folder/dwm/ clean install
-        ;;
-    "bspwm")
-        aptitude install -y bspwm sxhkd polybar
-        ;;
-    "i3")
-        echo $WM
-        aptitude install -y i3-wm i3blocks i3lock ranger
-        ;;
-    *)
-        echo $WM
-        ;;
-esac
+echo "###########################################"
+echo "installing window manager"
+echo "###########################################"
+# bspwm
+aptitude install -y bspwm sxhkd polybar
+
+# i3
+# aptitude install -y i3-wm i3blocks i3lock ranger
+
+# dwm
+# su daniel -c "git clone git://git.suckless.org/dwm $folder/dwm"
+# rm $folder/dwm/config.h
+# make -C $folder/dwm/
+# make -C $folder/dwm/ clean install
