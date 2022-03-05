@@ -14,7 +14,6 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
 - Re-start system
 - Launch emacs
 - Launch vim and run :PluginInstall
-- add fonts at ~/.local/share/
 
 ## License
 GPLv3+

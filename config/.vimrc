@@ -21,10 +21,10 @@ nmap <C-k> :tabnew<CR>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+"nnoremap <Up> :resize +2<CR>
+"nnoremap <Down> :resize -2<CR>
+"nnoremap <Left> :vertical resize +2<CR>
+"nnoremap <Right> :vertical resize -2<CR>
 
 "set list
 "set list!
