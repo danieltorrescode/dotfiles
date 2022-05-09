@@ -1,0 +1,63 @@
+#!/bin/bash
+
+echo "###########################################"
+echo "System essential config"
+echo "###########################################"
+echo "Set the console keyboard layout"
+ls /usr/share/kbd/keymaps/**/*.map.gz |  grep us
+loadkeys us
+
+echo "Update the system clock"
+timedatectl set-ntp true
+
+echo "Verify the boot mode"
+ls /sys/firmware/efi/efivars
+
+echo "Continue"
+read pause
+
+clear
+lsbk
+fdisk -l
+echo "Format the partitions"
+# echo "Enter EFI partition"
+# read efi_partition
+echo "Enter swap partition"
+read swap_partition
+echo "Enter root partition"
+read root_partition
+echo "Enter root partition"
+read home_partition
+
+echo "***************************************"
+# echo "efi_partition : $efi_partition"
+echo "swap_partition : $swap_partition"
+echo "root_partition : $root_partition"
+echo "home_partition : $home_partition"
+echo "***************************************"
+echo "Continue:any --- Esc: Ctrl+c "
+read pause
+
+# mkfs.fat -F 32 $efi_partition
+mkswap $swap_partition
+mkfs.ext4 $root_partition
+mkfs.ext4 $home_partition
+
+echo "Mount the file systems"
+swapon $swap_partition
+mount $root_partition /mnt
+# mount --mkdir $efi_partition /mnt/boot/efi
+mount --mkdir $home_partition /mnt/home
+
+echo "Install essential packages"
+pacstrap /mnt base linux linux-firmware vim git 
+
+echo "Generate an fstab file"
+genfstab -U /mnt >> /mnt/etc/fstab
+
+echo "Chroot"
+arch-chroot /mnt
+
+echo "Clone dotfiles"
+git clone https://github.com/danieltorrescode/dotfiles.git
+bash dotfiles/shell/scripts/essential
