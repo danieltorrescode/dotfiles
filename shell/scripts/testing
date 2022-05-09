@@ -26,16 +26,3 @@ fi
 # else
 #     su daniel -c "cat dotfiles/.bashrc >> /home/daniel/.bashrc"
 # fi
-
-# apt-get source dwm
-
-# git clone $st
-# wget -P st/ $st_patch_1
-# wget -P st/ $st_patch_2
-
-#     firefox="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US"
-#     # su daniel -c "wget $firefox"
-#     firefox=$(ls | grep firefox)
-#     su daniel -c "tar -xvf $firefox"
-#     mv firefox/ /opt/
-

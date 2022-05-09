@@ -1,5 +1,5 @@
 #!/bin/bash
-## enter su mode
+
 ## chmod 744 -R ~/scripts
 # #   rwx
 # 0   000
@@ -23,8 +23,6 @@ mkdir  ~/.local/share/Trash
 mkdir ~/backups/
 cp -v ~/* ~/backups/
 cp -v ~/.* ~/backups/
-# generate default config files for ranger with
-#ranger --copy-config=all
 
 sed -i '/daniel torres/,$d' ~/.bashrc
 cat ~/.bashrc_tail >> ~/.bashrc
@@ -33,26 +31,6 @@ cat ~/.history >> ~/.bash_history
 chmod 774 ~/.config/bspwm/bspwmrc
 chmod 774 ~/.config/sxhkd/sxhkdrc
 chmod 774 ~/.config/polybar/launch.sh
-
-git clone https://github.com/danieltorrescode/emacs.git ~/.emacs.d
-
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# # disable time automatic synchronization
-# timedatectl set-ntp 0
-# timedatectl set-timezone UTC
-# timedatectl set-local-rtc 0
-# # set timezone
-# cp /usr/share/zoneinfo/America/Caracas /etc/localtime
-
-# timedatectl set-timezone "America/Caracas"
-# # set date and time with:
-# # timedatectl set-time '2015-11-20 16:14:50'
-# timedatectl status
-# # set hardware clock from system clock
-# hwclock --systohc
-# # read hardware clock
-# hwclock --show
 
 echo "###########################################"
 echo "end"

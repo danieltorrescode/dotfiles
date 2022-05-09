@@ -1,51 +1,118 @@
 #!/bin/bash
-echo "###########################################"
-echo "updating repositories and installing essentials"
-echo "###########################################"
-apt-get update
-apt-get install -y aptitude
-aptitude install -y build-essential screen curl htop wget xorg stow
-aptitude install -y xdo xtitle clang git cmake
-aptitude install -y vim vim-youcompleteme vifm
-aptitude install -y emacs emacs-goodies-el gnutls-bin lemonbar
-aptitude install -y compton feh arandr playerctl pavucontrol
-aptitude install -y suckless-tools dmenu surf tabbed
-aptitude install -y zathura mpv imagemagick flameshot
-aptitude install -y python-pip python3-pip virtualenv
-aptitude install -y pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
-aptitude install -y libx11-dev libxft-dev libxinerama1 libxinerama-dev
-aptitude install -y simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
-aptitude install -y sudo iw wireless-tools wpasupplicant wicd-curses
-aptitude install -y sudo udisks2 acpi
-# aptitude install -y sudo mutt rtorrent transmission-cli
-# aptitude install -y ufw gufw firejail apparmor lxc
 
 echo "###########################################"
-echo "installing containers and virtual machine tools"
+echo "System essential config"
 echo "###########################################"
+echo "Time zone"
+timedatectl set-ntp true
+# ln -sf /usr/share/zoneinfo/America/Caracas /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+# echo "set hardware clock from system clock"
+hwclock --systohc
+hwclock --show
 
-# aptitude install -y docker.io docker-compose
-# aptitude install -y qemu qemu-kvm
+# echo "disable time automatic synchronization"
+# timedatectl set-ntp 0
+# timedatectl set-timezone UTC
+# timedatectl set-local-rtc 0
+
+# timedatectl set-timezone "America/Caracas"
+# echo "set date and time with:"
+# timedatectl set-time '2015-11-20 16:14:50'
+timedatectl status
+
+echo "Create a new file /etc/vconsole.conf to make the changes persistent keyboard layout"
+echo "KEYMAP=us" >> /etc/vconsole.conf
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+
+echo "Localization : edit /etc/locale.gen uncomment en_US.UTF-8 UTF-8"
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
+echo "Network configuration: Create the hostname file"
+echo "archlinux" >> /etc/hostname
+
+echo "Add to /etc/hosts"
+echo "127.0.0.1        localhost" >> /etc/hosts
+echo "::1              localhost" >> /etc/hosts
+echo "127.0.1.1        archlinux.localdomain archlinux" >> /etc/hosts
+
+pacman -S --noconfirm networkmanager dhcpcd netctl wpa_supplicant dialog
+systemctl enable NetworkManager
+systemctl start NetworkManager.service
+
+echo "Root password"
+passwd
+
+echo "Add new user and install sudo"
+useradd -m daniel
+passwd daniel
+usermod -aG wheel,audio,video,optical,storage daniel
+pacman -S --noconfirm sudo 
+echo "Uncomment the %wheel ALL=(ALL) ALL to allows people in group wheel to run all commands"
+visudo
+
+echo "Boot loader"
+#(if doing UEFI)
+# pacman -S --noconfirm grub efibootmgr dosfstools os-prober mtools
+# mkdir /boot/EFI 
+# echo "Mount FAT32 EFI partition"
+# mount /dev/sda1 /boot/EFI  
+# grub-install --efi-directory=/boot/efi --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
+#(if doing UEFI)
+grub-install /dev/vda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+echo "AMD drivers"
+lspci -k | grep VGA
+pacman -S --noconfirm xf86-video-amdgpu xf86-video-ati vulkan-radeon libva-mesa-driver mesa-vdpau mesa mesa-demos
+# sudo pacman -S --noconfirm --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
 
 echo "###########################################"
-echo "creating virtualenv for python"
+echo "updating repositories and installing essential tools"
 echo "###########################################"
+# pacman -S --noconfirm build-essential screen curl htop wget xorg stow
+# pacman -S --noconfirm xdo xtitle clang git cmake
+# pacman -S --noconfirm vim vim-youcompleteme vifm
+# pacman -S --noconfirm emacs emacs-goodies-el gnutls-bin lemonbar
+# pacman -S --noconfirm compton feh arandr playerctl pavucontrol
+# pacman -S --noconfirm suckless-tools dmenu surf tabbed
+# pacman -S --noconfirm zathura mpv imagemagick flameshot
+# pacman -S --noconfirm python-pip python3-pip virtualenv
+# pacman -S --noconfirm pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
+# pacman -S --noconfirm libx11-dev libxft-dev libxinerama1 libxinerama-dev
+# pacman -S --noconfirm simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
+# pacman -S --noconfirm sudo iw wireless-tools wpasupplicant wicd-curses
+# pacman -S --noconfirm sudo udisks2 acpi
+# pacman -S --noconfirm sudo mutt rtorrent transmission-cli
+# pacman -S --noconfirm ufw gufw firejail apparmor lxc
+
+# echo "###########################################"
+# echo "installing containers and virtual machine tools"
+# echo "###########################################"
+
+# pacman -S --noconfirm docker.io docker-compose
+# pacman -S --noconfirm qemu qemu-kvm
+
+# echo "###########################################"
+# echo "creating virtualenv for python"
+# echo "###########################################"
 
 # pip install --upgrade pip
 # virtualenv -p python3 ~/.venv/youtube-dl
 # pip install --upgrade pip
 # pip install youtube-dl
 
-echo "###########################################"
-echo "cloning and building packages"
-echo "###########################################"
+# echo "###########################################"
+# echo "cloning and building packages"
+# echo "###########################################"
 
-folder="/home/daniel"
+# folder="/home/daniel"
 
-su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
-rm $folder/st/config.h
-make -C $folder/st/
-make -C $folder/st/ clean install
+# su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
+# rm $folder/st/config.h
+# make -C $folder/st/
+# make -C $folder/st/ clean install
 
 # to add color to st use http://terminal.sexy/
 # generate palette with pywall or colorz
@@ -54,17 +121,23 @@ make -C $folder/st/ clean install
 # patch < $patch
 # su daniel -c "patch -d st/ < patches/$patch"
 
-echo "###########################################"
-echo "installing window manager"
-echo "###########################################"
-# bspwm
-aptitude install -y bspwm sxhkd polybar
+# echo "###########################################"
+# echo "installing window manager"
+# echo "###########################################"
+# echo "***** bspwm *****"
+# pacman -S --noconfirm bspwm sxhkd polybar
 
-# i3
-# aptitude install -y i3-wm i3blocks i3lock ranger
+# echo "***** i3 *****"
+# pacman -S --noconfirm i3-wm i3blocks i3lock
 
-# dwm
-# su daniel -c "git clone git://git.suckless.org/dwm $folder/dwm"
+# echo "***** dwm *****"
+# su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
 # rm $folder/dwm/config.h
 # make -C $folder/dwm/
 # make -C $folder/dwm/ clean install
+
+# echo "***** emacs *****"
+# su daniel -c "git clone https://github.com/danieltorrescode/emacs.git ~/.emacs.d"
+
+# echo "***** vim *****"
+# su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
