@@ -17,7 +17,7 @@ echo "Continue"
 read pause
 
 clear
-lsbk
+lsblk
 fdisk -l
 echo "Format the partitions"
 # echo "Enter EFI partition"
@@ -26,7 +26,7 @@ echo "Enter swap partition"
 read swap_partition
 echo "Enter root partition"
 read root_partition
-echo "Enter root partition"
+echo "Enter home partition"
 read home_partition
 
 echo "***************************************"
@@ -55,9 +55,9 @@ pacstrap /mnt base linux linux-firmware vim git
 echo "Generate an fstab file"
 genfstab -U /mnt >> /mnt/etc/fstab
 
+echo "Copying dotfiles"
+cp -r dotfiles /mnt
+
 echo "Chroot"
 arch-chroot /mnt
-
-echo "Clone dotfiles"
-git clone https://github.com/danieltorrescode/dotfiles.git
 bash dotfiles/shell/scripts/essential
