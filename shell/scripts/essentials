@@ -44,7 +44,7 @@ systemctl start NetworkManager.service
 echo "Root password"
 passwd
 
-echo "Add new user and install sudo"
+echo "Add new user daniel and install sudo"
 useradd -m daniel
 passwd daniel
 usermod -aG wheel,audio,video,optical,storage daniel
@@ -52,21 +52,28 @@ pacman -S --noconfirm sudo
 echo "Uncomment the %wheel ALL=(ALL) ALL to allows people in group wheel to run all commands"
 visudo
 
+echo "AMD drivers"
+lspci -k | grep VGA
+pacman -S --noconfirm xf86-video-amdgpu xf86-video-ati vulkan-radeon 
+pacman -S --noconfirm libva-mesa-driver mesa-vdpau mesa mesa-demos
+# sudo pacman -S --noconfirm --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon 
+# sudo pacman -S --noconfirm --needed vulkan-icd-loader lib32-vulkan-icd-loader
+
 echo "Boot loader"
 #(if doing UEFI)
-# pacman -S --noconfirm grub efibootmgr dosfstools os-prober mtools
+pacman -S --noconfirm grub efibootmgr dosfstools os-prober mtools
 # mkdir /boot/EFI 
 # echo "Mount FAT32 EFI partition"
 # mount /dev/sda1 /boot/EFI  
 # grub-install --efi-directory=/boot/efi --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
 #(if doing UEFI)
-grub-install /dev/vda
+lsblk
+fdisk -l
+echo "Enter disk to install grub"
+read disk
+echo "grub-install $disk"
+grub-install
 grub-mkconfig -o /boot/grub/grub.cfg
-
-echo "AMD drivers"
-lspci -k | grep VGA
-pacman -S --noconfirm xf86-video-amdgpu xf86-video-ati vulkan-radeon libva-mesa-driver mesa-vdpau mesa mesa-demos
-# sudo pacman -S --noconfirm --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
 
 echo "###########################################"
 echo "updating repositories and installing essential tools"

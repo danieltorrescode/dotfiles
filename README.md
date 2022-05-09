@@ -55,6 +55,7 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
   mount --mkdir /dev/efi_system_partition /mnt/boot/efi
   swapon /dev/swap_partition
   lsbk
+  fdisk -l
 ```
 
 * Install essential packages
