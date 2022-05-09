@@ -27,7 +27,7 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
 
 * clone dotfiles
 ```
-  pacman -Ss
+  pacman -Sy
   pacman -S git
   git clone https://github.com/danieltorrescode/dotfiles.git
   bash dotfiles/shell/scripts/arch
