@@ -70,7 +70,7 @@ fdisk -l
 echo "Enter disk to install grub"
 read disk
 echo "grub-install $disk"
-grub-install $disk
+grub-install /dev/$disk
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "Install packages"
 bash /dotfiles/shell/scripts/packages

@@ -4,7 +4,7 @@ echo "#######################################################"
 echo "updating repositories and installing packages"
 echo "#######################################################"
 pacman -Syu
-pacman -S --needed --noconfirm curl htop wget xorg stow screen
+pacman -S --needed --noconfirm base-devel curl htop wget xorg stow screen
 # pacman -S --needed --noconfirm build-essential
 # pacman -S --needed --noconfirm xdo xtitle clang git cmake
 # pacman -S --needed --noconfirm vim vim-youcompleteme vifm
@@ -89,11 +89,14 @@ folder="/home/daniel"
 # su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git $folder/.vim/bundle/Vundle.vim"
 
 echo "***** yay *****"
-su daniel -c "git clone https://aur.archlinux.org/yay.git $folder/.yay"
+pacman -S --needed --noconfirm go
+su daniel -c "git clone https://aur.archlinux.org/yay.git $folder/yay"
 chown -R  daniel:daniel $folder/yay
 cd $folder/yay
-makepkg -si
-yay --version
+echo "type: makepkg -si"
+echo "then type: yay --version"
+su daniel
+
 
 # su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git $folder/dotfiles"
 # cd $folder/dotfiles

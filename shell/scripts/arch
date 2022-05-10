@@ -31,23 +31,23 @@ read home_partition
 
 echo "***************************************"
 # echo "efi_partition : $efi_partition"
-echo "swap_partition : $swap_partition"
-echo "root_partition : $root_partition"
-echo "home_partition : $home_partition"
+echo "swap_partition : /dev/$swap_partition"
+echo "root_partition : /dev/$root_partition"
+echo "home_partition : /dev/$home_partition"
 echo "***************************************"
 echo "Continue:any --- Esc: Ctrl+c "
 read holded
 
 # mkfs.fat -F 32 $efi_partition
-mkswap $swap_partition
-mkfs.ext4 $root_partition
-mkfs.ext4 $home_partition
+mkswap /dev/$swap_partition
+mkfs.ext4 /dev/$root_partition
+mkfs.ext4 /dev/$home_partition
 
 echo "Mount the file systems"
-swapon $swap_partition
-mount $root_partition /mnt
+swapon /dev/$swap_partition
+mount /dev/$root_partition /mnt
 # mount --mkdir $efi_partition /mnt/boot/efi
-mount --mkdir $home_partition /mnt/home
+mount --mkdir /dev/$home_partition /mnt/home
 
 echo "Install essential packages"
 pacstrap /mnt base linux linux-firmware vim git 
@@ -59,5 +59,5 @@ echo "Copying dotfiles"
 cp -r dotfiles /mnt
 
 echo "Chroot"
-echo "bash dotfiles/shell/scripts/essential"
+echo "type: bash dotfiles/shell/scripts/essential"
 arch-chroot /mnt
