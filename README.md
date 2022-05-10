@@ -31,7 +31,8 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
   pacman -S git
   git clone https://github.com/danieltorrescode/dotfiles.git
   bash dotfiles/shell/scripts/arch
-  Re-start system
+  umount -R /mnt
+  reboot
   Launch emacs
   Launch vim and run :PluginInstall
 ```

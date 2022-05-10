@@ -14,7 +14,7 @@ echo "Verify the boot mode"
 ls /sys/firmware/efi/efivars
 
 echo "Continue"
-read pause
+read holded
 
 clear
 lsblk
@@ -36,7 +36,7 @@ echo "root_partition : $root_partition"
 echo "home_partition : $home_partition"
 echo "***************************************"
 echo "Continue:any --- Esc: Ctrl+c "
-read pause
+read holded
 
 # mkfs.fat -F 32 $efi_partition
 mkswap $swap_partition
