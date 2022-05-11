@@ -7,12 +7,14 @@ pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget xorg stow screen
 pacman -S --needed --noconfirm xdo clang cmake
 pacman -S --needed --noconfirm emacs vim vifm
-pacman -S --needed --noconfirm compton feh arandr playerctl pavucontrol
+pacman -S --needed --noconfirm compton feh arandr playerctl pavucontrol pulseaudio
 pacman -S --needed --noconfirm dmenu zathura mpv imagemagick flameshot
 pacman -S --needed --noconfirm python-pip python-virtualenv 
 pacman -S --needed --noconfirm udisks2 acpi
 pacman -S --needed --noconfirm mutt rtorrent transmission-cli
 pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc
+pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation
+
 echo "###########################################"
 echo "installing xfce"
 echo "###########################################"
@@ -51,17 +53,17 @@ echo "###########################################"
 echo "cloning and building packages"
 echo "###########################################"
 
-folder="/home/daniel"
-su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git $folder/dotfiles"
-cd $folder/dotfiles
+su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git /home/daniel/dotfiles"
+cd /home/daniel/dotfiles
+rm /home/daniel/.bash_profile
 su daniel -c  "stow shell config"
-su daniel -c "chmod 744 -R $folder/scripts"
-su daniel -c "bash $folder/scripts/config"
+su daniel -c "chmod 744 -R /home/daniel/scripts"
+su daniel -c "bash /home/daniel/scripts/config"
 
-su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
-rm $folder/st/config.h
-make -C $folder/st/
-make -C $folder/st/ clean install
+su daniel -c "git clone https://github.com/danieltorrescode/st.git /home/daniel/st"
+rm /home/daniel/st/config.h
+make -C /home/daniel/st/
+make -C /home/daniel/st/ clean install
 
 # to add color to st use http://terminal.sexy/
 # generate palette with pywall or colorz
@@ -80,22 +82,22 @@ echo "***** i3 *****"
 pacman -S --needed --noconfirm i3
 
 echo "***** dwm *****"
-su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
-rm $folder/dwm/config.h
-make -C $folder/dwm/
-make -C $folder/dwm/ clean install
+su daniel -c "git clone https://github.com/danieltorrescode/dwm.git /home/daniel/dwm"
+rm /home/daniel/dwm/config.h
+make -C /home/daniel/dwm/
+make -C /home/daniel/dwm/ clean install
 
 echo "***** emacs *****"
-su daniel -c "git clone https://github.com/danieltorrescode/emacs.git $folder/.emacs.d"
+su daniel -c "git clone https://github.com/danieltorrescode/emacs.git /home/daniel/.emacs.d"
 
 echo "***** vim *****"
-su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git $folder/.vim/bundle/Vundle.vim"
+su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git /home/daniel/.vim/bundle/Vundle.vim"
 
 echo "***** yay *****"
 pacman -S --needed --noconfirm go
-su daniel -c "git clone https://aur.archlinux.org/yay.git $folder/yay"
-chown -R  daniel:daniel $folder/yay
-cd $folder/yay
+su daniel -c "git clone https://aur.archlinux.org/yay.git /home/daniel/yay"
+chown -R  daniel:daniel /home/daniel/yay
+cd /home/daniel/yay
 echo "run: makepkg -si"
 echo "then run: yay --version"
 su daniel

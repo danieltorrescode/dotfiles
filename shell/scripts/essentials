@@ -69,7 +69,7 @@ lsblk
 fdisk -l
 echo "Enter disk to install grub"
 read disk
-echo "grub-install $disk"
+echo "grub-install /dev/$disk"
 grub-install /dev/$disk
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "Install packages"

@@ -15,7 +15,7 @@ WM="dwm"
 
 case $WM in
     "bspwm")
-        echo $WM
+        exec $WM
         ;;
     "emacs")
         # setting wallpaper
@@ -42,7 +42,7 @@ case $WM in
         done &
         ;;
     "i3")
-        exec /usr/bin/i3
+        exec $WM
         ;;
 esac
 
