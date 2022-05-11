@@ -74,3 +74,4 @@ grub-install /dev/$disk
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "Install packages"
 bash /dotfiles/shell/scripts/packages
+exit

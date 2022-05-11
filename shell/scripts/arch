@@ -59,5 +59,7 @@ echo "Copying dotfiles"
 cp -r dotfiles /mnt
 
 echo "Chroot"
-echo "type: bash dotfiles/shell/scripts/essential"
+echo "run: bash dotfiles/shell/scripts/essential"
 arch-chroot /mnt
+echo "run: umount -R /mnt"
+echo "then run: reboot"

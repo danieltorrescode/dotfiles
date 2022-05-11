@@ -5,21 +5,14 @@ echo "updating repositories and installing packages"
 echo "#######################################################"
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget xorg stow screen
-# pacman -S --needed --noconfirm build-essential
-# pacman -S --needed --noconfirm xdo xtitle clang git cmake
-# pacman -S --needed --noconfirm vim vim-youcompleteme vifm
-# pacman -S --needed --noconfirm emacs emacs-goodies-el gnutls-bin lemonbar
-# pacman -S --needed --noconfirm compton feh arandr playerctl pavucontrol
-# pacman -S --needed --noconfirm suckless-tools dmenu surf tabbed
-# pacman -S --needed --noconfirm zathura mpv imagemagick flameshot
-# pacman -S --needed --noconfirm python-pip python3-pip virtualenv
-# pacman -S --needed --noconfirm pkg-config libfontconfig-dev libdbus-glib-1-2 libfreetype6-dev
-# pacman -S --needed --noconfirm libx11-dev libxft-dev libxinerama1 libxinerama-dev
-# pacman -S --needed --noconfirm simple-scan fonts-hack-ttf fonts-font-awesome fonts-liberation
-# pacman -S --needed --noconfirm sudo iw wireless-tools wpasupplicant wicd-curses
-# pacman -S --needed --noconfirm sudo udisks2 acpi
-# pacman -S --needed --noconfirm sudo mutt rtorrent transmission-cli
-# pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc
+pacman -S --needed --noconfirm xdo clang cmake
+pacman -S --needed --noconfirm emacs vim vifm
+pacman -S --needed --noconfirm compton feh arandr playerctl pavucontrol
+pacman -S --needed --noconfirm dmenu zathura mpv imagemagick flameshot
+pacman -S --needed --noconfirm python-pip python-virtualenv 
+pacman -S --needed --noconfirm udisks2 acpi
+pacman -S --needed --noconfirm mutt rtorrent transmission-cli
+pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc
 echo "###########################################"
 echo "installing xfce"
 echo "###########################################"
@@ -27,7 +20,9 @@ pacman -S --needed --noconfirm  xfce4 xfce4-goodies
 pacman -S --needed --noconfirm  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
 pacman -S --needed --noconfirm  capitaine-cursors arc-gtk-theme xdg-user-dirs-gtk file-roller network-manager-applet
 systemctl enable lightdm -f
-sudo vim /etc/lightdm/lightdm.conf 
+cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.orig
+sed -i 's/#greeter-session=.*/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf
+
 echo "###########################################"
 echo "installing firefox"
 echo "###########################################"
@@ -37,8 +32,11 @@ sudo pacman -S --needed --noconfirm  firefox
 # echo "installing containers and virtual machine tools"
 # echo "###########################################"
 
-# pacman -S --needed --noconfirm docker.io docker-compose
-# pacman -S --needed --noconfirm qemu qemu-kvm
+# pacman -S --needed --noconfirm docker docker-compose
+# pacman -S --needed --noconfirm qemu-full virt-manager libvirt edk2-ovmf dnsmasq 
+# systemctl enable libvirtd.service
+# systemctl start libvirtd.service
+# systemctl status libvirtd.service
 
 # echo "###########################################"
 # echo "creating virtualenv for python"
@@ -49,16 +47,21 @@ sudo pacman -S --needed --noconfirm  firefox
 # pip install --upgrade pip
 # pip install youtube-dl
 
-# echo "###########################################"
-# echo "cloning and building packages"
-# echo "###########################################"
+echo "###########################################"
+echo "cloning and building packages"
+echo "###########################################"
 
 folder="/home/daniel"
+su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git $folder/dotfiles"
+cd $folder/dotfiles
+su daniel -c  "stow shell config"
+su daniel -c "chmod 744 -R $folder/scripts"
+su daniel -c "bash $folder/scripts/config"
 
-# su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
-# rm $folder/st/config.h
-# make -C $folder/st/
-# make -C $folder/st/ clean install
+su daniel -c "git clone https://github.com/danieltorrescode/st.git $folder/st"
+rm $folder/st/config.h
+make -C $folder/st/
+make -C $folder/st/ clean install
 
 # to add color to st use http://terminal.sexy/
 # generate palette with pywall or colorz
@@ -67,40 +70,34 @@ folder="/home/daniel"
 # patch < $patch
 # su daniel -c "patch -d st/ < patches/$patch"
 
-# echo "###########################################"
-# echo "installing window manager"
-# echo "###########################################"
-# echo "***** bspwm *****"
-# pacman -S --needed --noconfirm bspwm sxhkd polybar
+echo "###########################################"
+echo "installing window manager"
+echo "###########################################"
+echo "***** bspwm *****"
+pacman -S --needed --noconfirm bspwm sxhkd polybar
 
-# echo "***** i3 *****"
-# pacman -S --needed --noconfirm i3-wm i3blocks i3lock
+echo "***** i3 *****"
+pacman -S --needed --noconfirm i3
 
-# echo "***** dwm *****"
-# su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
-# rm $folder/dwm/config.h
-# make -C $folder/dwm/
-# make -C $folder/dwm/ clean install
+echo "***** dwm *****"
+su daniel -c "git clone https://github.com/danieltorrescode/dwm.git $folder/dwm"
+rm $folder/dwm/config.h
+make -C $folder/dwm/
+make -C $folder/dwm/ clean install
 
-# echo "***** emacs *****"
-# su daniel -c "git clone https://github.com/danieltorrescode/emacs.git $folder/.emacs.d"
+echo "***** emacs *****"
+su daniel -c "git clone https://github.com/danieltorrescode/emacs.git $folder/.emacs.d"
 
-# echo "***** vim *****"
-# su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git $folder/.vim/bundle/Vundle.vim"
+echo "***** vim *****"
+su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git $folder/.vim/bundle/Vundle.vim"
 
 echo "***** yay *****"
 pacman -S --needed --noconfirm go
 su daniel -c "git clone https://aur.archlinux.org/yay.git $folder/yay"
 chown -R  daniel:daniel $folder/yay
 cd $folder/yay
-echo "type: makepkg -si"
-echo "then type: yay --version"
+echo "run: makepkg -si"
+echo "then run: yay --version"
 su daniel
-
-
-# su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git $folder/dotfiles"
-# cd $folder/dotfiles
-# su daniel -c  "stow shell config"
-# su daniel -c "chmod 744 -R ~/scripts"
-# su daniel -c "bash ~/scripts/config"
-# rm -rf /dotfiles
+rm -rf /dotfiles
+exit
