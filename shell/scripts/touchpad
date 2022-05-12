@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# Device Enabled (156):   1
+# Coordinate Transformation Matrix (158): 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+# libinput Tapping Enabled (294): 1
+# libinput Tapping Enabled Default (295): 0
+# libinput Tapping Drag Enabled (296):    1
+# libinput Tapping Drag Enabled Default (297):    1
+# libinput Tapping Drag Lock Enabled (298):       0
+# libinput Tapping Drag Lock Enabled Default (299):       0
+# libinput Tapping Button Mapping Enabled (300):  1, 0
+# libinput Tapping Button Mapping Default (301):  1, 0
+# libinput Natural Scrolling Enabled (302):       1
+# libinput Natural Scrolling Enabled Default (303):       0
+# libinput Disable While Typing Enabled (304):    1
+# libinput Disable While Typing Enabled Default (305):    1
+# libinput Scroll Methods Available (306):        1, 1, 0
+# libinput Scroll Method Enabled (307):   1, 0, 0
+# libinput Scroll Method Enabled Default (308):   1, 0, 0
+# libinput Click Methods Available (309): 1, 1
+# libinput Click Method Enabled (310):    1, 0
+# libinput Click Method Enabled Default (311):    1, 0
+# libinput Middle Emulation Enabled (312):        0
+# libinput Middle Emulation Enabled Default (313):        0
+# libinput Accel Speed (314):     1.000000
+# libinput Accel Speed Default (315):     0.000000
+# libinput Accel Profiles Available (316):        1, 1
+# libinput Accel Profile Enabled (317):   1, 0
+# libinput Accel Profile Enabled Default (318):   1, 0
+# libinput Left Handed Enabled (319):     0
+# libinput Left Handed Enabled Default (320):     0
+# libinput Send Events Modes Available (279):     1, 1
+# libinput Send Events Mode Enabled (280):        0, 0
+# libinput Send Events Mode Enabled Default (281):        0, 0
+# Device Node (282):      "/dev/input/event7"
+# Device Product ID (283):        1739, 32552
+# libinput Drag Lock Buttons (321):       <no items>
+# libinput Horizontal Scroll Enabled (322):       1
+# libinput Scrolling Pixel Distance (323):        15
+# libinput Scrolling Pixel Distance Default (324):        15
+# libinput High Resolution Wheel Scroll Enabled (325):    1
+
+
+echo "Device SYNA3255:00 06CB:7F28 Touchpad"
+xinput list
+xinput list | grep Touchpad
+$device = xinput list | awk 'BEGIN { FS="=" } /Touchpad/ { print $2 ; exit }' | awk '{print $1 ; exit}'
+xinput --set-prop $device "libinput Tapping Enabled"  1
+xinput --set-prop $device "libinput Tapping Enabled Default"  0
+xinput --set-prop $device "libinput Tapping Drag Enabled"     1
+xinput --set-prop $device "libinput Tapping Drag Enabled Default"     1
+xinput --set-prop $device "libinput Tapping Drag Lock Enabled"        0
+xinput --set-prop $device "libinput Tapping Drag Lock Enabled Default"        0
+xinput --set-prop $device "libinput Tapping Button Mapping Enabled"   1, 0
+xinput --set-prop $device "libinput Tapping Button Mapping Default"   1, 0
+xinput --set-prop $device "libinput Natural Scrolling Enabled"        1
+xinput --set-prop $device "libinput Natural Scrolling Enabled Default"        0
+xinput --set-prop $device "libinput Disable While Typing Enabled"     1
+xinput --set-prop $device "libinput Disable While Typing Enabled Default"     1
+xinput --set-prop $device "libinput Scroll Methods Available"         1, 1, 0
+xinput --set-prop $device "libinput Scroll Method Enabled"    1, 0, 0
+xinput --set-prop $device "libinput Scroll Method Enabled Default"    1, 0, 0
+xinput --set-prop $device "libinput Click Methods Available"  1, 1
+xinput --set-prop $device "libinput Click Method Enabled"     1, 0
+xinput --set-prop $device "libinput Click Method Enabled Default"     1, 0
+xinput --set-prop $device "libinput Middle Emulation Enabled"         0
+xinput --set-prop $device "libinput Middle Emulation Enabled Default"         0
+xinput --set-prop $device "libinput Accel Speed"      1.000000
+xinput --set-prop $device "libinput Accel Speed Default"      0.000000
+xinput --set-prop $device "libinput Accel Profiles Available"         1, 1
+xinput --set-prop $device "libinput Accel Profile Enabled"    1, 0
+xinput --set-prop $device "libinput Accel Profile Enabled Default"    1, 0
+xinput --set-prop $device "libinput Left Handed Enabled"      0
+xinput --set-prop $device "libinput Left Handed Enabled Default"      0
+xinput --set-prop $device "libinput Send Events Modes Available"      1, 1
+xinput --set-prop $device "libinput Send Events Mode Enabled"         0, 0
+xinput --set-prop $device "libinput Send Events Mode Enabled Default"         0, 0
+# xinput --set-prop $device "Device Node"       "/dev/input/event7"
+# xinput --set-prop $device "Device Product ID"         1739, 32552
+xinput --set-prop $device "libinput Drag Lock Buttons"        <no items>
+xinput --set-prop $device "libinput Horizontal Scroll Enabled"        1
+xinput --set-prop $device "libinput Scrolling Pixel Distance"         15
+xinput --set-prop $device "libinput Scrolling Pixel Distance Default"         15
+xinput --set-prop $device "libinput High Resolution Wheel Scroll Enabled"     1

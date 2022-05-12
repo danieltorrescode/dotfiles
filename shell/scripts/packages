@@ -4,9 +4,9 @@ echo "#######################################################"
 echo "updating repositories and installing packages"
 echo "#######################################################"
 pacman -Syu
-pacman -S --needed --noconfirm base-devel curl htop wget xorg stow screen
-pacman -S --needed --noconfirm xdo clang cmake
-pacman -S --needed --noconfirm emacs vim vifm
+pacman -S --needed --noconfirm base-devel curl htop wget stow screen
+pacman -S --needed --noconfirm xorg xf86-input-synaptics xf86-input-libinput xdo clang cmake
+pacman -S --needed --noconfirm emacs vim vifm neofetch
 pacman -S --needed --noconfirm compton feh arandr playerctl pavucontrol pulseaudio
 pacman -S --needed --noconfirm dmenu zathura mpv imagemagick flameshot
 pacman -S --needed --noconfirm python-pip python-virtualenv 
@@ -14,6 +14,7 @@ pacman -S --needed --noconfirm udisks2 acpi
 pacman -S --needed --noconfirm mutt rtorrent transmission-cli
 pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc
 pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation
+pacman -S --needed --noconfirm  pamixer brightnessctl xbacklight mpd mpc
 
 echo "###########################################"
 echo "installing xfce"

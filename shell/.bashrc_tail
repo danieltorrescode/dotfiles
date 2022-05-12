@@ -4,7 +4,7 @@
 
 # set -o vi
 uname -a
-lsb_release -a
+neofetch
 
 alias SO="systemctl poweroff"
 alias SR="systemctl reboot"

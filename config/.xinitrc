@@ -5,7 +5,7 @@
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
 # invoke global X session script
-. /etc/X11/Xsession
+# . /etc/X11/Xsession
 
 # Load Xresource file
 xrdb -remove *
@@ -37,7 +37,7 @@ case $WM in
         compton --config ~/.config/compton/compton.conf &
 
         while true; do
-            xsetroot -name "$(info)"
+            xsetroot -name "$(statusbar)"
             sleep 1s # Update time every ten seconds
         done &
         ;;

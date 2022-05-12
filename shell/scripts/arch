@@ -61,5 +61,5 @@ cp -r dotfiles /mnt
 echo "Chroot"
 echo "run: bash dotfiles/shell/scripts/essentials"
 arch-chroot /mnt
-echo "run: umount -R /mnt"
-echo "then run: reboot"
+umount -R /mnt
+reboot

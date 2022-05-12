@@ -32,6 +32,8 @@ chmod 774 ~/.config/bspwm/bspwmrc
 chmod 774 ~/.config/sxhkd/sxhkdrc
 chmod 774 ~/.config/polybar/launch.sh
 
+bash ~/scripts/touchpad
+
 echo "###########################################"
 echo "end"
 date +'%d/%m/%Y %I:%M:%S'
