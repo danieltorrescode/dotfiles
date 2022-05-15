@@ -28,6 +28,8 @@ config/.config/neofetch
 !.config
 !.config/bspwm/
 !.config/bspwm/**
+!.config/picom/
+!.config/picom/**
 !.config/compton/
 !.config/compton/**
 !.config/i3/

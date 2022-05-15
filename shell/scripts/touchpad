@@ -3,7 +3,7 @@
 # https://man.archlinux.org/man/libinput.4
 device=$1
 touchpad="Touchpad"
-$device=${device:=$touchpad}
+device=${device:=$touchpad}
 xinput list
 xinput list | grep $device
 # $device = xinput list | awk 'BEGIN { FS="=" } /Touchpad/ { print $2 ; exit }' | awk '{print $1 ; exit}'

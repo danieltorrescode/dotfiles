@@ -17,4 +17,3 @@ alias py="source /home/daniel/.venv/python/bin/activate"
 # set -o vi
 uname -a
 neofetch
-tmux

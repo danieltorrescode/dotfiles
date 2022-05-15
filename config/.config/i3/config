@@ -207,8 +207,8 @@ bindsym $mod+Shift+x exec i3lock --color "#5F676A"
 # setting wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 
-# starting compton
-exec_always compton --config ~/.config/compton/compton.conf
+# starting picom
+exec_always picom --config ~/.config/picom/picom.conf
 
 # Widow Colours
 # class                 border  bground text    indicator child_border

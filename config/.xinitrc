@@ -21,8 +21,8 @@ case $WM in
         # setting wallpaper
         feh --bg-scale ~/.config/wallpaper.png &
 
-        # starting compton
-        compton --config ~/.config/compton/compton.conf &
+        # starting picom
+        picom --config ~/.config/picom/picom.conf &
 
         xsetroot -cursor_name left_ptr
 
@@ -33,8 +33,8 @@ case $WM in
         # setting wallpaper
         feh --bg-scale ~/.config/wallpaper.png
 
-        # starting compton
-        compton --config ~/.config/compton/compton.conf &
+        # starting picom
+        picom --config ~/.config/picom/picom.conf &
 
         while true; do
             xsetroot -name "$(statusbar)"

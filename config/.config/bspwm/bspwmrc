@@ -9,8 +9,8 @@ sxhkd &
 # setting wallpaper
 #feh --bg-scale ~/.config/wallpaper.png
 
-# starting compton
-compton --config ~/.config/compton/compton.conf &
+# starting picom
+picom --config ~/.config/picom/picom.conf &
 
 # starting polybar
 ~/.config/polybar/launch.sh &

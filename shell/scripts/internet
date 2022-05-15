@@ -1,0 +1,88 @@
+#! /bin/bash
+
+password=$1
+essid=$2
+interface=$3
+status=$4
+
+default="12345678"
+password=${password:=$default}
+
+default="Daniel_5G"
+essid=${essid:=$default}
+
+default=`ip route | awk '/^default/ { print $5 ; exit }'`
+interface=${interface:=$default}
+
+default="up"
+status=${status:=$default}
+
+echo "Enter Password. default: $password"
+read holded
+if [ -n "$holded" ]
+then
+    password=${holded:=password}
+fi
+
+echo "Enter ESSID. default: $essid"
+read holded
+if [ -n "$holded" ]
+then
+    essid=${holded:=essid}
+fi
+
+echo "Enter Interface. default: $interface"
+read holded
+if [ -n "$holded" ]
+then
+    interface=${holded:=interface}
+fi
+
+echo "Enter Status. default: $status"
+read holded
+if [ -n "$holded" ]
+then
+    status=${holded:=status}
+fi
+
+echo "ip link"
+ip link
+echo "####################################"
+echo "ESSID list"
+echo "iwlist  $interface scan | grep ESSID | awk '/^ */ { print \$1 ; exit }'"
+iwlist  $interface scan | grep ESSID | awk '/^ */ { print $1 ; exit }'
+echo "####################################"
+echo "Password: $password"
+echo "ESSID: $essid"
+echo "Interface: $interface"
+echo "Status: $status"
+echo "####################################"
+
+echo "example:"
+echo "connect:  internet  password  essid  interface  status"
+
+echo "Continue:any --- Esc: Ctrl+c "
+read holded
+echo "ip link set $interface $status "
+# ip link set $interface $status 
+if [ "$status" == "down" ]
+then
+    exit
+fi
+
+echo "wpa_passphrase $essid $password > ~/Downloads/wifi"
+# wpa_passphrase $essid $password > ~/Downloads/wifi
+echo "cat ~/Downloads/wifi"
+# cat ~/Downloads/wifi
+echo "wpa_supplicant -B -i $interface -D wext -c ~/Downloads/wifi"
+# wpa_supplicant -B -i $interface -D wext -c ~/Downloads/wifi
+echo "dhclient"
+# dhclient
+echo "nmcli dev wifi connect $essid password $password"
+# nmcli dev wifi connect $essid password $password
+
+echo "####################################"
+echo "####################################"
+echo "####################################"
+IF_STATE=$(cat /sys/class/net/$interface/operstate)
+echo "Connection: $IF_STATE"
