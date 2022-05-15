@@ -11,6 +11,10 @@
 xrdb -remove *
 xrdb ~/.Xresources
 
+numlockx &
+sleep 2
+xrandr -s 1920x1080
+
 WM="dwm"
 
 case $WM in

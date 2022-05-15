@@ -10,7 +10,7 @@ pacman -S --needed --noconfirm emacs vim vifm neofetch tmux
 pacman -S --needed --noconfirm picom feh arandr playerctl pavucontrol pulseaudio
 pacman -S --needed --noconfirm dmenu slock zathura mpv imagemagick flameshot
 pacman -S --needed --noconfirm python-pip python-virtualenv 
-pacman -S --needed --noconfirm udisks2 acpi
+pacman -S --needed --noconfirm udisks2 acpi numlockx 
 pacman -S --needed --noconfirm mutt rtorrent transmission-cli
 pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc
 pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation
