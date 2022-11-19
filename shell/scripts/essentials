@@ -61,16 +61,14 @@ pacman -S --noconfirm libva-mesa-driver mesa-vdpau mesa mesa-demos
 
 echo "Boot loader"
 pacman -S --noconfirm grub efibootmgr dosfstools os-prober mtools
-# echo "Mount FAT32 EFI partition"
-# mkdir /boot/EFI 
-# mount /dev/sda1 /boot/efi  
-# grub-install --efi-directory=/boot/efi --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
-lsblk
-fdisk -l
-echo "Enter disk to install grub"
-read disk
-echo "grub-install /dev/$disk"
-grub-install /dev/$disk
+echo "Mount FAT32 EFI partition"
+grub-install --efi-directory=/boot/efi --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
+#lsblk
+#fdisk -l
+#echo "Enter disk to install grub"
+#read disk
+#echo "grub-install /dev/$disk"
+#grub-install /dev/$disk
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "Install packages"
 bash /dotfiles/shell/scripts/packages
