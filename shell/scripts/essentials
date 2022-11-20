@@ -68,6 +68,7 @@ read efi
 echo "Mount FAT32 EFI partition"
 mount --mkdir /dev/$efi /boot/efi
 grub-install --efi-directory=/boot/efi --target=x86_64-efi  --bootloader-id=grub_uefi --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
 echo "Install packages"
 bash /dotfiles/shell/scripts/packages
 exit

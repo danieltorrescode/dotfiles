@@ -8,6 +8,7 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
 pacman -S --needed --noconfirm xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake
 pacman -S --needed --noconfirm emacs vim vifm neofetch tmux
 pacman -S --needed --noconfirm picom feh arandr playerctl pavucontrol pulseaudio
+pacman -S --needed --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
 pacman -S --needed --noconfirm dmenu slock zathura mpv imagemagick flameshot
 pacman -S --needed --noconfirm python-pip python-virtualenv 
 pacman -S --needed --noconfirm udisks2 acpi numlockx 

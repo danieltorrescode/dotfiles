@@ -2,16 +2,13 @@
 My dotfiles and GNU-Linux settings, maintained during part of my free time, it is a work in progress.
 
 ### Instructions
+[Arch Linux Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
 
 * Connect to the internet
+[iwctl](https://wiki.archlinux.org/title/Iwd#iwctl)
+
 ```
-  ip link
-  ip link set wlp2s0 up 
-  iwlist  wlp2s0 scan
-  wpa_passphrase "essid" "password" > /etc/wifi
-  wpa_supplicant -B -i wlp2s0 -D wext -c /etc/wifi
-  dhclient
-  nmcli dev wifi connect "essid" password "password"
+  iwctl
 ```
 
 * Partition the disks
