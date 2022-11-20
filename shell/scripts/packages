@@ -98,13 +98,13 @@ su daniel -c "git clone https://github.com/danieltorrescode/emacs.git /home/dani
 echo "***** vim *****"
 su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git /home/daniel/.vim/bundle/Vundle.vim"
 
-echo "***** yay *****"
+echo "***** paru *****"
 pacman -S --needed --noconfirm go
-su daniel -c "git clone https://aur.archlinux.org/yay.git /home/daniel/yay"
-chown -R  daniel:daniel /home/daniel/yay
-cd /home/daniel/yay
+su daniel -c "git clone https://aur.archlinux.org/paru.git /home/daniel/paru"
+chown -R  daniel:daniel /home/daniel/paru
+cd /home/daniel/paru
 echo "run: makepkg -si"
-echo "then run: yay --version"
+echo "then run: paru --version"
 su daniel
 rm -rf /dotfiles
 exit
