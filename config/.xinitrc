@@ -11,6 +11,9 @@
 xrdb -remove *
 xrdb ~/.Xresources
 
+# disable motherboard speaker
+xset -b
+
 numlockx &
 sleep 2
 xrandr -s 1920x1080
@@ -23,7 +26,7 @@ case $WM in
         ;;
     "emacs")
         # setting wallpaper
-        feh --bg-scale ~/.config/wallpaper.png &
+        feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png &
 
         # starting picom
         picom --config ~/.config/picom/picom.conf &
@@ -35,7 +38,7 @@ case $WM in
         ;;
     "dwm")
         # setting wallpaper
-        feh --bg-scale ~/.config/wallpaper.png
+        feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png
 
         # starting picom
         picom --config ~/.config/picom/picom.conf &

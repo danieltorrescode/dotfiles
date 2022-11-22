@@ -14,7 +14,13 @@ config/.config/thunar
 config/.config/Thunar/
 config/.config/user-dirs.dirs
 config/.config/user-dirs.locale
-
+config/.config/Code - OSSV/
+config/.config/Electron/
+config/.config/google-chrome/
+config/.config/gtk-3.0/
+config/.config/keepassxc/
+config/.config/Code*
+config/.config/vifm/vifminfo.json
 
 
 # Ignore everything

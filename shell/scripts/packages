@@ -6,15 +6,15 @@ echo "#######################################################"
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient
 pacman -S --needed --noconfirm xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake
-pacman -S --needed --noconfirm emacs vim vifm neofetch tmux
+pacman -S --needed --noconfirm emacs vim vifm neofetch tmux bash-completion
 pacman -S --needed --noconfirm picom feh arandr playerctl pavucontrol pulseaudio
 pacman -S --needed --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
 pacman -S --needed --noconfirm dmenu slock zathura mpv imagemagick flameshot
 pacman -S --needed --noconfirm python-pip python-virtualenv 
-pacman -S --needed --noconfirm udisks2 acpi numlockx 
+pacman -S --needed --noconfirm udisks2 udiskie acpi numlockx 
 pacman -S --needed --noconfirm mutt rtorrent transmission-cli
-pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc
-pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation
+pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc keepassxc
+pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family
 pacman -S --needed --noconfirm pamixer brightnessctl xbacklight mpd mpc
 
 echo "###########################################"
@@ -30,13 +30,13 @@ sed -i 's/#greeter-session=.*/greeter-session=lightdm-gtk-greeter/' /etc/lightdm
 echo "###########################################"
 echo "installing firefox"
 echo "###########################################"
-sudo pacman -S --needed --noconfirm  firefox
+pacman -S --needed --noconfirm  firefox
 
-# echo "###########################################"
-# echo "installing containers and virtual machine tools"
-# echo "###########################################"
+echo "###########################################"
+echo "installing containers and virtual machine tools"
+echo "###########################################"
 
-# pacman -S --needed --noconfirm docker docker-compose
+pacman -S --needed --noconfirm docker docker-compose
 # pacman -S --needed --noconfirm qemu-full virt-manager libvirt edk2-ovmf dnsmasq 
 # systemctl enable libvirtd.service
 # systemctl start libvirtd.service
@@ -58,7 +58,7 @@ echo "###########################################"
 su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git /home/daniel/dotfiles"
 cd /home/daniel/dotfiles
 rm /home/daniel/.bash_profile
-# cp /home/daniel/dotfiles/config/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+cp /home/daniel/dotfiles/config/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
 su daniel -c  "stow shell config"
 su daniel -c "chmod 744 -R /home/daniel/scripts"
 su daniel -c "bash /home/daniel/scripts/config"
@@ -107,5 +107,7 @@ cd /home/daniel/paru
 echo "run: makepkg -si"
 echo "then run: paru --version"
 su daniel
+paru -S xinit-xsession
+paru -S google-chrome visual-studio-code-bin
 rm -rf /dotfiles
 exit

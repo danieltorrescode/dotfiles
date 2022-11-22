@@ -17,3 +17,6 @@ alias py="source /home/daniel/.venv/python/bin/activate"
 # set -o vi
 uname -a
 neofetch
+synclient VertScrollDelta=-58
+synclient HorizScrollDelta=-58
+synclient AccelFactor=0.5

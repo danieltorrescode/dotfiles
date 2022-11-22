@@ -23,6 +23,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+xset -b
 export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/scripts/"
