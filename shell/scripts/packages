@@ -37,7 +37,7 @@ echo "installing containers and virtual machine tools"
 echo "###########################################"
 
 pacman -S --needed --noconfirm docker docker-compose
-# pacman -S --needed --noconfirm qemu-full virt-manager libvirt edk2-ovmf dnsmasq 
+pacman -S --needed --noconfirm qemu-full virt-manager dnsmasq 
 # systemctl enable libvirtd.service
 # systemctl start libvirtd.service
 # systemctl status libvirtd.service
@@ -107,7 +107,6 @@ cd /home/daniel/paru
 echo "run: makepkg -si"
 echo "then run: paru --version"
 su daniel
-paru -S xinit-xsession
-paru -S google-chrome visual-studio-code-bin
+paru -S xinit-xsession google-chrome visual-studio-code-bin
 rm -rf /dotfiles
 exit

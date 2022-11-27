@@ -19,16 +19,13 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
   partion boot = +550M
   partion swap = +2G
   partion root = +xG
-  partion home = +xG
 ```
 
 * clone dotfiles
 ```
-  pacman -Sy
-  pacman -S git
+  pacman -Sy git vim
   git clone https://github.com/danieltorrescode/dotfiles.git
   bash dotfiles/shell/scripts/arch
-  umount -R /mnt
   reboot
   Launch emacs
   Launch vim and run :PluginInstall

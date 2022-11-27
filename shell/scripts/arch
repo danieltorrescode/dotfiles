@@ -10,12 +10,6 @@ loadkeys us
 echo "Update the system clock"
 timedatectl set-ntp true
 
-echo "Verify the boot mode"
-ls /sys/firmware/efi/efivars
-
-echo "Continue"
-read holded
-
 clear
 lsblk
 fdisk -l
@@ -26,28 +20,29 @@ echo "Enter swap partition"
 read swap_partition
 echo "Enter root partition"
 read root_partition
-echo "Enter home partition"
-read home_partition
 
 echo "***************************************"
 echo "efi_partition : /dev/$efi_partition"
 echo "swap_partition : /dev/$swap_partition"
 echo "root_partition : /dev/$root_partition"
-echo "home_partition : /dev/$home_partition"
 echo "***************************************"
 echo "Continue:any --- Esc: Ctrl+c "
 read holded
 
-mkfs.fat -F 32 /dev/$efi_partition
 mkswap /dev/$swap_partition
 mkfs.ext4 /dev/$root_partition
-mkfs.ext4 /dev/$home_partition
 
 echo "Mount the file systems"
 swapon /dev/$swap_partition
 mount /dev/$root_partition /mnt
-mount --mkdir /dev/$efi_partition /mnt/boot/efi
-mount --mkdir /dev/$home_partition /mnt/home
+
+if [ $efi_partition -ne 0]
+then
+    mkfs.fat -F 32 /dev/$efi_partition
+    mount --mkdir /dev/$efi_partition /mnt/boot/efi
+else
+    echo ""
+fi
 
 echo "Install essential packages"
 pacstrap /mnt base linux linux-firmware vim git 

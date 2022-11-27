@@ -9,7 +9,6 @@ config/.config/htop
 config/.config/neofetch
 config/.config/Code
 config/.config/code
-config/.config/xfce4
 config/.config/thunar
 config/.config/Thunar/
 config/.config/user-dirs.dirs
@@ -21,6 +20,8 @@ config/.config/gtk-3.0/
 config/.config/keepassxc/
 config/.config/Code*
 config/.config/vifm/vifminfo.json
+config/.config/QtProject.conf
+config/.config/flameshot/
 
 
 # Ignore everything
