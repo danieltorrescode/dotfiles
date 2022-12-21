@@ -22,11 +22,17 @@ config/.config/Code*
 config/.config/vifm/vifminfo.json
 config/.config/QtProject.conf
 config/.config/flameshot/
-
+config/.config/blender/
+config/.config/cef_user_data/
+config/.config/configstore/
+config/.config/heroic/
+config/.config/legendary/
+config/.config/xfce4/
 
 # Ignore everything
 #*
 # But not these files...
+!config/.config/xfce4/xfconf/xfce-perchannel-xml/*
 !.gitignore
 !.gitattributes
 !.bash_profile

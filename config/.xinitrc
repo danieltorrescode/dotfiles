@@ -14,6 +14,9 @@ xrdb ~/.Xresources
 # disable motherboard speaker
 xset -b
 
+# set international english keyboard
+setxkbmap us -variant intl
+
 numlockx &
 sleep 2
 xrandr -s 1920x1080

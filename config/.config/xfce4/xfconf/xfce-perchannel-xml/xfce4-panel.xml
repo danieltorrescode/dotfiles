@@ -9,7 +9,7 @@
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="16"/>
+      <property name="icon-size" type="uint" value="18"/>
       <property name="size" type="uint" value="26"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
@@ -27,6 +27,8 @@
         <value type="int" value="14"/>
         <value type="int" value="7"/>
       </property>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="disable-struts" type="bool" value="false"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -45,6 +47,10 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="wi-fi network connection “daniel_5g” active: daniel_5g (75%)"/>
+        <value type="string" value="liferea"/>
+        <value type="string" value="configuring wi-fi network connection “daniel_5g”…"/>
         <value type="string" value="wi-fi network connection “daniel_5g” active: daniel_5g (86%)"/>
         <value type="string" value="wi-fi network connection “daniel_5g” active: daniel_5g (83%)"/>
         <value type="string" value="networkmanager applet"/>
@@ -60,6 +66,8 @@
         <value type="string" value="no network connection"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="steam"/>
+        <value type="string" value="heroic1"/>
         <value type="string" value="flameshot"/>
         <value type="string" value="blueman"/>
       </property>
@@ -67,7 +75,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance1019;firefox.instance1037;firefox.instance1044;firefox.instance1047;firefox.instance1138;firefox.instance1362;firefox.instance1378;firefox.instance1980;firefox.instance36316;firefox.instance3778;firefox.instance787;firefox.instance811;firefox.instance8312;firefox.instance840;firefox.instance844;firefox.instance849"/>
+      <property name="mpris-players" type="string" value="chromium.instance2318;firefox.instance1019;firefox.instance1037;firefox.instance1042;firefox.instance1044;firefox.instance1047;firefox.instance1061;firefox.instance1064;firefox.instance1068;firefox.instance1077;firefox.instance1094;firefox.instance1095;firefox.instance1138;firefox.instance1162;firefox.instance1199;firefox.instance1252;firefox.instance1316;firefox.instance1329;firefox.instance1362;firefox.instance1378;firefox.instance1417;firefox.instance1508;firefox.instance1621;firefox.instance1738;firefox.instance1980;firefox.instance2048;firefox.instance2403;firefox.instance26967;firefox.instance29932;firefox.instance36316;firefox.instance3778;firefox.instance4082;firefox.instance787;firefox.instance811;firefox.instance8312;firefox.instance834;firefox.instance840;firefox.instance844;firefox.instance845;firefox.instance849;firefox.instance853;firefox.instance858;firefox.instance859;firefox.instance860;firefox.instance862;firefox.instance864;firefox.instance866;firefox.instance868;firefox.instance869;firefox.instance873;firefox.instance877;firefox.instance889;firefox.instance896;firefox.instance980"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -76,7 +84,11 @@
     </property>
     <property name="plugin-12" type="string" value="clock">
       <property name="digital-format" type="string" value="%r"/>
-      <property name="tooltip-format" type="string" value="%x"/>
+      <property name="tooltip-format" type="string" value="%d-%m-%Y"/>
+      <property name="digital-time-format" type="string" value="%r"/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-font" type="string" value="Ubuntu 12"/>
+      <property name="digital-date-font" type="string" value="Ubuntu Bold 12"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="0"/>

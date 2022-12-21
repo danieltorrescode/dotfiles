@@ -29,6 +29,7 @@
       <property name="&lt;Super&gt;r" type="empty">
         <property name="startup-notify" type="empty"/>
       </property>
+      <property name="&lt;Alt&gt;&lt;Super&gt;s" type="empty"/>
     </property>
     <property name="custom" type="empty">
       <property name="&lt;Alt&gt;F2" type="empty">
@@ -55,9 +56,6 @@
       <property name="&lt;Shift&gt;d" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Shift&gt;&lt;Super&gt;d" type="string" value="/usr/bin/dmenu">
-        <property name="startup-notify" type="bool" value="true"/>
-      </property>
       <property name="&lt;Super&gt;d" type="string" value="xfce4-appfinder">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
@@ -65,6 +63,10 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;v" type="string" value="st vifm"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;e" type="string" value="/usr/bin/emacs"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;t" type="string" value="thunar"/>
+      <property name="&lt;Super&gt;x" type="string" value="/usr/bin/bash /home/daniel/scripts/snippets"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;d" type="string" value="/usr/bin/dmenu_run">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -123,8 +125,8 @@
       <property name="&lt;Primary&gt;F12" type="empty"/>
       <property name="&lt;Super&gt;KP_Left" type="empty"/>
       <property name="&lt;Super&gt;KP_Right" type="empty"/>
-      <property name="&lt;Super&gt;KP_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Down" type="empty"/>
+      <property name="&lt;Super&gt;KP_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Page_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Home" type="empty"/>
       <property name="&lt;Super&gt;KP_End" type="empty"/>
@@ -160,7 +162,6 @@
       <property name="&lt;Alt&gt;F11" type="string" value="fullscreen_key"/>
       <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
       <property name="&lt;Super&gt;KP_Home" type="string" value="tile_up_left_key"/>
-      <property name="Escape" type="string" value="cancel_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_1" type="string" value="move_window_workspace_1_key"/>
       <property name="&lt;Super&gt;KP_Next" type="string" value="tile_down_right_key"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;Page_Up" type="string" value="raise_window_key"/>

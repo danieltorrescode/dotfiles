@@ -4,6 +4,6 @@
   <property name="Default" type="empty">
     <property name="XkbDisable" type="bool" value="false"/>
     <property name="XkbLayout" type="string" value="us,us"/>
-    <property name="XkbVariant" type="string" value="alt-intl,"/>
+    <property name="XkbVariant" type="string" value="intl,"/>
   </property>
 </channel>

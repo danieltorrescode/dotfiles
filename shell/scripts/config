@@ -32,7 +32,7 @@ chmod 774 ~/.config/bspwm/bspwmrc
 chmod 774 ~/.config/sxhkd/sxhkdrc
 chmod 774 ~/.config/polybar/launch.sh
 
-bash ~/scripts/touchpad
+#bash ~/scripts/touchpad
 
 echo "###########################################"
 echo "end"
