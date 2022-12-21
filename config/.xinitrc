@@ -21,7 +21,7 @@ numlockx &
 sleep 2
 xrandr -s 1920x1080
 
-WM="dwm"
+WM="bspwm"
 
 case $WM in
     "bspwm")
@@ -38,21 +38,6 @@ case $WM in
 
         panel | lemonbar  -B '#2f2f2f' -F '#dcdccc' &
         exec emacs
-        ;;
-    "dwm")
-        # setting wallpaper
-        feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png
-
-        # starting picom
-        picom --config ~/.config/picom/picom.conf &
-
-        while true; do
-            xsetroot -name "$(statusbar)"
-            sleep 1s # Update time every ten seconds
-        done &
-        ;;
-    "i3")
-        exec $WM
         ;;
 esac
 

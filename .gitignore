@@ -53,14 +53,8 @@ config/.config/xfce4/
 !.config/picom/**
 !.config/compton/
 !.config/compton/**
-!.config/i3/
-!.config/i3/**
-!.config/i3status/
-!.config/i3status/**
 !.config/polybar/
 !.config/polybar/**
-!.config/ranger/
-!.config/ranger/**
 !.config/sxhkd/
 !.config/sxhkd/**
 !.config/vifm/

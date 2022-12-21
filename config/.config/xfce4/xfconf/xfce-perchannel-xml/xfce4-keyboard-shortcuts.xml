@@ -63,10 +63,10 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;v" type="string" value="st vifm"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;e" type="string" value="/usr/bin/emacs"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;t" type="string" value="thunar"/>
-      <property name="&lt;Super&gt;x" type="string" value="/usr/bin/bash /home/daniel/scripts/snippets"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;d" type="string" value="/usr/bin/dmenu_run">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="&lt;Shift&gt;&lt;Super&gt;x" type="string" value="/usr/bin/bash /home/daniel/scripts/snippets"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

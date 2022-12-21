@@ -1,11 +1,7 @@
 systemctl poweroff
 systemctl reboot
 systemctl suspend
-source /home/daniel/.venv/youtube-dl/bin/activate
 source /home/daniel/.venv/python/bin/activate
-youtube-dl  --verbose -f mp4 tmpl
-youtube-dl  --verbose -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'
-git clone https://gitlab.com/danieltorresgitlab/
 git log --all --decorate --oneline --graph
 git log --graph
 git ls-tree -r master --name-only

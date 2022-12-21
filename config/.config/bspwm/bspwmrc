@@ -8,6 +8,7 @@ killall -q sxhkd
 sxhkd &
 # setting wallpaper
 #feh --bg-scale ~/.config/wallpaper.png
+feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png 
 
 # starting picom
 picom --config ~/.config/picom/picom.conf &

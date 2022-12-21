@@ -16,6 +16,7 @@ pacman -S --needed --noconfirm mutt rtorrent transmission-cli
 pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc keepassxc
 pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family
 pacman -S --needed --noconfirm pamixer brightnessctl xbacklight mpd mpc
+pacman -S --needed --noconfirm xdotool
 
 echo "###########################################"
 echo "installing xfce"
@@ -42,14 +43,12 @@ pacman -S --needed --noconfirm qemu-full virt-manager dnsmasq
 # systemctl start libvirtd.service
 # systemctl status libvirtd.service
 
-# echo "###########################################"
-# echo "creating virtualenv for python"
-# echo "###########################################"
+echo "###########################################"
+echo "creating virtualenv for python"
+echo "###########################################"
 
-# pip install --upgrade pip
-# virtualenv -p python3 ~/.venv/youtube-dl
-# pip install --upgrade pip
-# pip install youtube-dl
+pip install --upgrade pip
+virtualenv -p python3 /home/daniel/.venv/python
 
 echo "###########################################"
 echo "cloning and building packages"
@@ -68,30 +67,14 @@ rm /home/daniel/st/config.h
 make -C /home/daniel/st/
 make -C /home/daniel/st/ clean install
 
-# to add color to st use http://terminal.sexy/
-# generate palette with pywall or colorz
-# and edit st/config.def.h and rebuild
-# patching ex:
-# patch < $patch
-# su daniel -c "patch -d st/ < patches/$patch"
-
-# XF86_keyboard_symbols complete list
-# https://wiki.linuxquestions.org/wiki/XF86_keyboard_symbols
-
-echo "###########################################"
+echo "######################################################"
 echo "installing window manager"
-echo "###########################################"
+echo "XF86_keyboard_symbols complete list:" 
+echo "wiki.linuxquestions.org/wiki/XF86_keyboard_symbols"
+echo "######################################################"
+
 echo "***** bspwm *****"
 pacman -S --needed --noconfirm bspwm sxhkd polybar
-
-echo "***** i3 *****"
-pacman -S --needed --noconfirm i3
-
-echo "***** dwm *****"
-su daniel -c "git clone https://github.com/danieltorrescode/dwm.git /home/daniel/dwm"
-rm /home/daniel/dwm/config.h
-make -C /home/daniel/dwm/
-make -C /home/daniel/dwm/ clean install
 
 echo "***** emacs *****"
 su daniel -c "git clone https://github.com/danieltorrescode/emacs.git /home/daniel/.emacs.d"
