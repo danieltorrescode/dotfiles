@@ -32,6 +32,12 @@ super + shift + e
 super + shift + p
         pavucontrol
 
+super + shift + m
+        rofi
+
+super + shift + k
+        kitty
+
 Print
     flameshot gui
 
