@@ -48,8 +48,8 @@ bspc config pointer_action3 resize_corner
 
 #### BSPWM coloring ####
 bspc config normal_border_color		      "#4c566a"
-bspc config active_border_color	          "#1e1e1e"
-bspc config focused_border_color	      "#5e81ac"
+bspc config active_border_color	        "#1e1e1e"
+bspc config focused_border_color        "#d1cbbe"
 bspc config presel_feedback_color	      "#5e81ac"
 #bspc config urgent_border_color 	      "#dd2727"
 
@@ -64,13 +64,5 @@ bspc rule -a Surf state=tiled follow=on
 bspc rule -a Zathura state=tiled follow=on
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
-
-# source the colors.
-# . "${HOME}/.cache/wal/colors.sh"
-
-# # Set the border colors.
-bspc config focused_border_color "#d1cbbe"
-# bspc config active_border_color "$color2"
-# bspc config focused_border_color "$color15"
 
 xsetroot -cursor_name left_ptr &

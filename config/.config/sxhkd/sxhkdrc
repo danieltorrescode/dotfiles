@@ -26,20 +26,39 @@ super + shift + v
 super + shift + s
         st screen
 
-super + shift + r
-        st ranger --confdir=~/.config/ranger
-
-super + shift + u
-        surf
-
 super + shift + e
         emacs
 
 super + shift + p
         pavucontrol
 
-super + shift + x
-        slock
+Print
+    flameshot gui
+
+F1
+   pactl set-sink-mute @DEFAULT_SINK@ toggle 
+
+F2
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+F3
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+F4
+   pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+
+F9
+   slock
+
+F11
+  brightnessctl set 10%-
+
+F12
+  brightnessctl set 10%+
+
+# Audio control
+XF86Audio{Next,Prev,Play,Stop}
+  playerctl {next,previous,play-pause,stop}
 
 ######################################################################
 ######################################################################
@@ -149,3 +168,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Cycle through desktops
+ctrl + alt + {Left, Right}
+    bspc desktop -f {prev,next}

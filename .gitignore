@@ -28,6 +28,7 @@ config/.config/configstore/
 config/.config/heroic/
 config/.config/legendary/
 config/.config/xfce4/
+config/.config/systemd/
 
 # Ignore everything
 #*

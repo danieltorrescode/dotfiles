@@ -1,5 +1,5 @@
 !! Transparency (0-1):
-st*.alpha: 0.8
+st*.alpha: 0.6
 
 !! Set a default font and font size as below:
 /* *.polybarfont: Hack:style=Bold:size=10 */
