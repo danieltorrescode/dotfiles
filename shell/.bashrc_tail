@@ -14,9 +14,19 @@ alias firefox3="${HOME}/firefox/firefox -P firefox3 2>/dev/null &"
 alias youtube="source /home/daniel/.venv/youtube-dl/bin/activate"
 alias py="source /home/daniel/.venv/python/bin/activate"
 
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='bat'
+
 # set -o vi
 uname -a
 neofetch
 synclient VertScrollDelta=-58
 synclient HorizScrollDelta=-58
 synclient AccelFactor=0.5
+
+# Starship Prompt
+eval "$(starship init bash)"
