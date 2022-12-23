@@ -16,6 +16,9 @@ picom --config ~/.config/picom/picom.conf &
 # starting polybar
 ~/.config/polybar/launch.sh &
 
+# notifications
+pkill dunst
+dunst &
 
 #### MONITORS ####
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -60,8 +63,8 @@ bspc config presel_feedback_color	      "#5e81ac"
 # xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI-A-0)
 
 bspc rule -a Emacs state=tiled follow=on
-bspc rule -a Surf state=tiled follow=on
 bspc rule -a Zathura state=tiled follow=on
+bspc rule -a Surf state=tiled follow=on
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 

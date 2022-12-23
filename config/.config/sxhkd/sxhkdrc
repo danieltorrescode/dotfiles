@@ -33,7 +33,13 @@ super + shift + p
         pavucontrol
 
 super + shift + m
-        rofi
+        rofi -show drun
+
+super + Tab
+        rofi -show window
+
+super + shift + d
+        bash ~/scripts/snippets
 
 super + shift + k
         kitty
