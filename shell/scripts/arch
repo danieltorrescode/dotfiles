@@ -45,7 +45,7 @@ else
 fi
 
 echo "Install essential packages"
-pacstrap /mnt base linux linux-firmware vim git 
+pacstrap -K /mnt base linux linux-firmware vim git 
 
 echo "Generate an fstab file"
 genfstab -U /mnt >> /mnt/etc/fstab
