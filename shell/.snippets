@@ -18,6 +18,7 @@ systemctl start docker && docker-compose up
 echo 8 > /sys/class/backlight/samsung/brightness
 sudo systemctl restart bluetooth.service
 sudo systemctl disable docker.service
+sudo systemctl start libvirtd.service | virtual | qemu
 export VISUAL=vim; crontab -e
 crontab -l
 sudo udevadm control --reload

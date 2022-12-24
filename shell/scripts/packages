@@ -65,12 +65,16 @@ pacman -S --needed --noconfirm docker docker-compose
 pacman -S --needed --noconfirm qemu-full virt-manager dnsmasq 
 
 echo "###########################################"
-echo "enabling service with systemctl"
+echo "working with systemctl"
 echo "###########################################"
 systemctl enable cronie.service
 systemctl start cronie.service
-systemctl enable libvirtd.service
-systemctl start libvirtd.service
+systemctl disable libvirtd.service
+systemctl disable docker.service
+systemctl disable bluetooth.service
+
+newgrp libvirt
+usermod -a -G libvirt daniel
 
 echo "###########################################"
 echo "creating virtualenv for python"
