@@ -3,6 +3,7 @@
 echo "###########################################"
 echo "Arch Linux install"
 echo "###########################################"
+pacman -S --needed --noconfirm archlinux-keyring
 echo "Set the console keyboard layout"
 ls /usr/share/kbd/keymaps/**/*.map.gz |  grep us
 loadkeys us
@@ -57,4 +58,3 @@ echo "Chroot"
 echo "run: bash dotfiles/shell/scripts/essentials"
 arch-chroot /mnt
 umount -R /mnt
-reboot
