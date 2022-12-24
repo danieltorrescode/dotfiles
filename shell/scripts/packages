@@ -30,7 +30,7 @@ pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc keepassxc
 pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family
 pacman -S --needed --noconfirm pamixer brightnessctl xbacklight mpd mpc
 pacman -S --needed --noconfirm xdotool lsd bat dunst cronie
-pacman -S --needed --noconfirm rofi kitty alacritty starship ncdu
+pacman -S --needed --noconfirm rofi kitty alacritty starship fzf ncdu 
 pacman -S --needed --noconfirm zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 
 echo "###########################################"

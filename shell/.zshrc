@@ -37,5 +37,13 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f /usr/bin/fzf ]
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+export FZF_DEFAULT_OPTS="--extended"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
