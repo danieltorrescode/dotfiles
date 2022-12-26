@@ -17,14 +17,11 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 
-# set -o vi
+set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 uname -a
 neofetch
-synclient VertScrollDelta=-58
-synclient HorizScrollDelta=-58
-synclient AccelFactor=0.5
 
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 #[ -f /usr/bin/fzf ]

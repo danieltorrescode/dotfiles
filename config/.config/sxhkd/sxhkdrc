@@ -23,22 +23,19 @@ super + shift + f
 super + shift + v
         st vifm
 
-super + shift + s
-        st screen
-
 super + shift + e
         emacs
 
 super + shift + p
         pavucontrol
 
-super + shift + m
+super + shift + r
         rofi -show drun
 
 super + Tab
         rofi -show window
 
-super + shift + d
+super + shift + s
         bash ~/scripts/snippets
 
 super + shift + k

@@ -16,6 +16,7 @@ date +'%d/%m/%Y %I:%M:%S'
 echo "#######################################################"
 echo "updating repositories and installing packages"
 echo "#######################################################"
+pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient
 pacman -S --needed --noconfirm xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake
@@ -67,6 +68,7 @@ pacman -S --needed --noconfirm qemu-full virt-manager dnsmasq
 echo "###########################################"
 echo "working with systemctl"
 echo "###########################################"
+systemctl enable ufw
 systemctl enable cronie.service
 systemctl start cronie.service
 systemctl disable libvirtd.service
@@ -140,7 +142,6 @@ cd /home/daniel/paru
 echo "run: makepkg -si"
 echo "then run: paru --version"
 su daniel
-paru -S xinit-xsession google-chrome visual-studio-code-bin
 
 rm -rf /dotfiles
 
