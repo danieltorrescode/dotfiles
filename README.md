@@ -23,7 +23,8 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
 
 * clone dotfiles
 ```
-  pacman -Sy git vim
+  pacman -S archlinux-keyring
+  pacman -Sy git vim tmux
   git clone https://github.com/danieltorrescode/dotfiles.git
   bash dotfiles/shell/scripts/arch
   reboot
