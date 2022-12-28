@@ -65,6 +65,9 @@ symbol = " "
 [git_branch]
 symbol = " "
 
+[git_status]
+up_to_date = " ✓ "
+
 [golang]
 symbol = " "
 

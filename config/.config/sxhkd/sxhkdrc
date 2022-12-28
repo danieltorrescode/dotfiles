@@ -60,10 +60,10 @@ F9
    slock
 
 F11
-  brightnessctl set 10%-
+  brightnessctl set 5%-
 
 F12
-  brightnessctl set 10%+
+  brightnessctl set 5%+
 
 # Audio control
 XF86Audio{Next,Prev,Play,Stop}
