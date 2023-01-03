@@ -38,9 +38,6 @@ super + Tab
 super + shift + s
         bash ~/scripts/snippets
 
-super + shift + k
-        kitty
-
 Print
     flameshot gui
 

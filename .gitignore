@@ -30,6 +30,7 @@ config/.config/legendary/
 config/.config/xfce4/
 config/.config/systemd/
 config/.config/menus
+config/.config/liferea
 
 # Ignore everything
 #*

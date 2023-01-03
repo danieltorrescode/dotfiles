@@ -20,15 +20,16 @@ pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient
 pacman -S --needed --noconfirm xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake
+pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family
 pacman -S --needed --noconfirm emacs vim vifm neofetch tmux bash-completion
 pacman -S --needed --noconfirm picom feh arandr playerctl pavucontrol pulseaudio
 pacman -S --needed --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
-pacman -S --needed --noconfirm dmenu slock zathura zathura-pdf-mupdf mpv imagemagick flameshot
+pacman -S --needed --noconfirm dmenu slock zathura zathura-pdf-mupdf mpv imagemagick 
+pacman -S --needed --noconfirm flameshot liferea
 pacman -S --needed --noconfirm python-pip python-virtualenv 
 pacman -S --needed --noconfirm udisks2 udiskie acpi numlockx 
 pacman -S --needed --noconfirm mutt rtorrent transmission-cli
 pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc keepassxc
-pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family
 pacman -S --needed --noconfirm pamixer brightnessctl xbacklight mpd mpc
 pacman -S --needed --noconfirm xdotool lsd bat dunst cronie
 pacman -S --needed --noconfirm rofi kitty alacritty starship fzf ncdu 
