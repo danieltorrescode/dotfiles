@@ -25,7 +25,7 @@ pacman -S --needed --noconfirm emacs vim vifm neofetch tmux bash-completion
 pacman -S --needed --noconfirm picom feh arandr playerctl pavucontrol pulseaudio
 pacman -S --needed --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth
 pacman -S --needed --noconfirm dmenu slock zathura zathura-pdf-mupdf mpv imagemagick 
-pacman -S --needed --noconfirm flameshot liferea
+pacman -S --needed --noconfirm flameshot liferea lxappearance-gtk3
 pacman -S --needed --noconfirm python-pip python-virtualenv 
 pacman -S --needed --noconfirm udisks2 udiskie acpi numlockx 
 pacman -S --needed --noconfirm mutt rtorrent transmission-cli
