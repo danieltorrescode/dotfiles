@@ -48,8 +48,8 @@ echo "###########################################"
 echo "installing xfce"
 echo "###########################################"
 pacman -S --needed --noconfirm  xfce4 xfce4-goodies 
-pacman -S --needed --noconfirm  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
 pacman -S --needed --noconfirm  capitaine-cursors arc-gtk-theme xdg-user-dirs-gtk file-roller network-manager-applet
+pacman -S --needed --noconfirm  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
 systemctl enable lightdm -f
 cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.orig
 sed -i 's/#greeter-session=.*/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf

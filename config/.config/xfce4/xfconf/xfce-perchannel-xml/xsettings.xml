@@ -3,7 +3,7 @@
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
     <property name="ThemeName" type="string" value="Nordic"/>
-    <property name="IconThemeName" type="string" value="Aura-Dark-Icons"/>
+    <property name="IconThemeName" type="string" value="Relax-Dark-Icons"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="int" value="6"/>
     <property name="DndDragThreshold" type="empty"/>
