@@ -36,7 +36,8 @@ case $WM in
 
         xsetroot -cursor_name left_ptr
 
-        panel | lemonbar  -B '#2f2f2f' -F '#dcdccc' &
+        #panel | lemonbar  -B '#2f2f2f' -F '#dcdccc' &
+        ~/.config/polybar/launch.sh &
         exec emacs
         ;;
 esac

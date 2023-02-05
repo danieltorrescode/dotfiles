@@ -31,6 +31,10 @@ config/.config/xfce4/
 config/.config/systemd/
 config/.config/menus
 config/.config/liferea
+config/.config/GIMP/
+config/.config/JetBrains/
+config/.config/gtk-2.0/
+config/.config/libreoffice/
 
 # Ignore everything
 #*
