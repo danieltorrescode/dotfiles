@@ -64,6 +64,7 @@ echo "installing containers and virtual machine tools"
 echo "###########################################"
 
 pacman -S --needed --noconfirm docker docker-compose
+usermod -aG docker daniel
 pacman -S --needed --noconfirm qemu-full virt-manager dnsmasq 
 
 echo "###########################################"

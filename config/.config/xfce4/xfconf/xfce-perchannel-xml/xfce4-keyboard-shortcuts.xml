@@ -65,6 +65,7 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="/usr/bin/bash /home/daniel/scripts/snippets"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="/usr/bin/firefox"/>
       <property name="&lt;Super&gt;space" type="string" value="rofi -show drun"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;l" type="string" value="/usr/bin/liferea"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
