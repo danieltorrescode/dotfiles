@@ -32,7 +32,7 @@ super + shift + p
 super + space
         rofi -show drun
 
-super + Tab
+shift + Tab
         rofi -show window
 
 super + shift + s
@@ -41,25 +41,25 @@ super + shift + s
 Print
     flameshot gui
 
-F1
+super + F1
    pactl set-sink-mute @DEFAULT_SINK@ toggle 
 
-F2
+super + F2
     pactl set-sink-volume @DEFAULT_SINK@ -5%
 
-F3
+super + F3
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-F4
+super + F4
    pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
-F9
+super + F9
    slock
 
-F11
+super + F11
   brightnessctl set 5%-
 
-F12
+super + F12
   brightnessctl set 5%+
 
 # Audio control
@@ -126,7 +126,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
+super + {Tab, shift + Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
