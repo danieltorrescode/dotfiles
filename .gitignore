@@ -35,6 +35,7 @@ config/.config/GIMP/
 config/.config/JetBrains/
 config/.config/gtk-2.0/
 config/.config/libreoffice/
+config/.fonts/.uuid
 
 # Ignore everything
 #*
