@@ -32,7 +32,7 @@ super + shift + p
 super + space
         rofi -show drun
 
-shift + Tab
+ctrl + shift + Tab
         rofi -show window
 
 super + shift + s

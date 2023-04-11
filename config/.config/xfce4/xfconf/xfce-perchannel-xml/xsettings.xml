@@ -2,7 +2,7 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Nordic"/>
+    <property name="ThemeName" type="string" value="Aura"/>
     <property name="IconThemeName" type="string" value="Relax-Dark-Icons"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="int" value="6"/>
@@ -23,7 +23,6 @@
   <property name="Gtk" type="empty">
     <property name="CanChangeAccels" type="empty"/>
     <property name="ColorPalette" type="empty"/>
-    <property name="DialogsUseHeader" type="empty"/>
     <property name="FontName" type="string" value="Ubuntu Bold 12"/>
     <property name="MonospaceFontName" type="string" value="Ubuntu Mono Bold 14"/>
     <property name="IconSizes" type="empty"/>
@@ -36,6 +35,7 @@
     <property name="CursorThemeName" type="empty"/>
     <property name="CursorThemeSize" type="empty"/>
     <property name="DecorationLayout" type="string" value="menu:minimize,maximize,close"/>
+    <property name="DialogsUseHeader" type="empty"/>
     <property name="TitlebarMiddleClick" type="empty"/>
   </property>
   <property name="Gdk" type="empty">
