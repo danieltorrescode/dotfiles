@@ -457,6 +457,15 @@ format-foreground = #fefefe
 format-background = #7197E7
 
 #################################################################################
+
+[module/microphone]
+type = custom/script
+interval = 5
+format-prefix = "Microphone: "
+format = <label>
+exec = microphone_status.sh
+
+#################################################################################
 [module/powermenu]
 type = custom/menu
 

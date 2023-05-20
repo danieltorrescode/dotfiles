@@ -1,0 +1,10 @@
+#!/bin/bash
+
+status=$(pactl list sources | awk '/Name:.*\.monitor/ { getline; getline; if ($2 == "yes") print "muted"; else print "unmuted"; exit}')
+echo $status
+if [[ $status == "unmuted" ]]; then
+    echo ""  # Icon for open microphone
+else
+    echo ""  # Icon for closed microphone
+fi
+
