@@ -1,0 +1,59 @@
+#!/bin/bash
+
+apt install vim git tmux gparted keepassxc htop \
+ ufw gufw liferea powerline gnome-tweaks \
+ qemu qemu-kvm virt-manager bridge-utils docker.io docker-compose  \
+ fzf neofetch bat fonts-hack pip virtualenv -y
+
+snap install lsd
+snap install --edge starship 
+
+python3 -m pip install --upgrade pip
+
+cp /home/daniel/Downloads/Projects/dotfiles/config/.vimrc ~
+cp /home/daniel/Downloads/Projects/dotfiles/config/starship.toml ~
+cp -r /home/daniel/Downloads/Projects/dotfiles/config/.fonts ~/.local/share/fonts
+fc-cache -f -v
+
+
+systemctl disable docker.service
+usermod -aG docker daniel
+
+: <<'COMMENT'
+    # "from here all is added and edited by daniel torres"
+    # uncomment the line above to set to yes force_color_prompt=yes
+    # default .bashrc config files at /etc/skel/
+
+    alias SO="systemctl poweroff"
+    alias SR="systemctl reboot"
+    alias SS="systemctl suspend"
+    alias SH="systemctl hibernate"
+    alias SSH="systemctl suspend-then-hibernate"
+
+    alias firefox2="${HOME}/firefox/firefox -P firefox2 2>/dev/null &"
+
+    alias ll='lsd -lh --group-dirs=first'
+    alias la='lsd -a --group-dirs=first'
+    alias l='lsd --group-dirs=first'
+    alias lla='lsd -lha --group-dirs=first'
+    alias ls='lsd --group-dirs=first'
+    #alias cat='bat'
+
+    set -o vi
+    bind 'set show-all-if-ambiguous on'
+    bind 'TAB:menu-complete'
+    uname -a
+    neofetch
+
+    #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+    [ -f /usr/bin/fzf ]
+    #source /usr/share/fzf/completion.bash
+    source /usr/share/doc/fzf/examples/key-bindings.bash
+    #export FZF_DEFAULT_OPTS="--extended"
+    #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+    export STARSHIP_CONFIG=~/starship.toml
+    # Starship Prompt
+    eval "$(starship init bash)"
+COMMENT
+
