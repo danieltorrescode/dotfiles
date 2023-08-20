@@ -21,18 +21,6 @@ numlockx &
 sleep 2
 xrandr -s 1920x1080
 
-
-# see https://unix.stackexchange.com/a/295652/332452
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-
-# see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
-eval $(/usr/bin/gnome-keyring-daemon --start)
-export SSH_AUTH_SOCK
-
-# see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
-mkdir -p "$HOME"/.local/share/keyrings
-
-
 WM="bspwm"
 
 case $WM in
@@ -43,12 +31,10 @@ case $WM in
         # setting wallpaper
         feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png &
 
-        # starting picom
         picom --config ~/.config/picom/picom.conf &
 
         xsetroot -cursor_name left_ptr
 
-        #panel | lemonbar  -B '#2f2f2f' -F '#dcdccc' &
         ~/.config/polybar/launch.sh &
         exec emacs
         ;;

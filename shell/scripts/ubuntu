@@ -10,13 +10,16 @@ snap install --edge starship
 
 python3 -m pip install --upgrade pip
 
-cp /home/daniel/Downloads/Projects/dotfiles/config/.vimrc ~
-cp /home/daniel/Downloads/Projects/dotfiles/config/starship.toml ~
-cp -r /home/daniel/Downloads/Projects/dotfiles/config/.fonts ~/.local/share/fonts
+su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git /home/daniel/Downloads/Projects/dotfiles"
+su daniel -c "cp /home/daniel/Downloads/Projects/dotfiles/config/.vimrc ~"
+su daniel -c "cp /home/daniel/Downloads/Projects/dotfiles/config/starship.toml ~"
+su daniel -c "cp -r /home/daniel/Downloads/Projects/dotfiles/config/.fonts ~/.local/share/fonts"
 fc-cache -f -v
 
+# apt install dxvk winetricks
+# snap install steam 
+# snap install --edge heroic
 
-systemctl disable docker.service
 usermod -aG docker daniel
 
 : <<'COMMENT'

@@ -78,6 +78,4 @@ else
 fi
 
 grub-mkconfig -o /boot/grub/grub.cfg
-#echo "Install packages"
-#bash /dotfiles/shell/scripts/packages
-#exit
+exit

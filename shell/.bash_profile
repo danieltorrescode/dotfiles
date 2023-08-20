@@ -31,7 +31,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL="st"
 export BROWSER="${HOME}/firefox"
-export RANGER_LOAD_DEFAULT_RC=false
 export VIFM="/home/daniel/.config/vifm"
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx

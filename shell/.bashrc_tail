@@ -8,8 +8,6 @@ alias SS="systemctl suspend"
 alias SH="systemctl hibernate"
 alias SSH="systemctl suspend-then-hibernate"
 
-alias firefox2="${HOME}/firefox/firefox -P firefox2 2>/dev/null &"
-
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
