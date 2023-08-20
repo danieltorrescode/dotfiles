@@ -20,38 +20,38 @@ echo "updating repositories and installing packages"
 echo "#######################################################"
 pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
-pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient \
-    xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake \ 
-    gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family \ 
-    emacs vim vifm neofetch tmux bash-completion \ 
-    picom feh arandr playerctl pavucontrol pulseaudio \ 
-    bluez bluez-utils blueman pulseaudio-bluetooth \ 
-    dmenu slock zathura zathura-pdf-mupdf mpv imagemagick  \ 
-    flameshot liferea lxappearance-gtk3 \ 
-    python-pip python-virtualenv  \ 
-    udisks2 udiskie acpi numlockx  \ 
-    mutt rtorrent transmission-cli \ 
-    ufw gufw firejail apparmor lxc keepassxc \ 
-    pamixer brightnessctl xbacklight mpd mpc \ 
-    xdotool lsd bat dunst cronie \ 
-    rofi alacritty starship fzf ncdu  \ 
-    zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k \
-    docker docker-compose qemu-full virt-manager dnsmasq firefox \  
-    bspwm sxhkd polybar hyprland
+pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient
+pacman -S --needed --noconfirm xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake 
+pacman -S --needed --noconfirm gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family 
+pacman -S --needed --noconfirm emacs vim vifm neofetch tmux bash-completion 
+pacman -S --needed --noconfirm picom feh arandr playerctl pavucontrol pulseaudio 
+pacman -S --needed --noconfirm bluez bluez-utils blueman pulseaudio-bluetooth 
+pacman -S --needed --noconfirm dmenu slock zathura zathura-pdf-mupdf mpv imagemagick  
+pacman -S --needed --noconfirm flameshot liferea lxappearance-gtk3 
+pacman -S --needed --noconfirm python-pip python-virtualenv  
+pacman -S --needed --noconfirm udisks2 udiskie acpi numlockx  
+pacman -S --needed --noconfirm mutt rtorrent transmission-cli 
+pacman -S --needed --noconfirm ufw gufw firejail apparmor lxc keepassxc 
+pacman -S --needed --noconfirm pamixer brightnessctl xbacklight mpd mpc 
+pacman -S --needed --noconfirm xdotool lsd bat dunst cronie 
+pacman -S --needed --noconfirm rofi alacritty starship fzf ncdu  
+pacman -S --needed --noconfirm zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
+pacman -S --needed --noconfirm docker docker-compose qemu-full virt-manager dnsmasq firefox  
+pacman -S --needed --noconfirm bspwm sxhkd polybar hyprland
 
 echo "###########################################"
 echo "AMD drivers"
 echo "###########################################"
 lspci -k | grep VGA
-pacman -S --noconfirm xf86-video-amdgpu xf86-video-ati vulkan-radeon \ 
-    libva-mesa-driver mesa-vdpau mesa mesa-demos dxvk-bin
+pacman -S --needed --noconfirm xf86-video-amdgpu xf86-video-ati vulkan-radeon
+pacman -S --needed --noconfirm libva-mesa-driver mesa-vdpau mesa mesa-demos dxvk-bin
 
 echo "###########################################"
 echo "working with systemctl and services"
 echo "###########################################"
 usermod -aG docker daniel
 newgrp libvirt
-usermod -a -G libvirt daniel
+usermod -aG libvirt daniel
 pip install --upgrade pip
 
 systemctl enable ufw
