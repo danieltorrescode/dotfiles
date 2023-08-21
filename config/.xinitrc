@@ -39,9 +39,3 @@ case $WM in
         exec emacs
         ;;
 esac
-
-# starting window manager
-while true; do
-    exec /usr/local/bin/$WM 2> /dev/null
-done
-

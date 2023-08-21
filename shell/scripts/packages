@@ -44,7 +44,7 @@ echo "AMD drivers"
 echo "###########################################"
 lspci -k | grep VGA
 pacman -S --needed --noconfirm xf86-video-amdgpu xf86-video-ati vulkan-radeon
-pacman -S --needed --noconfirm libva-mesa-driver mesa-vdpau mesa mesa-demos dxvk-bin
+pacman -S --needed --noconfirm libva-mesa-driver mesa-vdpau mesa mesa-demos
 
 echo "###########################################"
 echo "working with systemctl and services"
@@ -52,7 +52,6 @@ echo "###########################################"
 usermod -aG docker daniel
 newgrp libvirt
 usermod -aG libvirt daniel
-pip install --upgrade pip
 
 systemctl enable ufw
 systemctl enable cronie.service
@@ -74,7 +73,7 @@ su daniel -c "git clone https://github.com/VundleVim/Vundle.vim.git /home/daniel
 
 su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git /home/daniel/dotfiles"
 
-cp /home/daniel/dotfiles/config/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
+# cp /home/daniel/dotfiles/config/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
 # cp /home/daniel/dotfiles/config/20-amd-gpu.conf /etc/X11/xorg.conf.d/20-amd-gpu.conf
 cp /home/daniel/dotfiles/config/power.rules  /etc/udev/rules.d/power.rules
 
@@ -95,7 +94,7 @@ su daniel -c "rm /home/daniel/.bash_profile"
 
 su daniel -c "stow shell config"
 su daniel -c "chmod 744 -R /home/daniel/scripts"
-su daniel -c "sed -i '/daniel torres/,$d' /home/daniel/.bashrc"
+su daniel -c "sed -i '/daniel torres/,\$d' /home/daniel/.bashrc"
 su daniel -c "cat /home/daniel/.bashrc_tail >> /home/daniel/.bashrc"
 
 su daniel -c "chmod 774 /home/daniel/.config/bspwm/bspwmrc"

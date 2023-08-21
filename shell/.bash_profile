@@ -23,7 +23,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-xset -b
 export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/scripts/"
@@ -32,6 +31,6 @@ export EDITOR="$VISUAL"
 export TERMINAL="st"
 export BROWSER="${HOME}/firefox"
 export VIFM="/home/daniel/.config/vifm"
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]] && [[ $(tty) = /dev/tty1 ]]; then
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx
 fi
