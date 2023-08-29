@@ -1,0 +1,254 @@
+/* 
+theme_selected_bg_color: #308280;
+theme_selected_fg_color: #e3e7e7
+wm_icon_bg: #
+error_color: #dc4713
+warning_color: #a8a822
+theme_bg_color: #010409
+theme_fg_color: #e3e7e7
+background_color: #010409
+
+*/
+
+@keyframes blink-warning {
+    70% {
+        color: #e3e7e7;
+    }
+
+    to {
+        color: #e3e7e7;
+        background-color: #a8a822;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: #e3e7e7;
+    }
+
+    to {
+        color: #e3e7e7;
+        background-color: #dc4713;
+    }
+}
+
+/* Reset all styles */
+* {
+    font-family: "Ubuntu Regular", "Font Awesome 6 Free", "Font Awesome";
+    border: none;
+    border-radius: 4;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* The whole bar */
+#waybar {
+    background: #010409;
+    color: #e3e7e7;
+    font-size: 14px;
+}
+
+#window {
+    margin-left: 10px;
+}
+
+window#waybar {
+    margin-left: 10px;
+    border-radius: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button {
+    /* To compensate for the top border and still have vertical centering */
+    padding: 0 0.5em;
+    margin: 4px 3px;
+    color: #e3e7e7;
+}
+
+#workspaces button.focused {
+    border-color: #308280;
+    color: #e3e7e7;
+    background-color: #308280;
+}
+
+#workspaces button.urgent {
+    border-color: #dc4713;
+    color: #dc4713;
+}
+
+#mode {
+    background: #010409;
+}
+
+#clock,
+#custom-playerctl,
+#custom-power,
+#custom-scratchpad,
+#custom-weather,
+#custom-wlsunset,
+#custom-clipboard,
+#custom-menu,
+#custom-dnd,
+#battery,
+#cpu,
+#language,
+#memory,
+#network,
+#bluetooth,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 4px 3px;
+}
+
+#clock {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-weather {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-wlsunset {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-playerctl {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-power {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-scratchpad {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-clipboard {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-menu {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-dnd {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#battery.warning {
+    color: #a8a822;
+}
+
+#battery.critical {
+    color: #dc4713;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#language {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#memory {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#custom-gpu-usage {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#network {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#bluetooth {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#bluetooth.disabled {
+    background: #010409;
+    color: #e3e7e7;
+}
+
+#network.disconnected {
+    background: #010409;
+    color: #e3e7e7
+}
+
+#pulseaudio {
+    background: #308280;
+    color: #e3e7e7;
+}
+
+#pulseaudio.muted {
+    background: #010409;
+    color: #e3e7e7;
+}
+
+#custom-wf-recorder {
+    color: #dc4713;
+    padding-right: 10px;
+}
+
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#idle_inhibitor {
+    background: #308280;
+}
+
+#idle_inhibitor.activated {
+    background: #308280;
+    color: #e3e7e7;
+}

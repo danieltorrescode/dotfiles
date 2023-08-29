@@ -1,10 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-status=$(pactl list sources | awk '/Name:.*\.monitor/ { getline; getline; if ($2 == "yes") print "muted"; else print "unmuted"; exit}')
-echo $status
-if [[ $status == "unmuted" ]]; then
-    echo ""  # Icon for open microphone
+# Check if microphone is muted
+if pactl list sources | grep -q "Mute: yes"; then
+    echo ""  
 else
-    echo ""  # Icon for closed microphone
+    echo ""  
 fi
-

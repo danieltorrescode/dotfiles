@@ -26,6 +26,11 @@ compinit
 # End of lines added by compinstall
 
 # Manual aliases
+alias SO="systemctl poweroff"
+alias SR="systemctl reboot"
+alias SS="systemctl suspend"
+alias SH="systemctl hibernate"
+alias SSH="systemctl suspend-then-hibernate"
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
