@@ -7,16 +7,16 @@ apt install  kitty fzf neofetch bat fonts-hack pip virtualenv -y
 apt install  sway swaybg swaylock waybar wdisplays wofi swayimg swayidle -y
 apt install  sway-backgrounds python3-i3ipc grimshot mako-notifier -y
 apt install  zsh zsh-theme-powerlevel9k zsh-syntax-highlighting zsh-autosuggestions -y
-apt install  playerctl brightnessctl ffmpeg pavucontrol -y
+apt install  playerctl brightnessctl ffmpeg pavucontrol flameshot -y
 apt install  bspwm sxhkd polybar rofi feh picom xserver-xorg-input-synaptics -y
 
-chmod 666  /sys/class/backlight/amdgpu_bl0/brightness
 snap install lsd
 snap install --edge starship 
 
 python3 -m pip install --upgrade pip
+usermod -aG docker daniel
 
-git clone https://github.com/danieltorrescode/dotfiles.git /home/daniel/dotfiles
+exit
 cp /home/daniel/dotfiles/config/.vimrc ~
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -35,7 +35,6 @@ fc-cache -f -v
 # snap install steam 
 # snap install --edge heroic
 
-usermod -aG docker daniel
 
 
 chmod +x ~/.config/swaylock/lock.sh
