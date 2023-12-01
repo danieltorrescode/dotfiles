@@ -28,8 +28,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/scripts/"
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export TERMINAL="st"
-export BROWSER="${HOME}/firefox"
+export TERMINAL="kitty"
 export VIFM="/home/daniel/.config/vifm"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx

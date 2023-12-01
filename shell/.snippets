@@ -16,9 +16,7 @@ sudo mount -o gid=daniel,fmask=113,dmask=002 /dev/sdc1 usb/
 udisksctl mount -b /dev/sdc1
 udisksctl unmount -b /dev/sdc1
 udiskie | usb 
-sudo systemctl start docker 
-sudo docker-compose up
-echo 8 > /sys/class/backlight/samsung/brightness
+sudo systemctl start docker && docker-compose up
 sudo systemctl restart bluetooth.service
 sudo systemctl disable docker.service
 sudo systemctl start libvirtd.service | virtual | qemu

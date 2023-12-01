@@ -29,7 +29,6 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
   bash dotfiles/shell/scripts/arch
   reboot
   Launch emacs
-  Launch vim and run :PluginInstall
 ```
 
 ## License
