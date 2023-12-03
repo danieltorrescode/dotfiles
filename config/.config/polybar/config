@@ -448,11 +448,11 @@ animation-low-framerate = 200
 type = custom/script
 tail = true
 label = %output%
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
+exec = ~/scripts/pavolume --listen
 click-right = exec pavucontrol
-click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+click-left = ~/scripts/pavolume --togmute
+scroll-up = ~/scripts/pavolume --up
+scroll-down = ~/scripts/pavolume --down
 format-foreground = #fefefe
 format-background = #7197E7
 
@@ -463,12 +463,12 @@ type = custom/script
 interval = 5
 format-prefix = "Microphone: "
 format = <label>
-exec = microphone_status.sh
+exec = ~/scripts/microphone_status
 
 [module/bluetooth]
 type = custom/script
 exec = echo "bluetooth"
-click-right =  ~/scripts/sway/rofi-bluetooth.sh &
+click-right =  ~/scripts/rofi-bluetooth &
 format-prefix = "🖧 "
 format = <label> 
 label =

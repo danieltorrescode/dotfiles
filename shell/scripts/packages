@@ -39,7 +39,7 @@ pacman -S --needed --noconfirm zsh zsh-autosuggestions zsh-completions zsh-synta
 pacman -S --needed --noconfirm docker docker-compose qemu-full virt-manager dnsmasq firefox  
 pacman -S --needed --noconfirm bspwm sxhkd polybar hyprland
 
-echo "###########################################"          
+echo "###########################################"
 echo "AMD drivers"
 echo "###########################################"
 lspci -k | grep VGA
@@ -66,11 +66,6 @@ echo "###########################################"
 
 su daniel -c "git clone https://github.com/danieltorrescode/emacs.git /home/daniel/.emacs.d"
 su daniel -c "git clone https://github.com/danieltorrescode/dotfiles.git /home/daniel/dotfiles"
-
-# su daniel -c "git clone https://github.com/danieltorrescode/st.git /home/daniel/st"
-# rm /home/daniel/st/config.h
-# make -C /home/daniel/st/
-# make -C /home/daniel/st/ clean install
 
 echo "###########################################"
 echo "coping and cloning config files"
