@@ -10,8 +10,7 @@ sxhkd &
 feh --bg-scale ~/Downloads/Wallpapers/t1lhejt67c0a1.png &
 
 # starting picom
-# picom --config ~/.config/picom/picom.conf &
-picom --experimental-backends --config ~/.config/picom/picom.conf &
+picom --config ~/.config/picom/picom.conf &
 
 # starting polybar
 ~/.config/polybar/launch.sh &
