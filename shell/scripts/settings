@@ -80,4 +80,7 @@ else
 fi
 
 grub-mkconfig -o /boot/grub/grub.cfg
+if [[ "$user" != "vm" ]]; then
+    bash /dotfiles/shell/scripts/packages $user
+fi
 exit

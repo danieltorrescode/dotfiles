@@ -1,7 +1,12 @@
 #!/bin/bash
 
-echo "Enter user"
-read user
+if [ -n "$1" ]
+then
+    user=$1
+else
+    echo "Enter user"
+    read user
+fi
 home="/home/$user"
 
 ## chmod 744 -R $home/scripts
