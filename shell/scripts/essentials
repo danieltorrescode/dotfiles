@@ -45,11 +45,11 @@ echo "Root password"
 passwd
 
 echo "Add new user and install sudo"
-echo "Enter username"
-read username
-useradd -m $username
-passwd $username
-usermod -aG wheel,audio,video,optical,storage $username 
+echo "Enter user"
+read user
+useradd -m $user
+passwd $user
+usermod -aG wheel,audio,video,optical,storage $user 
 pacman -S --noconfirm sudo 
 echo "Uncomment the %wheel ALL=(ALL) ALL to allows people in group wheel to run all commands"
 visudo

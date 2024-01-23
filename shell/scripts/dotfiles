@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "Enter username"
-read username
-HOME = "/home/$username"
+read user
+home="/home/$user"
 
 echo "###########################################"
 echo "start"
@@ -13,25 +13,25 @@ echo "###########################################"
 echo "coping and cloning config files"
 echo "###########################################"
 
-if [[ "$username" != "vm" ]]; then
-    cp $HOME/config/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
-    cp $HOME/dotfiles/config/20-amd-gpu.conf /etc/X11/xorg.conf.d/20-amd-gpu.conf
-    cp $HOME/dotfiles/config/power.rules  /etc/udev/rules.d/power.rules
+if [[ "$user" != "vm" ]]; then
+    cp $home/config/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
+    cp $home/dotfiles/config/20-amd-gpu.conf /etc/X11/xorg.conf.d/20-amd-gpu.conf
+    cp $home/dotfiles/config/power.rules  /etc/udev/rules.d/power.rules
 fi
 
-su $username -c "mkdir $HOME/backups/"
-su $username -c "cp -v ~/* $HOME/backups/"
-su $username -c "cp -v ~/.* $HOME/backups/"
-su $username -c "rm $HOME/.bash_profile"
+su $user -c "mkdir $home/backups/"
+su $user -c "cp -v ~/* $home/backups/"
+su $user -c "cp -v ~/.* $home/backups/"
+su $user -c "rm $home/.bash_profile"
 
-su $username -c "stow -d $HOME/dotfiles -t $HOME shell config"
-su $username -c "chmod 744 -R $HOME/scripts"
-su $username -c "sed -i '/daniel torres/,\$d' $HOME/.bashrc"
-su $username -c "cat $HOME/.bashrc_tail >> $HOME/.bashrc"
+su $user -c "stow -d $home/dotfiles -t $home shell config"
+su $user -c "chmod 744 -R $home/scripts"
+su $user -c "sed -i '/daniel torres/,\$d' $home/.bashrc"
+su $user -c "cat $home/.bashrc_tail >> $home/.bashrc"
 
-su $username -c "chmod 774 $HOME/.config/bspwm/bspwmrc"
-su $username -c "chmod 774 $HOME/.config/sxhkd/sxhkdrc"
-su $username -c "chmod 774 $HOME/.config/polybar/launch.sh"
+su $user -c "chmod 774 $home/.config/bspwm/bspwmrc"
+su $user -c "chmod 774 $home/.config/sxhkd/sxhkdrc"
+su $user -c "chmod 774 $home/.config/polybar/launch.sh"
 
 rm -rf /dotfiles
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "Enter username"
-read username
-HOME = "/home/$username"
+read user
+home = "/home/$user"
 
-## chmod 744 -R $HOME/scripts
+## chmod 744 -R $home/scripts
 # #   rwx
 # 0   000
 # 1   001
@@ -53,9 +53,9 @@ pacman -S --needed --noconfirm libva-mesa-driver mesa-vdpau mesa mesa-demos
 echo "###########################################"
 echo "working with systemctl and services"
 echo "###########################################"
-usermod -aG docker $username
+usermod -aG docker $user
 newgrp libvirt
-usermod -aG libvirt $username
+usermod -aG libvirt $user
 
 systemctl enable ufw
 systemctl enable cronie.service
@@ -68,20 +68,20 @@ echo "###########################################"
 echo "cloning and building packages"
 echo "###########################################"
 
-su $username -c "git clone https://github.com/danieltorrescode/emacs.git $HOME/.emacs.d"
-su $username -c "git clone https://github.com/danieltorrescode/neovim.git $HOME/.config/neovim"
-su $username -c "git clone https://github.com/danieltorrescode/dotfiles.git $HOME/dotfiles"
+su $user -c "git clone https://github.com/danieltorrescode/emacs.git $home/.emacs.d"
+su $user -c "git clone https://github.com/danieltorrescode/neovim.git $home/.config/neovim"
+su $user -c "git clone https://github.com/danieltorrescode/dotfiles.git $home/dotfiles"
 
 echo "#######################################################"
 echo "installing paru"
 echo "#######################################################"
 pacman -S --needed --noconfirm go
-su $username -c "git clone https://aur.archlinux.org/paru.git $HOME/paru"
-chown -R  $username:$username $HOME/paru
-cd $HOME/paru
+su $user -c "git clone https://aur.archlinux.org/paru.git $home/paru"
+chown -R  $user:$user $home/paru
+cd $home/paru
 echo "run: makepkg -si"
 echo "then run: paru --version"
-su $username
+su $user
 
 echo "###########################################"
 echo "end"
