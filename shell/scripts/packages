@@ -45,7 +45,7 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  udisks2 udiskie acpi numlockx \
  mutt rtorrent transmission-cli \
  ufw gufw firejail apparmor lxc keepassxc \
- pamixer brightnessctl xbacklight mpd mpc \
+ pamixer brightnessctl xorg-xbacklight mpd mpc \
  xdotool lsd bat dunst cronie \
  rofi alacritty starship fzf ncdu kitty \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k \
