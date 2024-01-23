@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "###########################################"
-echo "System essential config"
+echo "System settings"
 echo "###########################################"
 echo "Time zone"
 timedatectl set-ntp true
