@@ -44,10 +44,12 @@ systemctl start NetworkManager.service
 echo "Root password"
 passwd
 
-echo "Add new user daniel and install sudo"
-useradd -m daniel
-passwd daniel
-usermod -aG wheel,audio,video,optical,storage daniel
+echo "Add new user and install sudo"
+echo "Enter username"
+read username
+useradd -m $username
+passwd $username
+usermod -aG wheel,audio,video,optical,storage $username 
 pacman -S --noconfirm sudo 
 echo "Uncomment the %wheel ALL=(ALL) ALL to allows people in group wheel to run all commands"
 visudo

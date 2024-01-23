@@ -37,12 +37,12 @@ echo "Mount the file systems"
 swapon /dev/$swap_partition
 mount /dev/$root_partition /mnt
 
-if [ $efi_partition -ne 0]
+if [ -n "$efi_partition" ]
 then
-    mkfs.fat -F 32 /dev/$efi_partition
+    mkfs.fat -F 32 "/dev/$efi_partition"
     mount --mkdir /dev/$efi_partition /mnt/boot/efi
 else
-    echo ""
+    echo "Warning: \$efi_partition variable is null or an empty string."
 fi
 
 echo "Install essential packages"
