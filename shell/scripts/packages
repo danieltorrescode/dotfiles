@@ -34,7 +34,8 @@ echo "#######################################################"
 pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient \
- xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo clang cmake \
+ xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \ 
+ clang cmake go \
  gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family  \
  emacs neovim vim vifm neofetch tmux bash-completion \
  picom feh arandr playerctl pavucontrol pulseaudio \
@@ -45,15 +46,14 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  udisks2 udiskie acpi numlockx \
  mutt rtorrent transmission-cli \
  ufw gufw firejail apparmor lxc keepassxc \
- pamixer brightnessctl xorg-xbacklight mpd mpc \
- xdotool lsd bat dunst cronie \
+ pamixer brightnessctl mpd mpc \
+ lsd bat dunst cronie \
  rofi alacritty starship fzf ncdu kitty \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k \
  docker docker-compose qemu-full virt-manager dnsmasq firefox \
  bspwm sxhkd polybar hyprland \
  xf86-video-amdgpu xf86-video-ati vulkan-radeon \
  libva-mesa-driver mesa-vdpau mesa mesa-demos
-
 
 echo "###########################################"
 echo "working with systemctl and services"
@@ -70,7 +70,15 @@ systemctl disable docker.service
 systemctl disable bluetooth.service
 
 echo "###########################################"
-echo "coping and cloning config files"
+echo "cloning repositories"
+echo "###########################################"
+
+su $user -c "git clone https://github.com/danieltorrescode/emacs.git $home/.emacs.d"
+su $user -c "git clone https://github.com/danieltorrescode/neovim.git $home/.config/nvim"
+su $user -c "git clone https://github.com/danieltorrescode/dotfiles.git $home/dotfiles"
+
+echo "###########################################"
+echo "setting config files"
 echo "###########################################"
 
 if [[ "$user" != "vm" ]]; then
@@ -93,21 +101,11 @@ su $user -c "chmod 774 $home/.config/bspwm/bspwmrc"
 su $user -c "chmod 774 $home/.config/sxhkd/sxhkdrc"
 su $user -c "chmod 774 $home/.config/polybar/launch.sh"
 
-
-echo "###########################################"
-echo "cloning and building packages"
-echo "###########################################"
-
-su $user -c "git clone https://github.com/danieltorrescode/emacs.git $home/.emacs.d"
-su $user -c "git clone https://github.com/danieltorrescode/neovim.git $home/.config/nvim"
-su $user -c "git clone https://github.com/danieltorrescode/dotfiles.git $home/dotfiles"
-
 rm -rf /dotfiles
 
 echo "#######################################################"
 echo "installing paru"
 echo "#######################################################"
-pacman -S --needed --noconfirm go
 su $user -c "git clone https://aur.archlinux.org/paru.git $home/paru"
 chown -R  $user:$user $home/paru
 cd $home/paru
