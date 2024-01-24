@@ -463,7 +463,7 @@ type = custom/script
 interval = 5
 format-prefix = "Microphone: "
 format = <label>
-exec = ~/scripts/microphone_status
+exec = ~/scripts/microphone-status
 
 [module/bluetooth]
 type = custom/script
@@ -478,7 +478,7 @@ type = custom/script
 tail = true
 #label-foreground = ${colors.foreground-alt}
 interval = 1
-exec = ~/scripts/microphone_status &
+exec = ~/scripts/microphone-status &
 click-left = amixer set Capture toggle
 
 #################################################################################

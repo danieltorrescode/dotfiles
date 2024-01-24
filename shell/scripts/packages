@@ -34,7 +34,7 @@ echo "#######################################################"
 pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient \
- xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \ 
+ xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
  clang cmake go \
  gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family  \
  emacs neovim vim vifm neofetch tmux bash-completion \
