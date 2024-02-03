@@ -21,7 +21,7 @@ super + shift + f
         firefox
 
 super + shift + v
-        st vifm
+        kitty vifm
 
 super + shift + e
         emacs
@@ -176,5 +176,5 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Cycle through desktops
-ctrl + alt + {Left, Right}
-    bspc desktop -f {prev,next}
+# ctrl + alt + {Left, Right}
+#     bspc desktop -f {prev,next}

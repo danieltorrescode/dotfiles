@@ -3,6 +3,7 @@ systemctl reboot
 systemctl suspend
 virtualenv -p python3 .virtualenv
 source /home/daniel/.venv/python/bin/activate
+source .virtualenv/bin/activate
 git log --all --decorate --oneline --graph
 git log --graph
 git ls-tree -r master --name-only
