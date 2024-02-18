@@ -12,7 +12,6 @@ config/.config/chromium/
 config/.config/code
 config/.config/configstore/
 config/.config/dconf
-config/.config/flameshot/
 config/.config/google-chrome/
 config/.config/gtk-2.0/
 config/.config/gtk-3.0/

@@ -41,7 +41,7 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  picom feh arandr playerctl pavucontrol pulseaudio \
  bluez bluez-utils blueman pulseaudio-bluetooth \
  dmenu slock zathura zathura-pdf-mupdf mpv imagemagick \
- shutter lxappearance-gtk3 thunar \
+ flameshot lxappearance-gtk3 thunar \
  python-pip python-virtualenv \
  udisks2 udiskie acpi numlockx \
  mutt rtorrent transmission-cli \

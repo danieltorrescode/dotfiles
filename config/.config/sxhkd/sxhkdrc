@@ -36,7 +36,7 @@ super + shift + s
         bash ~/scripts/snippets
 
 Print
-    shutter
+    flameshot & flameshot gui
 
 super + F1
    pactl set-sink-mute @DEFAULT_SINK@ toggle 
