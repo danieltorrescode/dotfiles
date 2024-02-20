@@ -36,7 +36,7 @@ pacman -Syu
 pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplicant dhclient \
  xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
  clang cmake go \
- gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family  \
+ gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family noto-fonts-emoji \
  emacs vim neofetch tmux bash-completion \
  picom feh arandr playerctl pavucontrol pulseaudio \
  bluez bluez-utils blueman pulseaudio-bluetooth \
@@ -48,7 +48,7 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  ufw gufw firejail apparmor lxc keepassxc \
  pamixer brightnessctl mpd mpc \
  lsd bat dunst cronie \
- rofi alacritty starship fzf ncdu kitty \
+ rofi alacritty starship fzf ncdu \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k \
  docker docker-compose qemu-full virt-manager dnsmasq firefox \
  bspwm sxhkd polybar hyprland \
