@@ -23,6 +23,9 @@ super + shift + f
 super + shift + e
         emacs
 
+super + shift + l
+        liferea
+
 super + shift + p
         pavucontrol
 

@@ -37,11 +37,11 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
  clang cmake go \
  gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family noto-fonts-emoji \
- emacs vim neofetch tmux bash-completion \
+ emacs vim neovim vifm neofetch tmux bash-completion \
  picom feh arandr playerctl pavucontrol pulseaudio \
  bluez bluez-utils blueman pulseaudio-bluetooth \
  dmenu slock zathura zathura-pdf-mupdf mpv imagemagick \
- flameshot lxappearance-gtk3 thunar \
+ flameshot lxappearance-gtk3 thunar liferea \
  python-pip python-virtualenv \
  udisks2 udiskie acpi numlockx \
  mutt rtorrent transmission-cli \

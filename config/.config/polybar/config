@@ -54,11 +54,7 @@ font-1 = "FontAwesome: style=Regular: size=12"
 
 modules-left = bspwm
 modules-center =  xwindow
-modules-right =  backlight pulseaudio battery wlan date bluetooth mic
-
-tray-position = right
-tray-padding = 2
-#tray-background = #0063ff
+modules-right =  backlight pulseaudio battery wlan date mic bluetooth tray
 
 separator = |
 
@@ -525,3 +521,12 @@ margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini
+
+#################################################################################
+[module/tray]
+type = internal/tray
+
+;tray-size = 50%
+;format-margin = 4px
+;tray-spacing = 4px
+;tray-background = #0063ff

@@ -19,6 +19,7 @@ udisksctl unmount -b /dev/sdc1
 udiskie | usb 
 sudo systemctl start docker && docker-compose up
 sudo systemctl restart bluetooth.service
+sudo systemctl start bluetooth.service && blueman-applet &
 sudo systemctl disable docker.service
 sudo systemctl start libvirtd.service | virtual | qemu
 export VISUAL=vim; crontab -e

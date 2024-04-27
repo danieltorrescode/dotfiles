@@ -7,7 +7,7 @@ xrdb ~/.Xresources
 killall -q sxhkd
 sxhkd &
 # setting wallpaper
-feh --bg-scale ~/Downloads/Wallpapers/3zoihc1qv7pb1.png&
+feh --bg-scale ~/Downloads/Wallpapers/wp9166771.jpg &
 
 # starting picom
 picom --config ~/.config/picom/picom.conf &
