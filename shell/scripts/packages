@@ -76,6 +76,7 @@ echo "cloning repositories"
 echo "###########################################"
 
 su $user -c "git clone https://github.com/danieltorrescode/emacs.git $home/.emacs.d"
+su $user -c "git clone https://github.com/danieltorrescode/neovim.git $home/.config/nvim"
 su $user -c "git clone https://github.com/danieltorrescode/dotfiles.git $home/dotfiles"
 
 echo "###########################################"

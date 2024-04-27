@@ -4,24 +4,20 @@
 
 # terminal emulator
 super + Return
-	 alacritty
+		alacritty --command tmux
 
 # program launcher
 super + d
-	dmenu_run -m "0" -fn "Hack:size=12" -nb "#222222" -nf "#bbbbbb" -sb "#005577" -sf "#eeeeee" -p "dmenu"
+		dmenu_run -m "0" -fn "Hack:size=12" -nb "#222222" -nf "#bbbbbb" -sb "#005577" -sf "#eeeeee" -p "dmenu"
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
-######################################################################
-######################################################################
+super + shift + e
+        emacs
 
 super + shift + f
         firefox
 
-super + shift + e
-        emacs
+super + shift + n
+        alacritty --command nvim
 
 super + shift + l
         liferea
@@ -29,14 +25,17 @@ super + shift + l
 super + shift + p
         pavucontrol
 
+super + shift + s
+        bash ~/scripts/snippets
+		
+super + shift + v
+        alacritty --command vifm
+
 super + space
         rofi -show drun
 
 ctrl + shift + Tab
         rofi -show window
-
-super + shift + s
-        bash ~/scripts/snippets
 
 Print
     flameshot & flameshot gui
@@ -65,6 +64,10 @@ super + F12
 # Audio control
 XF86Audio{Next,Prev,Play,Stop}
   playerctl {next,previous,play-pause,stop}
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
 
 ######################################################################
 ######################################################################
