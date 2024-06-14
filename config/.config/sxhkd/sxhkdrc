@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-		alacritty --command tmux
+	alacritty --command tmux
 
 # program launcher
 super + d
-		dmenu_run -m "0" -fn "Hack:size=12" -nb "#222222" -nf "#bbbbbb" -sb "#005577" -sf "#eeeeee" -p "dmenu"
+	dmenu_run -m "0" -fn "Hack:size=12" -nb "#222222" -nf "#bbbbbb" -sb "#005577" -sf "#eeeeee" -p "dmenu"
 
 super + shift + e
         emacs
@@ -19,18 +19,12 @@ super + shift + f
 super + shift + n
         alacritty --command nvim
 
-super + shift + l
-        liferea
-
 super + shift + p
         pavucontrol
 
 super + shift + s
         bash ~/scripts/snippets
 		
-super + shift + v
-        alacritty --command vifm
-
 super + space
         rofi -show drun
 

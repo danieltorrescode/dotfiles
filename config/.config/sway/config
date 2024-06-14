@@ -8,7 +8,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -19,8 +19,8 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/daniel/Downloads/Wallpaper/UbuntuSway.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /home/daniel/Downloads/Wallpaper/UbuntuSway.png fill
 font pango:Ubuntu Regular 12
 gaps inner  5
 gaps outer  5
@@ -37,7 +37,7 @@ default_border pixel 1
 ### Idle configuration
 #
 #
-exec swayidle -C ~/.config/swayidle/config
+# exec swayidle -C ~/.config/swayidle/config
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when

@@ -21,21 +21,7 @@ numlockx &
 sleep 2
 xrandr -s 1920x1080
 
-WM="bspwm"
+# xsetroot -cursor_name left_ptr
 
-case $WM in
-    "bspwm")
-        exec $WM
-        ;;
-    "emacs")
-        # setting wallpaper
-        feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png &
+exec bspwm
 
-        picom --config ~/.config/picom/picom.conf &
-
-        xsetroot -cursor_name left_ptr
-
-        ~/.config/polybar/launch.sh &
-        exec emacs
-        ;;
-esac

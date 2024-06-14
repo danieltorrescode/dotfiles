@@ -1,34 +1,48 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
-    "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
-    "modules-center": ["custom/wf-recorder", "sway/mode"],
+    "height": 8,
+    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["custom/wf-recorder", "hyprland/submap"],
     "modules-right": [
-        //"custom/weather",
-        "custom/wlsunset",
         //"custom/playerctl",
-        "custom/scratchpad",
+        // "custom/scratchpad",
         //"idle_inhibitor",
         //"custom/dnd",
         //"sway/language",
-        "custom/clipboard",
+        // "custom/clipboard",
         //"cpu",
         //"memory",
-        "network",
-        "bluetooth",
         "pulseaudio",
-        "clock",
+        "network",
+        "backlight",
         "battery",
-        "custom/power",
+        "clock",
+        "bluetooth",
+        "privacy",
         "tray"
     ],
+    
+    "hyprland/workspaces": {
+         "format": "{icon}",
+         "on-scroll-up": "hyprctl dispatch workspace e+1",
+         "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "hyprland/submap": {
+        "format": "<span style=\"italic\">{}</span>",
+        "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "tooltip": true
+    },
     
     "sway/workspaces": {
          "disable-scroll": true,
          "all-outputs": true
     },
-    
+
     "sway/language": {
         "format": " {}",
         "min-length": 5,
@@ -58,12 +72,6 @@
         "format": "<span style=\"italic\">{}</span>",
         "tooltip": false
     },
-    
-    "sway/window": {
-        "format": "{}",
-        "max-length": 50,
-        "tooltip": true
-    },
 
     "idle_inhibitor": {
         "format": "{icon}",
@@ -78,21 +86,21 @@
 
     "pulseaudio": {
        "format": "{icon}  {volume}% {format_source}",
-       "format-bluetooth": "{icon} {volume}%",
+       "format-bluetooth": "{icon}   {volume}% {format_source}",
        "format-muted": " {format_source}",
        "format-source": "  {volume}%",
-       "format-source-muted": "",
+       "format-source-muted": "",
        "format-icons": {
-           "headphone": "",
-           "headset": "",
+           "headphone": "  " ,
+           "headset": " ",
            "default": ["", "", ""]
        },
        "tooltip-format": "{icon}  {volume}% {format_source}",
-       "on-click": "swaymsg exec \\$pulseaudio",
-       "on-click-middle": "swaymsg exec \\$volume_mute",
-       "on-click-right": "swaymsg exec pavucontrol",
-       "on-scroll-up": "swaymsg exec \\$volume_up",
-       "on-scroll-down": "swaymsg exec \\$volume_down"
+       // "on-click": "swaymsg exec \\$pulseaudio",
+       // "on-click-middle": "swaymsg exec \\$volume_mute",
+       // "on-click-right": "swaymsg exec pavucontrol",
+       // "on-scroll-up": "swaymsg exec \\$volume_up",
+       // "on-scroll-down": "swaymsg exec \\$volume_down"
     },
     
     "battery": {
@@ -105,23 +113,23 @@
        "format-ethernet": "",
        "format-disconnected": "",
        "tooltip-format": "{ifname} ({essid}): {ipaddr}",
-       "on-click": "swaymsg exec \\$term nmtui"
+       // "on-click": "swaymsg exec \\$term nmtui"
     },
 
     "bluetooth": {
         "format": "",
         "format-disabled": "",
-        "on-click": "swaymsg exec /bin/bash ~/scripts/rofi-bluetooth.sh",
+        "on-click": "hyprctl dispatch  exec /bin/bash ~/scripts/rofi-bluetooth.sh",
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
     },
     
     "clock": {
-        "format": "{:%e %b %H:%M}",
+        "format": "  {:%e %b %H:%M}",
         "tooltip": true,
         "tooltip-format": "{:%d.%m.%Y %H:%M}",
         "interval": 5,
-        "on-click": "swaymsg exec \\$calendar"
+        // "on-click": "swaymsg exec \\$calendar"
     },
     
     "cpu": {
@@ -131,7 +139,7 @@
           "warning": 70,
           "critical": 90
           },
-    "on-click": "swaymsg exec \\$term htop"
+    // "on-click": "swaymsg exec \\$term htop"
     },
     
     "memory": {
@@ -141,7 +149,7 @@
           "warning": 70,
           "critical": 90
         },
-    "on-click": "swaymsg exec \\$term htop"
+    // "on-click": "swaymsg exec \\$term htop"
     
     },
     
@@ -191,52 +199,6 @@
         "signal": 11
     },
     
-    "custom/weather": {
-        "icon-size": 42,
-        "format": "{icon} {}",
-        "tooltip": true,
-        "interval": 3600,
-        "exec": "~/scripts/sway/weather.py",
-        "return-type": "json",
-        "format-icons": {
-           "Unknown": "✨",
-           "Cloudy": "",
-           "Fog": "🌫",
-           "HeavyRain": "🌧",
-           "HeavyShowers": "🌧",
-           "HeavySnow": "❄️",
-           "HeavySnowShowers": "❄️",
-           "LightRain": "🌦",
-           "LightShowers": "🌦",
-           "LightSleet": "🌧",
-           "LightSleetShowers": "🌧",
-           "LightSnow": "🌨",
-           "LightSnowShowers": "🌨",
-           "PartlyCloudy": "⛅️",
-           "Sunny": "☀️",
-           "ThunderyHeavyRain": "🌩",
-           "ThunderyShowers": "⛈",
-           "ThunderySnowShowers": "⛈",
-           "VeryCloudy": ""
-        }
-    },
-
-    "custom/wlsunset": {
-        "interval": "once",
-        "tooltip": true,
-        "tooltip-format": "{tooltip}",
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "on": "",
-            "off": ""
-        },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= ~/scripts/sway/sunset.sh",
-        "on-click": "~/scripts/sway/sunset.sh toggle; pkill -RTMIN+6 waybar",
-        "exec-if": "~/scripts/sway/sunset.sh check",
-        "signal": 6
-    },
-
     "custom/scratchpad": {
         "interval": "once",
         "return-type": "json",
@@ -249,9 +211,38 @@
         "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },
-    
+   
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", ""]
+    },
+
+    "privacy": {
+            "icon-spacing": 4,
+            "icon-size": 18,
+            "transition-duration": 250,
+            "modules": [
+                    {
+                            "type": "screenshare",
+                            "tooltip": true,
+                            "tooltip-icon-size": 24
+                    },
+                    {
+                            "type": "audio-out",
+                            "tooltip": true,
+                            "tooltip-icon-size": 24
+                    },
+                    {
+                            "type": "audio-in",
+                            "tooltip": true,
+                            "tooltip-icon-size": 24
+                    }
+            ]
+    },
+
     "tray": {
-        "icon-size": 21,
+        "icon-size": 15,
         "spacing": 10
     }
 }

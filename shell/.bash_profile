@@ -28,8 +28,17 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/scripts/"
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export TERMINAL="kitty"
-export VIFM="/home/daniel/.config/vifm"
+export TERMINAL="alacritty"
+
+SERVER="wayland"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
+    case $SERVER in
+        "wayland")
+            Hyprland
+            ;;
+        "xorg")
+            exec startx
+            ;;
+    esac
 fi
+

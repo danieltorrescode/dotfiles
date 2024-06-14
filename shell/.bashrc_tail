@@ -19,7 +19,7 @@ set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 uname -a
-neofetch
+fastfetch
 
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 #[ -f /usr/bin/fzf ]
