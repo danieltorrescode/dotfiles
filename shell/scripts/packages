@@ -40,7 +40,8 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  emacs vim neovim fastfetch tmux bash-completion \
  picom feh arandr playerctl pavucontrol pulseaudio \
  bluez bluez-utils blueman pulseaudio-bluetooth \
- dmenu slock zathura zathura-pdf-mupdf mpv imagemagick \
+ dmenu slock zathura zathura-pdf-mupdf mpv \
+ imagemagick slurp swappy grim wl-clipboard \
  flameshot lxappearance-gtk3 \
  python-pip python-virtualenv \
  udisks2 udiskie acpi numlockx \

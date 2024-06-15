@@ -3,23 +3,22 @@
     "position": "top",
     "height": 8,
     "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["custom/wf-recorder", "hyprland/submap"],
+    "modules-center": ["privacy", "custom/wf-recorder", "hyprland/submap"],
     "modules-right": [
         //"custom/playerctl",
-        // "custom/scratchpad",
         //"idle_inhibitor",
         //"custom/dnd",
         //"sway/language",
         // "custom/clipboard",
         //"cpu",
         //"memory",
+        // "custom/scratchpad",
         "pulseaudio",
         "network",
         "backlight",
         "battery",
         "clock",
         "bluetooth",
-        "privacy",
         "tray"
     ],
     
@@ -125,7 +124,7 @@
     },
     
     "clock": {
-        "format": "  {:%e %b %H:%M}",
+        "format": "  {:%e %b %I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%d.%m.%Y %H:%M}",
         "interval": 5,
@@ -207,8 +206,8 @@
             "one": "",
             "many": ""
         },
-        "exec": "/bin/bash ~/scripts/sway/scratchpad.sh; pkill -RTMIN+7 waybar",
-        "on-click": "swaymsg 'scratchpad show'",
+        // "exec": "/bin/bash ~/scripts/sway/scratchpad.sh; pkill -RTMIN+7 waybar",
+        // "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },
    
