@@ -46,7 +46,8 @@ pacman -S --needed --noconfirm base-devel curl htop wget stow screen wpa_supplic
  python-pip python-virtualenv \
  udisks2 udiskie acpi numlockx \
  mutt rtorrent transmission-cli \
- ufw gufw firejail apparmor lxc keepassxc \
+ ufw gufw firejail apparmor audit lxc keepassxc \
+ python-notify2 \
  pamixer brightnessctl mpd mpc \
  lsd bat dunst cronie \
  rofi alacritty starship fzf ncdu \
@@ -68,9 +69,16 @@ ufw enable
 ufw status verbose
 systemctl enable cronie.service
 systemctl start cronie.service
+systemctl enable apparmor.service
+systemctl start apparmor.service
+systemctl enable auditd.service
+systemctl status auditd.service
 systemctl disable libvirtd.service
 systemctl disable docker.service
 systemctl disable bluetooth.service
+
+groupadd -r audit
+gpasswd -a $user audit
 
 echo "###########################################"
 echo "cloning repositories"
