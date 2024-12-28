@@ -40,7 +40,7 @@ text = "CellForeground"
 TERM = "xterm-256color"
 
 [font]
-size = 12.0
+size = 14.0
 
 [font.bold]
 family = "Ubuntu Mono"

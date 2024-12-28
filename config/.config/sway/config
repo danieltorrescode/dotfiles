@@ -2,13 +2,14 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $Alt Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term alacritty --command tmux
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -20,13 +21,25 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# output * bg /home/daniel/Downloads/Wallpaper/UbuntuSway.png fill
+output * bg ~/Downloads/Wallpapers/abstract-black-waves.jpg fill
 font pango:Ubuntu Regular 12
 gaps inner  5
 gaps outer  5
 smart_borders on
 default_border pixel 1 
 
+# Colors for focused windows
+# client.focused #1d2021 #282828 
+client.focused #1d2021 #d1cbbed9 #353535 #458588
+ 
+# Colors for unfocused windows
+client.unfocused #1d2021 #282828 #f9f9f9 #282828
+
+# Colors for urgent windows (e.g., alerts)
+client.urgent #1d2021 #cc241d #fb4934 #282828
+
+# Colors for placeholder windows (e.g., no content)
+client.placeholder #1d2021 #282828 #928374 #282828
 #
 # Example configuration:
 #
@@ -37,7 +50,10 @@ default_border pixel 1
 ### Idle configuration
 #
 #
-# exec swayidle -C ~/.config/swayidle/config
+exec swayidle -C ~/.config/swayidle/config
+
+exec  dunst &
+
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -54,10 +70,10 @@ input 1739:32552:SYNA3255:00_06CB:7F28_Touchpad {
     pointer_accel 0.9 # set mouse sensitivity (between -1 and 1)
 }
 
-input "type:keyboard" {
+input type:keyboard {
     xkb_numlock enabled
-    xkb_layout us_intl
-    xkb_variant deadkeys
+    xkb_layout us
+    xkb_variant intl
 }
 
 ### Key bindings
@@ -73,9 +89,16 @@ input "type:keyboard" {
     bindsym XF86AudioStop exec playerctl stop
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-    bindsym Print exec --no-startup-id grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S").png
+    # bindsym Print exec --no-startup-id grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S").png
+    # bindsym F9 exec ~/.config/swaylock/lock.sh
+    bindsym Print exec grim -g "$(slurp)" - | swappy -f - &  
+    bindsym $mod+F9 exec  systemctl suspend 
 
-    bindsym F9 exec ~/.config/swaylock/lock.sh
+    bindsym $mod+Shift+B exec bash ~/scripts/snippets
+    bindsym $mod+Shift+E exec emacs
+    bindsym $mod+Shift+F exec firefox
+    bindsym $mod+Shift+P exec pavucontrol
+    bindsym $mod+Shift+N exec alacritty --command nvim
 
 # Basics:
 #
@@ -83,7 +106,7 @@ input "type:keyboard" {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+space exec $menu
@@ -96,10 +119,10 @@ input "type:keyboard" {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+r reload
+    bindsym $mod+$Alt+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes' 'swaymsg exit'
+    bindsym $mod+$Alt+e exec swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes' 'swaymsg exit'
 #
 # Moving around:
 #

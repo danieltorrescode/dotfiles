@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 8,
-    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["privacy", "custom/wf-recorder", "hyprland/submap"],
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
+    "modules-center": ["privacy", "custom/wf-recorder", "sway/submap"],
     "modules-right": [
         //"custom/playerctl",
         //"idle_inhibitor",

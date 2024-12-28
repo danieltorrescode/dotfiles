@@ -1,101 +1,98 @@
 .waybar-colors {
-    /* themselected_bg_color */
-    color: #4c566a;
-    /* themselected_fg_color */
-    color: #e3e7e7;
-    /* errocolor */
-    color: #dc4713;
-    /* warng_color */
-    color: #a8a822;
-    /* thembg_color */
-    color: #010409;
-    /* themfg_color */
-    color: #e3e7e7;
-    /* backound_color */
-    color: #010409;
-
+  /* themselected_bg_color */
+  color: #4c566a;
+  /* themselected_fg_color */
+  color: #e3e7e7;
+  /* errocolor */
+  color: #dc4713;
+  /* warng_color */
+  color: #a8a822;
+  /* thembg_color */
+  color: #010409;
+  /* themfg_color */
+  color: #e3e7e7;
+  /* backound_color */
+  color: #010409;
 }
 
-
 @keyframes blink-warning {
-    70% {
-        color: #e3e7e7;
-    }
+  70% {
+    color: #e3e7e7;
+  }
 
-    to {
-        color: #e3e7e7;
-        background-color: #a8a822;
-    }
+  to {
+    color: #e3e7e7;
+    background-color: #a8a822;
+  }
 }
 
 @keyframes blink-critical {
-    70% {
-        color: #e3e7e7;
-    }
+  70% {
+    color: #e3e7e7;
+  }
 
-    to {
-        color: #e3e7e7;
-        background-color: #dc4713;
-    }
+  to {
+    color: #e3e7e7;
+    background-color: #dc4713;
+  }
 }
 
 /* Reset all styles */
 * {
-    font-family: "Ubuntu Regular", "Font Awesome 6 Free", "Font Awesome";
-    border: none;
-    border-radius: 4px;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
+  font-family: "Ubuntu Regular", "Font Awesome 6 Free", "Font Awesome";
+  border: none;
+  border-radius: 4px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 /* The whole bar */
 #waybar {
-    background: #010409;
-    color: #e3e7e7;
-    font-size: 12px;
+  background: #010409;
+  color: #e3e7e7;
+  font-size: 14px;
 }
 
 #window {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 window#waybar {
-    margin-left: 10px;
-    border-radius: 0;
+  margin-left: 10px;
+  border-radius: 0;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 #workspaces button {
-    /* To compensate for the top border and still have vertical centering */
-    padding: 0 0.5em;
-    margin: 4px 3px;
-    color: #e3e7e7;
+  /* To compensate for the top border and still have vertical centering */
+  padding: 0 0.5em;
+  margin: 4px 3px;
+  color: #e3e7e7;
 }
 
 #workspaces button.focused {
-    border-color: #4c566a;
-    color: #e3e7e7;
-    background-color: #4c566a;
+  border-color: #4c566a;
+  color: #e3e7e7;
+  background-color: #4c566a;
 }
 
-#workspaces button.active{
-    border-color: #e3e7e7;
-    color: #4c566a;
-    background-color: #e3e7e7;
+#workspaces button.active {
+  border-color: #e3e7e7;
+  color: #4c566a;
+  background-color: #e3e7e7;
 }
 
 #workspaces button.urgent {
-    border-color: #dc4713;
-    color: #dc4713;
+  border-color: #dc4713;
+  color: #dc4713;
 }
 
 #mode {
-    background: #010409;
+  background: #010409;
 }
 
 #clock,
@@ -118,156 +115,156 @@ window#waybar.hidden {
 #tray,
 #mode,
 #idle_inhibitor {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 4px 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 4px 3px;
 }
 
 #clock {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-weather {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-wlsunset {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-playerctl {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-power {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-scratchpad {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-clipboard {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-menu {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-dnd {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    background: #4c566a;
-    color: #e3e7e7;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #battery.warning {
-    color: #a8a822;
+  color: #a8a822;
 }
 
 #battery.critical {
-    color: #dc4713;
+  color: #dc4713;
 }
 
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+  animation-name: blink-warning;
+  animation-duration: 3s;
 }
 
 #battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
+  animation-name: blink-critical;
+  animation-duration: 2s;
 }
 
 label:focus {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #cpu {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #language {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #memory {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-gpu-usage {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #network {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #bluetooth {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #bluetooth.disabled {
-    background: #010409;
-    color: #e3e7e7;
+  background: #010409;
+  color: #e3e7e7;
 }
 
 #network.disconnected {
-    background: #010409;
-    color: #e3e7e7
+  background: #010409;
+  color: #e3e7e7;
 }
 
 #pulseaudio {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #pulseaudio.muted {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #backlight {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }
 
 #custom-wf-recorder {
-    color: #dc4713;
-    padding-right: 10px;
+  color: #dc4713;
+  padding-right: 10px;
 }
 
 #tray {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #idle_inhibitor {
-    background: #4c566a;
+  background: #4c566a;
 }
 
 #idle_inhibitor.activated {
-    background: #4c566a;
-    color: #e3e7e7;
+  background: #4c566a;
+  color: #e3e7e7;
 }

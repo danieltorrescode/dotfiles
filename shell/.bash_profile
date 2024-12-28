@@ -29,12 +29,15 @@ export PATH="${PATH}:${HOME}/scripts/"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL="alacritty"
-
-SERVER="wayland"
+export GDK_DPI_SCALE=1.2
+SERVER="sway"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     case $SERVER in
         "wayland")
             Hyprland
+            ;;
+        "sway")
+            exec sway
             ;;
         "xorg")
             exec startx
