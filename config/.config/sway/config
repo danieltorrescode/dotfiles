@@ -21,10 +21,10 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/Downloads/Wallpapers/abstract-black-waves.jpg fill
+output * bg ~/Downloads/Wallpapers/wq00m5un5b1.jpg fill
 font pango:Ubuntu Regular 12
-gaps inner  5
-gaps outer  5
+# gaps inner  5
+# gaps outer  5
 smart_borders on
 default_border pixel 1 
 

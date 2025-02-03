@@ -30,6 +30,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL="alacritty"
 export GDK_DPI_SCALE=1.2
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 SERVER="sway"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     case $SERVER in

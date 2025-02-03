@@ -18,7 +18,7 @@
         "backlight",
         "battery",
         "clock",
-        "bluetooth",
+        // "bluetooth",
         "tray"
     ],
     
@@ -206,7 +206,7 @@
             "one": "",
             "many": ""
         },
-        // "exec": "/bin/bash ~/scripts/sway/scratchpad.sh; pkill -RTMIN+7 waybar",
+        // "exec": "/bin/bash ~/scripts/scratchpad.sh; pkill -RTMIN+7 waybar",
         // "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },

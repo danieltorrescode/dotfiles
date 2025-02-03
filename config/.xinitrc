@@ -23,5 +23,21 @@ xrandr -s 1920x1080
 
 # xsetroot -cursor_name left_ptr
 
-exec bspwm
+WM="bspwm"
 
+case $WM in
+    "bspwm")
+        exec $WM
+        ;;
+    "emacs")
+        # setting wallpaper
+        feh --bg-scale ~/Downloads/Wallpapers/wallpaper.png &
+
+        picom --config ~/.config/picom/picom.conf &
+
+        xsetroot -cursor_name left_ptr
+
+        ~/.config/polybar/launch.sh &
+        exec emacs
+        ;;
+esac
