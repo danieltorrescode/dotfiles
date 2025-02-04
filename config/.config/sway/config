@@ -50,7 +50,7 @@ client.placeholder #1d2021 #282828 #928374 #282828
 ### Idle configuration
 #
 #
-exec swayidle -C ~/.config/swayidle/config
+exec swayidle -w -C ~/.config/swayidle/config
 
 exec  dunst &
 

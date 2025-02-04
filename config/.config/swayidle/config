@@ -1,10 +1,3 @@
-# timeout 240 'light -G > /tmp/brightness && light -S 10' resume 'light -S $([ -f /tmp/brightness ] && cat /tmp/brightness || echo 100%)'
-# timeout 300 ~/.config/swaylock/lock.sh
-# timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
-timeout 180 'swaymsg "output * dpms off"' \
-resume 'swaymsg "output * dpms on"' \
-timeout 300 'systemctl suspend' \
+timeout 15 'swaymsg "output * power off"' \
+resume 'swaymsg "output * power on"' \
 before-sleep 'playerctl pause'
-before-sleep 'swaymsg "output * dpms off"'
-before-sleep ~/.config/swaylock/lock.sh
-lock ~/.config/swaylock/lock.sh
