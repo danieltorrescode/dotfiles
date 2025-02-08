@@ -29,16 +29,13 @@ export PATH="${PATH}:${HOME}/scripts/"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL="alacritty"
-export GDK_DPI_SCALE=1.2
+# export GDK_DPI_SCALE=0.9
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-SERVER="sway"
+SERVER="wayland"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     case $SERVER in
         "wayland")
             Hyprland
-            ;;
-        "sway")
-            exec sway
             ;;
         "xorg")
             exec startx

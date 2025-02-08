@@ -48,10 +48,9 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
  waybar wofi dmenu lxappearance-gtk3  slock \
- sway swaylock swayidle swaybg \
- firefox emacs vim neovim alacritty htop
-# hyprland hypridle hyprlock hyprpaper
-# bspwm sxhkd polybar rofi
+ firefox emacs vim neovim alacritty htop \
+ hyprland hypridle hyprlock hyprpaper \
+ bspwm sxhkd polybar rofi
 
 echo "###########################################"
 echo "working with systemctl and services"

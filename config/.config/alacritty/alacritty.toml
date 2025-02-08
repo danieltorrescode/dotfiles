@@ -40,7 +40,7 @@ text = "CellForeground"
 TERM = "xterm-256color"
 
 [font]
-size = 14.0
+size = 12.0
 
 [font.bold]
 family = "Ubuntu Mono"
@@ -60,7 +60,7 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 1
+y = 0
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -151,7 +151,7 @@ history = 5000
 
 [window]
 dynamic_padding = false
-opacity = 0.8
+opacity = 0.7
 title = "Alacritty"
 
 [window.class]

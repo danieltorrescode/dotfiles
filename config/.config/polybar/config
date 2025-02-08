@@ -54,7 +54,7 @@ font-1 = "FontAwesome: style=Regular: size=12"
 
 modules-left = bspwm
 modules-center =  xwindow
-modules-right =  backlight pulseaudio battery wlan date mic bluetooth tray
+modules-right =  backlight pulseaudio mic  battery wlan date tray
 
 separator = |
 
@@ -238,7 +238,8 @@ format-packetloss = <animation-packetloss> <label-connected>
 
 format-connected = <ramp-signal> <label-connected>
 ;format-connected-underline = ${colors.primary}
-label-connected = %essid% | %upspeed% %downspeed%
+;label-connected = %essid% | %upspeed% %downspeed%
+label-connected = %essid% 
 label-connected-foreground = ${colors.foreground}
 
 format-disconnected = <label-disconnected>
