@@ -1,27 +1,31 @@
 # dotfiles
+
 My dotfiles and GNU-Linux settings, maintained during part of my free time, it is a work in progress.
 
 ### Instructions
+
 [Arch Linux Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
 
-* Connect to the internet
-[iwctl](https://wiki.archlinux.org/title/Iwd#iwctl)
+- Connect to the internet
+  [iwctl](https://wiki.archlinux.org/title/Iwd#iwctl)
 
 ```
   iwctl
 ```
 
-* Partition the disks
+- Partition the disks
+
 ```
   lsbk
   fdisk -l
-  fdisk /dev/sdx
+  cfdisk /dev/sdx
   partion boot = +550M
   partion swap = +2G
   partion root = +xG
 ```
 
-* clone dotfiles
+- clone dotfiles
+
 ```
   pacman -S archlinux-keyring
   pacman -Sy git vim tmux
@@ -32,4 +36,5 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
 ```
 
 ## License
+
 GPLv3+
