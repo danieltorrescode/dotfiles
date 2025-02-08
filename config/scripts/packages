@@ -98,7 +98,7 @@ su $user -c "cp -v ~/* $home/backups/"
 su $user -c "cp -v ~/.* $home/backups/"
 su $user -c "rm $home/.bash_profile"
 
-su $user -c "stow -d $home/dotfiles -t $home shell config fonts"
+su $user -c "stow -d $home/dotfiles -t $home config bash xorg fonts"
 su $user -c "chmod 744 -R $home/scripts"
 su $user -c "sed -i '/daniel torres/,\$d' $home/.bashrc"
 su $user -c "cat $home/.bashrc_tail >> $home/.bashrc"
