@@ -33,7 +33,7 @@ echo "updating repositories and installing packages"
 echo "#######################################################"
 pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
-pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsmasq \
+pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsmasq openssh \
  xf86-video-amdgpu xf86-video-ati vulkan-radeon \
  libva-mesa-driver mesa-vdpau mesa mesa-demos \
  xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
@@ -49,6 +49,8 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  docker docker-compose qemu-full virt-manager \
  waybar wofi dmenu lxappearance-gtk3  slock \
  firefox emacs vim neovim alacritty htop \
+ thunar tumbler ffmpegthumbnailer \
+ nodejs npm unzip \
  hyprland hypridle hyprlock hyprpaper \
  bspwm sxhkd polybar rofi
 
@@ -62,6 +64,7 @@ usermod -aG libvirt $user
 systemctl enable ufw
 ufw enable
 ufw status verbose
+systemctl enable iptables.service
 systemctl enable cronie.service
 systemctl start cronie.service
 systemctl enable apparmor.service
