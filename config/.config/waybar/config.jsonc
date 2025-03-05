@@ -91,7 +91,7 @@
        "format-source-muted": "",
        "format-icons": {
            "headphone": "  " ,
-           "headset": " ",
+           "headset": "   ",
            "default": ["", "", ""]
        },
        "tooltip-format": "{icon}  {volume}% {format_source}",
