@@ -48,7 +48,7 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
  waybar wofi dmenu lxappearance-gtk3  slock \
- firefox emacs vim neovim alacritty htop \
+ firefox emacs vim alacritty htop \
  thunar tumbler ffmpegthumbnailer \
  nodejs npm unzip \
  hyprland hypridle hyprlock hyprpaper \
@@ -84,7 +84,6 @@ echo "###########################################"
 
 su $user -c "git clone https://github.com/danieltorrescode/dotfiles.git $home/dotfiles"
 su $user -c "git clone https://github.com/danieltorrescode/emacs.git $home/.emacs.d"
-su $user -c "git clone https://github.com/danieltorrescode/neovim.git $home/.config/nvim"
 
 echo "###########################################"
 echo "setting config files"
