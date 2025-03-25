@@ -39,7 +39,7 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
  gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family noto-fonts-emoji \
  clang cmake python-pip python-virtualenv go \
- ufw gufw firejail apparmor audit lxc keepassxc \
+ ufw gufw firejail firetools clamav bleachbit apparmor audit lxc keepassxc \
  playerctl pavucontrol pulseaudio pamixer mpv mpd mpc \
  bluez bluez-utils blueman pulseaudio-bluetooth \
  imagemagick picom feh arandr slurp swappy grim wl-clipboard flameshot \
@@ -64,7 +64,6 @@ usermod -aG libvirt $user
 systemctl enable ufw
 ufw enable
 ufw status verbose
-systemctl enable iptables.service
 systemctl enable cronie.service
 systemctl start cronie.service
 systemctl enable apparmor.service
