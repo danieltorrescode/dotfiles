@@ -26,6 +26,7 @@ fi
 export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/scripts/"
+export PATH="${PATH}:${HOME}/.npm-global/bin"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL="alacritty"
@@ -42,4 +43,3 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
             ;;
     esac
 fi
-
