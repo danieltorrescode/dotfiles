@@ -44,7 +44,8 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  bluez bluez-utils blueman pulseaudio-bluetooth \
  imagemagick picom feh arandr slurp swappy grim wl-clipboard flameshot \
  brightnessctl acpi numlockx cronie dunst python-notify2 stow ncdu udisks2 udiskie \
- bash-completion starship fastfetch tmux fzf lsd bat \
+ bash-completion  bash-language-server shellcheck \
+ starship fastfetch tmux fzf lsd bat \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
  waybar wofi dmenu lxappearance-gtk3  slock \
