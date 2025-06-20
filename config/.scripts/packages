@@ -99,7 +99,7 @@ su $user -c "rm $home/.bash_profile"
 su $user -c "stow -d $home/dotfiles -t $home config"
 su $user -c "chmod 744 -R $home/.scripts"
 su $user -c "sed -i '/daniel torres/,\$d' $home/.bashrc"
-su $user -c "cat $home/.bashrc_tail >> $home/.bashrc"
+su $user -c "cat $home/dotfiles/config/.bashrc_tail >> $home/.bashrc"
 
 rm -rf /dotfiles
 
