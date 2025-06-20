@@ -42,18 +42,17 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  ufw gufw firejail firetools clamav bleachbit apparmor audit lxc keepassxc \
  playerctl pavucontrol pulseaudio pamixer mpv mpd mpc \
  bluez bluez-utils blueman pulseaudio-bluetooth \
- imagemagick picom feh arandr slurp swappy grim wl-clipboard flameshot \
+ imagemagick arandr slurp swappy grim wl-clipboard flameshot \
  brightnessctl acpi numlockx cronie dunst python-notify2 stow ncdu udisks2 udiskie \
  bash-completion  bash-language-server shellcheck \
  starship fastfetch tmux fzf lsd bat \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
- waybar wofi dmenu lxappearance-gtk3  slock \
+ waybar wofi dmenu slock \
  firefox emacs vim alacritty htop \
- thunar tumbler ffmpegthumbnailer \
  nodejs npm unzip \
- hyprland hypridle hyprlock hyprpaper \
- bspwm sxhkd polybar rofi
+ thunar tumbler ffmpegthumbnailer file-roller \
+ hyprland hypridle hyprlock hyprpaper
 
 echo "###########################################"
 echo "working with systemctl and services"
@@ -90,24 +89,16 @@ echo "setting config files"
 echo "###########################################"
 
 if [[ "$user" != "vm" ]]; then
-    ln -s $home/dotfiles/etc/70-synaptics.conf /etc/X11/xorg.conf.d
-    ln -s $home/dotfiles/etc/20-amd-gpu.conf /etc/X11/xorg.conf.d
-    ln -s $home/dotfiles/etc/power.rules  /etc/udev/rules.d
+    ln -s $home/dotfiles/config/70-synaptics.conf /etc/X11/xorg.conf.d
+    ln -s $home/dotfiles/config/20-amd-gpu.conf /etc/X11/xorg.conf.d
+    ln -s $home/dotfiles/config/power.rules  /etc/udev/rules.d
 fi
 
-su $user -c "mkdir $home/backups/"
-su $user -c "cp -v ~/* $home/backups/"
-su $user -c "cp -v ~/.* $home/backups/"
 su $user -c "rm $home/.bash_profile"
-
-su $user -c "stow -d $home/dotfiles -t $home config bash xorg fonts"
+su $user -c "stow -d $home/dotfiles -t $home config"
 su $user -c "chmod 744 -R $home/scripts"
 su $user -c "sed -i '/daniel torres/,\$d' $home/.bashrc"
 su $user -c "cat $home/.bashrc_tail >> $home/.bashrc"
-
-su $user -c "chmod 774 $home/.config/bspwm/bspwmrc"
-su $user -c "chmod 774 $home/.config/sxhkd/sxhkdrc"
-su $user -c "chmod 774 $home/.config/polybar/launch.sh"
 
 rm -rf /dotfiles
 

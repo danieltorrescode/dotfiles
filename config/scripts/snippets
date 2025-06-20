@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# xdotool type "$(grep -v '^#' ~/.snippets | rofi -dmenu | cut -d'|' -f1)"
-grep -v '^#' ~/.snippets | wofi -dmenu | cut -d'|' -f1 | wl-copy

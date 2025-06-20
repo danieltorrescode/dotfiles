@@ -3,25 +3,16 @@
     "position": "top",
     "height": 8,
     "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["privacy", "custom/wf-recorder", "hyprland/submap"],
+    "modules-center": ["privacy", "custom/scratchpad", "custom/wf-recorder", "hyprland/submap"],
     "modules-right": [
-        //"custom/playerctl",
-        //"idle_inhibitor",
-        //"custom/dnd",
-        //"sway/language",
-        // "custom/clipboard",
-        //"cpu",
-        //"memory",
-        // "custom/scratchpad",
         "pulseaudio",
         "network",
         "backlight",
         "battery",
         "clock",
-        // "bluetooth",
         "tray"
     ],
-    
+
     "hyprland/workspaces": {
          "format": "{icon}",
          "on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -35,18 +26,6 @@
         "format": "{}",
         "max-length": 50,
         "tooltip": true
-    },
-    
-    "sway/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true
-    },
-
-    "sway/language": {
-        "format": " {}",
-        "min-length": 5,
-        "tooltip": false,
-        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
     },
 
     "custom/clipboard": {
@@ -64,11 +43,6 @@
     "custom/menu": {
         "format": "",
         "on-click": "wofi --show drun",
-        "tooltip": false
-    },
-    
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>",
         "tooltip": false
     },
 
@@ -101,12 +75,12 @@
        // "on-scroll-up": "swaymsg exec \\$volume_up",
        // "on-scroll-down": "swaymsg exec \\$volume_down"
     },
-    
+
     "battery": {
         "format": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
-    
+
     "network": {
        "format-wifi": " ({signalStrength}%)",
        "format-ethernet": "",
@@ -122,7 +96,7 @@
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
     },
-    
+
     "clock": {
         "format": "  {:%e %b %I:%M %p}",
         "tooltip": true,
@@ -130,17 +104,17 @@
         "interval": 5,
         // "on-click": "swaymsg exec \\$calendar"
     },
-    
+
     "cpu": {
-        "interval": 5,
-        "format": " {usage}%",
-        "states": {
-          "warning": 70,
-          "critical": 90
-          },
-    // "on-click": "swaymsg exec \\$term htop"
+            "interval": 5,
+            "format": " {usage}%",
+            "states": {
+            "warning": 70,
+            "critical": 90
+            },
+            // "on-click": "swaymsg exec \\$term htop"
     },
-    
+
     "memory": {
         "interval": 30,
         "format": " {}%",
@@ -149,9 +123,9 @@
           "critical": 90
         },
     // "on-click": "swaymsg exec \\$term htop"
-    
+
     },
-    
+
     "custom/wf-recorder": {
          "interval": "once",
          "return-type": "json",
@@ -197,7 +171,7 @@
         "exec": "printf '{\"alt\":\"%s\",\"tooltip\":\"Notification mode: %s\"}' $(makoctl set-mode 'do-not-disturb' && echo dnd || echo default) $(makoctl set-mode | tail -1)",
         "signal": 11
     },
-    
+
     "custom/scratchpad": {
         "interval": "once",
         "return-type": "json",
@@ -206,11 +180,9 @@
             "one": "",
             "many": ""
         },
-        // "exec": "/bin/bash ~/scripts/scratchpad.sh; pkill -RTMIN+7 waybar",
-        // "on-click": "swaymsg 'scratchpad show'",
         "signal": 7
     },
-   
+
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
