@@ -83,6 +83,7 @@ echo "###########################################"
 
 su $user -c "git clone https://github.com/danieltorrescode/dotfiles.git $home/dotfiles"
 su $user -c "git clone https://github.com/danieltorrescode/emacs.git $home/.emacs.d"
+su $user -c "git clone https://github.com/romkatv/powerlevel10k $home/powerlevel10k"
 
 echo "###########################################"
 echo "setting config files"
@@ -96,7 +97,7 @@ fi
 
 su $user -c "rm $home/.bash_profile"
 su $user -c "stow -d $home/dotfiles -t $home config"
-su $user -c "chmod 744 -R $home/scripts"
+su $user -c "chmod 744 -R $home/.scripts"
 su $user -c "sed -i '/daniel torres/,\$d' $home/.bashrc"
 su $user -c "cat $home/.bashrc_tail >> $home/.bashrc"
 

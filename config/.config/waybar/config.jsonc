@@ -92,7 +92,7 @@
     "bluetooth": {
         "format": "",
         "format-disabled": "",
-        "on-click": "hyprctl dispatch  exec /bin/bash ~/scripts/rofi-bluetooth.sh",
+        "on-click": "hyprctl dispatch  exec /bin/bash ~/.scripts/rofi-bluetooth.sh",
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
     },
