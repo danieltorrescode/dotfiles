@@ -42,16 +42,16 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  ufw gufw firejail firetools clamav bleachbit apparmor audit lxc keepassxc \
  playerctl pavucontrol pulseaudio pamixer mpv mpd mpc \
  bluez bluez-utils blueman pulseaudio-bluetooth \
- imagemagick arandr slurp swappy grim wl-clipboard flameshot \
+ imagemagick arandr feh slurp swappy grim wl-clipboard flameshot \
  brightnessctl acpi numlockx cronie dunst python-notify2 stow ncdu udisks2 udiskie \
  bash-completion  bash-language-server shellcheck \
  starship fastfetch tmux fzf lsd bat \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
- waybar wofi dmenu slock \
+ waybar wofi dmenu slock rofi \
  firefox emacs vim alacritty htop \
  nodejs npm unzip \
- thunar tumbler ffmpegthumbnailer file-roller \
+ thunar thunar-archive-plugin tumbler ffmpegthumbnailer file-roller nwg-look \
  hyprland hypridle hyprlock hyprpaper
 
 echo "###########################################"
