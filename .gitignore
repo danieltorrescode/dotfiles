@@ -36,6 +36,9 @@ config/.config/vifm/vifminfo.json
 config/.config/wallpaper.png
 config/.config/xfce4/
 config/.fonts/.uuid
+config/.config/gtk-4.0/
+config/.config/nwg-look/
+config/.config/xsettingsd/
 
 # Ignore everything
 #*

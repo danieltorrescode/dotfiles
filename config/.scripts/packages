@@ -49,7 +49,7 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
  waybar wofi dmenu slock rofi \
- firefox emacs vim alacritty htop liferea \
+ firefox emacs vim alacritty htop \
  nodejs npm unzip \
  thunar thunar-archive-plugin tumbler ffmpegthumbnailer file-roller nwg-look \
  hyprland hypridle hyprlock hyprpaper
