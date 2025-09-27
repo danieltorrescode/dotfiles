@@ -49,9 +49,10 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  docker docker-compose qemu-full virt-manager \
  waybar wofi dmenu slock rofi \
- firefox emacs vim alacritty htop liferea \
+ firefox emacs vim alacritty htop \
  nodejs npm unzip \
- thunar thunar-archive-plugin tumbler ffmpegthumbnailer file-roller nwg-look \
+ thunar thunar-archive-plugin tumbler ffmpegthumbnailer zathura zathura-pdf-poppler file-roller nwg-look \
+ bspwm sxhkd polybar rofi picom \
  hyprland hypridle hyprlock hyprpaper
 
 echo "###########################################"
@@ -100,6 +101,10 @@ su $user -c "stow -d $home/dotfiles -t $home config"
 su $user -c "chmod 744 -R $home/.scripts"
 su $user -c "sed -i '/daniel torres/,\$d' $home/.bashrc"
 su $user -c "cat $home/dotfiles/config/.bashrc_tail >> $home/.bashrc"
+
+su $user -c "chmod 774 $home/.config/bspwm/bspwmrc"
+su $user -c "chmod 774 $home/.config/sxhkd/sxhkdrc"
+su $user -c "chmod 774 $home/.config/polybar/launch.sh"
 
 rm -rf /dotfiles
 
