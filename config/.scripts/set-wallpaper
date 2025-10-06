@@ -1,0 +1,35 @@
+#!/bin/bash
+IMG="$1"
+WALLDIR="$HOME/Pictures/Wallpapers"
+DEFAULT="$WALLDIR/default.jpg"
+
+# ensure directory exists
+mkdir -p "$WALLDIR"
+
+# cp "$IMG" "$DEFAULT"
+convert "$IMG" "$DEFAULT"
+
+# if no image is passed, fall back to default
+if [ -z "$IMG" ]; then
+    IMG="$DEFAULT"
+fi
+
+# Detect session
+if pgrep -x Hyprland >/dev/null 2>&1; then
+    echo "Detected Hyprland → using hyprpaper"
+    # preload the image
+    hyprctl hyprpaper preload "$IMG"
+
+    # set it on all monitors (no jq needed)
+    for MON in $(hyprctl monitors | grep "Monitor" | awk '{print $2}'); do
+        hyprctl hyprpaper wallpaper "$MON","$IMG"
+    done
+
+elif pgrep -x bspwm >/dev/null 2>&1; then
+    echo "Detected bspwm → using feh"
+    feh --bg-scale "$IMG"
+
+else
+    echo "No supported WM detected. Falling back to feh."
+    feh --bg-scale "$IMG"
+fi
