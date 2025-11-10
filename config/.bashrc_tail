@@ -15,11 +15,10 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 
-set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
-uname -a
-fastfetch
+#uname -a
+#fastfetch
 
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 #[ -f /usr/bin/fzf ]

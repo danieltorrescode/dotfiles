@@ -38,21 +38,24 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  libva-mesa-driver mesa-vdpau mesa mesa-demos \
  xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
  gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family noto-fonts-emoji \
- clang cmake python-pip python-virtualenv go \
- ufw gufw firejail firetools clamav bleachbit apparmor audit lxc keepassxc \
+ clang cmake python-pip python-virtualenv go nodejs npm \
+ bash-completion  bash-language-server shellcheck \
+ typescript-language-server vscode-json-languageserver \
+ vscode-css-languageserver vscode-html-languageserver \
+ ufw firejail firetools clamav apparmor audit lxc \
  playerctl pavucontrol pulseaudio pamixer mpv mpd mpc \
  bluez bluez-utils blueman pulseaudio-bluetooth \
  imagemagick arandr feh slurp swappy grim wl-clipboard flameshot \
- brightnessctl acpi numlockx cronie dunst python-notify2 stow ncdu udisks2 udiskie \
- bash-completion  bash-language-server shellcheck \
- starship fastfetch tmux fzf lsd bat \
- zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
+ brightnessctl acpi numlockx cronie dunst python-notify2 ncdu udisks2 udiskie \
+ stow starship fastfetch fzf lsd bat \
  docker docker-compose qemu-full virt-manager \
- waybar wofi dmenu slock rofi \
- firefox emacs vim alacritty htop \
- nodejs npm unzip \
- thunar thunar-archive-plugin tumbler ffmpegthumbnailer zathura zathura-pdf-poppler file-roller nwg-look \
+ firefox emacs alacritty tmux vim htop keepassxc nwg-look liferea \
+ zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
+ thunar thunar-archive-plugin tumbler ffmpegthumbnailer \
+ zathura zathura-pdf-poppler \
+ file-roller unzip  \
  bspwm sxhkd polybar rofi picom \
+ waybar wofi dmenu slock rofi \
  hyprland hypridle hyprlock hyprpaper
 
 echo "###########################################"
