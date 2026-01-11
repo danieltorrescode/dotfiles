@@ -41,6 +41,7 @@ config/.config/nwg-look/
 config/.config/xsettingsd/
 config/.config/calibre/
 config/.config/bruno/
+config/.config/FreeCAD/
 
 # Ignore everything
 #*
