@@ -35,7 +35,7 @@ pacman -S --needed --noconfirm archlinux-keyring
 pacman -Syu
 pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsmasq openssh \
  xf86-video-amdgpu xf86-video-ati vulkan-radeon \
- libva-mesa-driver mesa-vdpau mesa mesa-demos \
+ libva-mesa-driver mesa mesa-demos \
  xorg xorg-xinit xf86-input-synaptics xf86-input-libinput xdo xorg-xbacklight xdotool \
  gnu-free-fonts ttf-hack ttf-liberation ttf-ubuntu-font-family noto-fonts-emoji \
  clang cmake python-pip python-virtualenv go nodejs npm \
@@ -50,6 +50,8 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  stow starship fastfetch fzf lsd bat \
  docker docker-compose qemu-full virt-manager \
  firefox emacs alacritty tmux vim htop keepassxc nwg-look liferea \
+ gtk-theme-elementary adapta-gtk-theme adw-gtk-theme deepin-gtk-theme materia-gtk-theme orchis-theme \
+ elementary-icon-theme breeze-icons adwaita-icon-theme \
  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
  thunar thunar-archive-plugin tumbler ffmpegthumbnailer \
  zathura zathura-pdf-poppler \

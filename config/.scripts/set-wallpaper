@@ -7,7 +7,7 @@ DEFAULT="$WALLDIR/default.jpg"
 mkdir -p "$WALLDIR"
 
 # cp "$IMG" "$DEFAULT"
-convert "$IMG" "$DEFAULT"
+magick "$IMG" "$DEFAULT"
 
 # if no image is passed, fall back to default
 if [ -z "$IMG" ]; then

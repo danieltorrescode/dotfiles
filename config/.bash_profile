@@ -36,7 +36,7 @@ SERVER="hyprland"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     case $SERVER in
         "hyprland")
-            Hyprland
+            start-hyprland
             ;;
         "default")
             exec startx
