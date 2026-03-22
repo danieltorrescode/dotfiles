@@ -1,0 +1,21 @@
+# Last Modified: Sat Mar 21 16:49:06 2026
+include <tunables/global>
+
+# vim:syntax=apparmor
+# AppArmor policy for zathura
+# ###AUTHOR###
+# ###COPYRIGHT###
+# ###COMMENT###
+# No template variables specified
+
+
+/usr/bin/zathura {
+  include <abstractions/X>
+  include <abstractions/base>
+  include <abstractions/lxc/container-base>
+
+  /usr/bin/zathura ix,
+  # Bloquear red
+  deny network,
+
+}

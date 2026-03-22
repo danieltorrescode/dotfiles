@@ -42,7 +42,8 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  bash-completion  bash-language-server shellcheck \
  typescript-language-server vscode-json-languageserver \
  vscode-css-languageserver vscode-html-languageserver \
- ufw firejail firetools clamav apparmor audit lxc \
+ ufw firejail firetools apparmor audit lxc \
+ lynis rkhunter clamav nmap whowatch \
  playerctl pavucontrol pulseaudio pamixer mpv mpd mpc \
  bluez bluez-utils blueman pulseaudio-bluetooth \
  imagemagick arandr feh slurp swappy grim wl-clipboard flameshot \

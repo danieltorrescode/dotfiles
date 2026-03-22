@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# ==== CONFIG ====
+OUT_DIR="/mnt/forensics"
+DUMP_FILE="$OUT_DIR/mem_$(date +%F_%H-%M-%S).raw"
+HASH_FILE="$DUMP_FILE.sha256"
+LOG_FILE="$OUT_DIR/analysis_$(date +%F_%H-%M-%S).log"
+
+LIME_MODULE="./lime-$(uname -r).ko"
+VOL="vol.py"   # o ruta completa a Volatility3
+
+# ==== CHECKS ====
+echo "[*] Checking environment..."
+
+if [[ $EUID -ne 0 ]]; then
+  echo "[!] Run as root"
+  exit 1
+fi
+
+if [[ ! -f "$LIME_MODULE" ]]; then
+  echo "[!] LiME module not found: $LIME_MODULE"
+  exit 1
+fi
+
+mkdir -p "$OUT_DIR"
+
+echo "[*] Output directory: $OUT_DIR"
+echo "[*] Dump file: $DUMP_FILE"
+
+# ==== MEMORY ACQUISITION ====
+echo "[*] Starting memory dump with LiME..."
+
+insmod "$LIME_MODULE" "path=$DUMP_FILE format=raw"
+
+echo "[*] Waiting for dump to complete..."
+sleep 5
+
+rmmod lime || true
+
+echo "[+] Memory dump completed"
+
+# ==== HASH ====
+echo "[*] Calculating SHA256..."
+sha256sum "$DUMP_FILE" | tee "$HASH_FILE"
+
+# ==== BASIC ANALYSIS ====
+echo "[*] Starting basic analysis with Volatility3..."
+
+{
+echo "===== MEMORY ANALYSIS REPORT ====="
+date
+echo
+
+echo "---- Kernel Info ----"
+$VOL -f "$DUMP_FILE" linux.banner || true
+
+echo
+echo "---- Process List ----"
+$VOL -f "$DUMP_FILE" linux.pslist || true
+
+echo
+echo "---- Hidden Processes (psscan) ----"
+$VOL -f "$DUMP_FILE" linux.psscan || true
+
+echo
+echo "---- Network Connections ----"
+$VOL -f "$DUMP_FILE" linux.netstat || true
+
+echo
+echo "---- Loaded Kernel Modules ----"
+$VOL -f "$DUMP_FILE" linux.lsmod || true
+
+echo
+echo "---- Suspicious (Check creds/tokens) ----"
+$VOL -f "$DUMP_FILE" linux.envars || true
+
+echo
+echo "---- Possible Rootkit Indicators ----"
+$VOL -f "$DUMP_FILE" linux.check_afinfo || true
+$VOL -f "$DUMP_FILE" linux.check_modules || true
+
+} | tee "$LOG_FILE"
+
+# ==== QUICK DETECTION HEURISTICS ====
+echo "[*] Running quick heuristics..."
+
+SUS=0
+
+grep -E "bash|nc|sh -i|python -c" "$LOG_FILE" && SUS=1 || true
+grep -E "ESTABLISHED.*:4444|:1337|:6666" "$LOG_FILE" && SUS=1 || true
+grep -i "hidden" "$LOG_FILE" && SUS=1 || true
+
+if [[ $SUS -eq 1 ]]; then
+  echo "[!] Suspicious indicators FOUND"
+else
+  echo "[+] No obvious indicators found"
+fi
+
+echo "[+] Report saved at: $LOG_FILE"
+echo "[+] Hash saved at: $HASH_FILE"
