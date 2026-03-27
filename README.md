@@ -35,6 +35,21 @@ My dotfiles and GNU-Linux settings, maintained during part of my free time, it i
   Launch emacs
 ```
 
+- Post Install Config
+
+```
+ Open the crontab file for editing using the following command:
+ crontab -e
+ Add the following line to the file to run a command every minute:
+   * * * * * /home/USER/.scripts/battery
+```
+
+- Enable AppArmor
+```
+ sudo aa-enforce /etc/apparmor.d/firefox
+ sudo aa-enforce /etc/apparmor.d/bwrap-userns-restrict
+```
+
 ## License
 
 GPLv3+

@@ -15,7 +15,9 @@ include <tunables/global>
   include <abstractions/lxc/container-base>
 
   /usr/bin/zathura ix,
-  # Bloquear red
+
   deny network,
 
+  deny /run/user/*/gnupg/** rw,
+  deny /run/user/*/ssh/** rw,
 }

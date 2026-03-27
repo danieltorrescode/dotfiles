@@ -38,6 +38,37 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 
+firejail-sandbox() {
+    if [ $# -eq 0 ]; then
+        echo "firejail-sandbox <package> [args...]"
+        return 1
+    fi
+
+    echo "Running in sandbox: $@"
+
+    firejail \
+    --apparmor \
+    --caps.drop=all \
+    --seccomp \
+    --nonewprivs \
+    --blacklist=/sbin \
+    --blacklist=/usr/sbin \
+    --blacklist=${HOME}/.ssh \
+    --blacklist=${HOME}/.gnupg \
+    --blacklist=${HOME}/.bash_history \
+    --blacklist=${HOME}/.zsh_history \
+    --blacklist=${HOME}/Documents \
+    --whitelist=${HOME}/.cache \
+    --whitelist=${HOME}/.local \
+    --read-only=${HOME}/.fonts \
+    --read-only=${HOME}/.config \
+    -- "$@"
+}
+
+firejail-firefox(){
+    firejail-sandbox firefox "$@"
+}
+
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
