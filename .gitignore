@@ -42,6 +42,7 @@ config/.config/xsettingsd/
 config/.config/calibre/
 config/.config/bruno/
 config/.config/FreeCAD/
+config/.config/github-copilot/
 
 # Ignore everything
 #*
