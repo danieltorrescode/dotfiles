@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 8,
-    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["privacy", "custom/scratchpad", "custom/wf-recorder", "hyprland/submap"],
+    "modules-left": ["custom/menu", "niri/workspaces", "niri/window"],
+    "modules-center": ["privacy", "custom/scratchpad", "custom/wf-recorder", "niri/submap"],
     "modules-right": [
         "pulseaudio",
         "network",
@@ -13,6 +13,20 @@
         "tray"
     ],
 
+    "niri/workspaces": {
+         "format": "{icon}",
+         "on-scroll-up": "hyprctl dispatch workspace e+1",
+         "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "niri/submap": {
+        "format": "<span style=\"italic\">{}</span>",
+        "tooltip": false
+    },
+    "niri/window": {
+        "format": "{}",
+        "max-length": 50,
+        "tooltip": true
+    },
     "hyprland/workspaces": {
          "format": "{icon}",
          "on-scroll-up": "hyprctl dispatch workspace e+1",

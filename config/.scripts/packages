@@ -57,6 +57,7 @@ pacman -S --needed --noconfirm base-devel curl wget wpa_supplicant dhclient dnsm
  thunar thunar-archive-plugin tumbler ffmpegthumbnailer \
  zathura zathura-pdf-poppler \
  file-roller unzip  \
+ niri swaybg xwayland-satellite \
  bspwm sxhkd polybar rofi picom \
  waybar wofi dmenu slock rofi \
  hyprland hypridle hyprlock hyprpaper
