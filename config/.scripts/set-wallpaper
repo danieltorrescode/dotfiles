@@ -32,4 +32,5 @@ elif pgrep -x bspwm >/dev/null 2>&1; then
 else
     echo "No supported WM detected. Falling back to feh."
     feh --bg-scale "$IMG"
+    swaybg -i "$IMG" -m fill
 fi
