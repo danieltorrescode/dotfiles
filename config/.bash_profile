@@ -32,7 +32,7 @@ export EDITOR="$VISUAL"
 export TERMINAL="alacritty"
 # export GDK_DPI_SCALE=0.9
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-SERVER="niri"
+SERVER="hyprland"
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     case $SERVER in
         "hyprland")

@@ -43,6 +43,7 @@ config/.config/calibre/
 config/.config/bruno/
 config/.config/FreeCAD/
 config/.config/github-copilot/
+config/.config/eca/
 
 # Ignore everything
 #*
