@@ -1,0 +1,118 @@
+#################################################################################
+# Lynis - Custom profile (Arch Linux Workstation)
+#################################################################################
+
+# General
+colors=yes
+compressed-uploads=yes
+error-on-warnings=no
+language=
+machine-role=workstation
+profile-name=Arch Linux Workstation Audit
+pause-between-tests=0
+quick=yes
+refresh-repositories=yes
+show-report-solution=yes
+show-tool-tips=no
+skip-plugins=no
+test-scan-mode=full
+verbose=no
+
+#################################################################################
+# Reduce ruido (muy importante en Arch)
+#################################################################################
+
+# systemd dinámico en Arch
+skip-test=BOOT-5122
+
+# permisos flexibles en desktop
+skip-test=FILE-6310
+
+# networking no crítico en local
+skip-test=NETW-3012
+skip-test=FIRE-4512
+
+#################################################################################
+# Plugins (desactivar lo innecesario en desktop)
+#################################################################################
+
+plugin=authentication
+plugin=configuration
+plugin=crypto
+plugin=file-integrity
+plugin=file-systems
+plugin=firewalls
+plugin=hardware
+plugin=kernel
+plugin=malware
+plugin=memory
+plugin=pam
+plugin=processes
+plugin=security-modules
+plugin=software
+plugin=system-integrity
+plugin=systemd
+plugin=users
+
+# Deshabilitar servicios que normalmente no usas en local
+disable-plugin=nginx
+disable-plugin=dns
+disable-plugin=kerberos
+
+# Docker solo si lo usas (comenta si sí lo usas)
+# disable-plugin=docker
+
+#################################################################################
+# Paths relevantes en Arch
+#################################################################################
+
+ssl-certificate-paths=/etc/ssl:/etc/ca-certificates:/etc/pacman.d/gnupg
+
+#################################################################################
+# Home directories (evitar ruido en /home)
+#################################################################################
+
+ignore-home-dir=/home/daniel
+
+#################################################################################
+# Kernel hardening (sin romper Arch)
+#################################################################################
+
+config-data=sysctl;kernel.randomize_va_space;2;1
+config-data=sysctl;kernel.kptr_restrict;2;1
+config-data=sysctl;kernel.dmesg_restrict;1;1
+config-data=sysctl;kernel.yama.ptrace_scope;1;1
+
+#################################################################################
+# Network (mínimo razonable para desktop)
+#################################################################################
+
+config-data=sysctl;net.ipv4.tcp_syncookies;1;1
+config-data=sysctl;net.ipv4.conf.all.accept_redirects;0;1
+config-data=sysctl;net.ipv4.conf.all.send_redirects;0;1
+
+#################################################################################
+# Permisos críticos
+#################################################################################
+
+permfile=/etc/passwd:rw-r--r--:root:root:WARN:
+permfile=/etc/shadow:---------:root:root:WARN:
+permfile=/etc/group:rw-r--r--:root:root:WARN:
+permfile=/etc/ssh/sshd_config:rw-------:root:root:WARN:
+
+#################################################################################
+# Directorios críticos
+#################################################################################
+
+permdir=/root/.ssh:rwx------:root:root:WARN:
+permdir=/etc/cron.d:rwx------:root:root:WARN:
+
+#################################################################################
+# Compliance (opcional en workstation)
+#################################################################################
+
+compliance-standards=cis
+
+#################################################################################
+# EOF
+#################################################################################

@@ -1,0 +1,153 @@
+#################################################################################
+# Lynis - Custom profile (Ubuntu Server - Hardened Reverse Proxy)
+#################################################################################
+
+# General
+colors=yes
+compressed-uploads=yes
+error-on-warnings=yes
+machine-role=server
+profile-name=Ubuntu Hardened Reverse Proxy Audit
+pause-between-tests=0
+quick=yes
+refresh-repositories=yes
+show-report-solution=yes
+show-tool-tips=no
+skip-plugins=no
+test-scan-mode=full
+verbose=no
+log_level=warning
+
+#################################################################################
+# Plugins (todo lo relevante activo)
+#################################################################################
+
+plugin=authentication
+plugin=compliance
+plugin=configuration
+plugin=crypto
+plugin=dns
+plugin=docker
+plugin=file-integrity
+plugin=file-systems
+plugin=firewalls
+plugin=forensics
+plugin=hardware
+plugin=intrusion-detection
+plugin=intrusion-prevention
+plugin=kernel
+plugin=malware
+plugin=memory
+plugin=nginx
+plugin=pam
+plugin=processes
+plugin=security-modules
+plugin=software
+plugin=system-integrity
+plugin=systemd
+plugin=users
+
+#################################################################################
+# Paths críticos
+#################################################################################
+
+ssl-certificate-paths=/etc/ssl:/etc/letsencrypt:/etc/nginx:/etc/apache2
+
+# Más superficie de auditoría
+extra_dirs="/var/www /srv /opt /etc/nginx"
+
+#################################################################################
+# NO ignorar home dirs (posible vector de ataque)
+#################################################################################
+
+#ignore-home-dir=/home
+
+#################################################################################
+# HARDENING DE KERNEL (nivel producción)
+#################################################################################
+
+config-data=sysctl;kernel.randomize_va_space;2;1
+config-data=sysctl;kernel.kptr_restrict;2;1
+config-data=sysctl;kernel.dmesg_restrict;1;1
+config-data=sysctl;kernel.yama.ptrace_scope;2;1
+config-data=sysctl;kernel.sysrq;0;1
+config-data=sysctl;kernel.perf_event_paranoid;3;1
+config-data=sysctl;kernel.unprivileged_bpf_disabled;1;1
+
+#################################################################################
+# HARDENING DE RED (clave para reverse proxy)
+#################################################################################
+
+# IPv4
+config-data=sysctl;net.ipv4.ip_forward;0;1
+config-data=sysctl;net.ipv4.conf.all.accept_redirects;0;1
+config-data=sysctl;net.ipv4.conf.all.send_redirects;0;1
+config-data=sysctl;net.ipv4.conf.all.accept_source_route;0;1
+config-data=sysctl;net.ipv4.conf.all.log_martians;1;1
+config-data=sysctl;net.ipv4.conf.all.rp_filter;1;1
+config-data=sysctl;net.ipv4.icmp_echo_ignore_broadcasts;1;1
+config-data=sysctl;net.ipv4.icmp_ignore_bogus_error_responses;1;1
+config-data=sysctl;net.ipv4.tcp_syncookies;1;1
+
+# IPv6 (desactiva si no usas)
+config-data=sysctl;net.ipv6.conf.all.disable_ipv6;1;1
+
+#################################################################################
+# FILE PERMISSIONS (muy estricto)
+#################################################################################
+
+permfile=/etc/passwd:rw-r--r--:root:root:WARN:
+permfile=/etc/shadow:---------:root:root:WARN:
+permfile=/etc/group:rw-r--r--:root:root:WARN:
+permfile=/etc/gshadow:---------:root:root:WARN:
+permfile=/etc/ssh/sshd_config:rw-------:root:root:WARN:
+permfile=/etc/nginx/nginx.conf:rw-r-----:root:root:WARN:
+
+#################################################################################
+# DIRECTORIOS CRÍTICOS
+#################################################################################
+
+permdir=/root/.ssh:rwx------:root:root:WARN:
+permdir=/etc/cron.d:rwx------:root:root:WARN:
+permdir=/etc/nginx:rwxr-x---:root:root:WARN:
+
+#################################################################################
+# TESTS IMPORTANTES (NO saltar nada crítico)
+#################################################################################
+
+# Ejemplo: si sabes que algo es falso positivo, lo agregas aquí
+#skip-test=SSH-7408
+
+#################################################################################
+# SSH HARDENING (validación indirecta)
+#################################################################################
+
+# Lynis revisará:
+# - PermitRootLogin
+# - PasswordAuthentication
+# - Protocol version
+# - Ciphers
+
+#################################################################################
+# FIREWALL (espera que exista uno)
+#################################################################################
+
+# Asegúrate de tener UFW o iptables configurado
+# Lynis lo detectará automáticamente
+
+#################################################################################
+# COMPLIANCE (nivel enterprise)
+#################################################################################
+
+compliance-standards=cis,iso27001,pci-dss
+
+#################################################################################
+# LOGGING / DETECCIÓN
+#################################################################################
+
+# Más visibilidad en incidentes
+log_level=warning
+
+#################################################################################
+# EOF
+#################################################################################

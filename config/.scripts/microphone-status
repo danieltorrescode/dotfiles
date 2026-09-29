@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Check if microphone is muted
+if pactl list sources | grep -q "Mute: yes"; then
+    echo ""  
+else
+    echo ""  
+fi

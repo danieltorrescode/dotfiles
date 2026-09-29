@@ -1,13 +1,81 @@
-# # Ignore everything
-# *
+config/.config/Code
+config/.config/Code - OSSV/
+config/.config/Code*
+config/.config/Electron/
+config/.config/GIMP/
+config/.config/JetBrains/
+config/.config/QtProject.conf
+config/.config/Thunar/
+config/.config/blender/
+config/.config/cef_user_data/
+config/.config/chromium/
+config/.config/code
+config/.config/configstore/
+config/.config/dconf
+config/.config/google-chrome/
+config/.config/gtk-2.0/
+config/.config/gtk-3.0/
+config/.config/heroic/
+config/.config/htop
+config/.config/keepassxc/
+config/.config/legendary/
+config/.config/libreoffice/
+config/.config/liferea
+config/.config/menus
+config/.config/mimeapps.list
+config/.config/neofetch
+config/.config/nvim
+config/.config/pavucontrol.ini
+config/.config/pulse/
+config/.config/systemd/
+config/.config/thunar
+config/.config/user-dirs.dirs
+config/.config/user-dirs.locale
+config/.config/vifm/vifminfo
+config/.config/vifm/vifminfo.json
+config/.config/wallpaper.png
+config/.config/xfce4/
+config/.fonts/.uuid
+config/.config/gtk-4.0/
+config/.config/nwg-look/
+config/.config/xsettingsd/
+config/.config/calibre/
+config/.config/bruno/
+config/.config/FreeCAD/
+config/.config/github-copilot/
+config/.config/eca/
+config/.config/Antigravity*
 
-# # But not these files...
-# !.vimrc
+# Ignore everything
+#*
+# But not these files...
+!.Xresources
+!.bash_profile
+!.bashrc_tail
+!.gitattributes
+!.gitignore
+!.history
+!.vimrc
+!.xinitrc
+!config/.config/xfce4/xfconf/xfce-perchannel-xml/*
 
-# # ...even if they are in subdirectories
-# !*/
+# not this folders...
+!.config
+!.config/bspwm/
+!.config/bspwm/**
+!.config/compton/
+!.config/compton/**
+!.config/picom/
+!.config/picom/**
+!.config/polybar/
+!.config/polybar/**
+!.config/sxhkd/
+!.config/sxhkd/**
+!.config/vifm/
+!.config/vifm/**
+!scripts
+!scripts/**
+.config/vifm/vifminfo
 
-# # if the files to be tracked are in subdirectories
-# !.config/i3/*
-
-emacs/
+.newsboat/*
+!.newsboat/config

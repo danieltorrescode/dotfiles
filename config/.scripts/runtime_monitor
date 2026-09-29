@@ -1,0 +1,174 @@
+#!/bin/bash
+
+LOG_FILE="runtime_v5_$(date +%F_%H-%M-%S).log"
+BASELINE_FILE="/tmp/runtime_baseline.db"
+RISK=0
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+log() {
+  echo -e "$1" | tee -a "$LOG_FILE"
+}
+
+section() {
+  echo -e "\n${YELLOW}==== $1 ====${NC}" | tee -a "$LOG_FILE"
+}
+
+risk() {
+  RISK=$((RISK + $1))
+}
+
+clear
+log "${GREEN}Runtime Security Monitor V5 (SOC-lite)${NC}"
+log "Log: $LOG_FILE"
+
+# ========================
+# 1. BASELINE (Connections)
+# ========================
+section "Baseline Learning"
+
+CURRENT_CONN=$(ss -ant state established | wc -l)
+
+if [ ! -f "$BASELINE_FILE" ]; then
+  echo "$CURRENT_CONN" > "$BASELINE_FILE"
+  log "Baseline created: $CURRENT_CONN connections"
+else
+  BASE=$(cat "$BASELINE_FILE")
+  DIFF=$((CURRENT_CONN - BASE))
+
+  log "Current: $CURRENT_CONN | Baseline: $BASE | Diff: $DIFF"
+
+  if [ "$DIFF" -gt 5 ]; then
+    log "${RED}Anomalous spike in connections${NC}"
+    risk 4
+  elif [ "$DIFF" -gt 2 ]; then
+    log "${YELLOW}Slight anomaly in connections${NC}"
+    risk 2
+  else
+    log "${GREEN}Connections within normal range${NC}"
+  fi
+fi
+
+# ========================
+# 2. Process ↔ Network correlation
+# ========================
+section "Process-Network Correlation"
+
+SUSP_CONN=$(ss -tupn state established | grep -vE "127\.0\.0\.1|::1|192\.168|10\.|172\.")
+
+echo "$SUSP_CONN" >> "$LOG_FILE"
+
+if [ -n "$SUSP_CONN" ]; then
+  log "${YELLOW}External connections with processes:${NC}"
+  log "$SUSP_CONN"
+  risk 3
+else
+  log "${GREEN}No suspicious external connections${NC}"
+fi
+
+# ========================
+# 3. Rare Processes (per user)
+# ========================
+section "User Process Anomalies"
+
+USERS=$(ps -eo user= | sort | uniq)
+
+for u in $USERS; do
+  COUNT=$(ps -u "$u" --no-headers | wc -l)
+
+  if [ "$COUNT" -gt 50 ]; then
+    log "${YELLOW}User $u has high process count: $COUNT${NC}"
+    risk 1
+  fi
+done
+
+# ========================
+# 4. Suspicious Execution Context
+# ========================
+section "Suspicious Execution Context"
+
+SHELLS=$(ps aux | grep -E "bash -i|sh -i" | grep -v grep)
+
+if [ -n "$SHELLS" ]; then
+  log "${RED}Interactive shells detected (possible reverse shell)${NC}"
+  log "$SHELLS"
+  risk 4
+fi
+
+# ========================
+# 5. Memory Execution Indicators
+# ========================
+section "Memory Execution Indicators"
+
+MEMFD=$(ls /proc/*/fd 2>/dev/null | grep memfd)
+
+if [ -n "$MEMFD" ]; then
+  log "${YELLOW}memfd usage detected (possible fileless malware)${NC}"
+  echo "$MEMFD" >> "$LOG_FILE"
+  risk 3
+else
+  log "${GREEN}No memfd anomalies${NC}"
+fi
+
+# ========================
+# 6. Short-lived Processes spike
+# ========================
+section "Process Spawn Rate"
+
+SPAWN=$(ps -eo pid,etimes | awk '$2 < 5' | wc -l)
+
+log "Processes started in last 5s: $SPAWN"
+
+if [ "$SPAWN" -gt 20 ]; then
+  log "${RED}High process spawn rate (possible fork bomb / malware)${NC}"
+  risk 4
+elif [ "$SPAWN" -gt 10 ]; then
+  log "${YELLOW}Moderate spawn spike${NC}"
+  risk 2
+else
+  log "${GREEN}Normal process activity${NC}"
+fi
+
+# ========================
+# 7. TTY-less processes
+# ========================
+section "TTY-less Processes"
+
+NO_TTY=$(ps -eo pid,tty,cmd | grep '?' | wc -l)
+
+log "Processes without TTY: $NO_TTY"
+
+if [ "$NO_TTY" -gt 30 ]; then
+  log "${YELLOW}High number of background processes${NC}"
+  risk 2
+fi
+
+# ========================
+# FINAL DASHBOARD
+# ========================
+section "RUNTIME DASHBOARD"
+
+echo -e "
+Connections:           $CURRENT_CONN
+External Connections:  $(echo "$SUSP_CONN" | wc -l)
+Spawn Rate:            $SPAWN
+TTY-less Processes:    $NO_TTY
+" | tee -a "$LOG_FILE"
+
+# ========================
+# FINAL SCORE
+# ========================
+section "FINAL RISK LEVEL"
+
+if [ "$RISK" -le 3 ]; then
+  log "${GREEN}LOW ($RISK)${NC}"
+elif [ "$RISK" -le 8 ]; then
+  log "${YELLOW}MEDIUM ($RISK)${NC}"
+else
+  log "${RED}HIGH ($RISK)${NC}"
+fi
+
+log "\nDone. Log saved at: $LOG_FILE"
