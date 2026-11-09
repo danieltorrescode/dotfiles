@@ -45,6 +45,8 @@ config/.config/FreeCAD/
 config/.config/github-copilot/
 config/.config/eca/
 config/.config/Antigravity*
+config/.config/git
+config/.config/mozilla
 
 # Ignore everything
 #*
