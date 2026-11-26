@@ -1,0 +1,26 @@
+abi <abi/4.0>,
+include <tunables/global>
+
+profile bwrap /usr/bin/bwrap {
+  include <abstractions/base>
+
+  # Necesita crear namespaces
+  userns,
+  capability sys_admin,
+  capability setuid,
+  capability setgid,
+
+  # Glycin loaders
+  /usr/lib/glycin-loaders/** rix,
+
+  # Archivos temporales del sandbox
+  owner /tmp/** rw,
+  deny /tmp/** x,
+
+  # Proc para el sandbox interno
+  @{PROC}/ r,
+  owner @{PROC}/@{pid}/status r,
+
+  # Sin red propia — la gestiona Firefox
+  deny network,
+}

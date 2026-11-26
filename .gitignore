@@ -1,13 +1,24 @@
-# # Ignore everything
-# *
+/config/.config/*
 
-# # But not these files...
-# !.vimrc
-
-# # ...even if they are in subdirectories
-# !*/
-
-# # if the files to be tracked are in subdirectories
-# !.config/i3/*
-
-emacs/
+#ignore all files in the config directory except for the following directories
+!/config/.config/alacritty/
+!/config/.config/apparmor/
+!/config/.config/autostart/
+!/config/.config/bspwm/
+!/config/.config/dunst/
+!/config/.config/firetools/
+!/config/.config/flameshot/
+!/config/.config/hypr/
+!/config/.config/lynis/
+!/config/.config/mako/
+!/config/.config/mpd/
+!/config/.config/niri/
+!/config/.config/p10k/
+!/config/.config/picom/
+!/config/.config/polybar/
+!/config/.config/rofi/
+!/config/.config/starship/
+!/config/.config/swappy/
+!/config/.config/sxhkd/
+!/config/.config/waybar/
+!/config/.config/wofi/

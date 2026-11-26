@@ -1,0 +1,41 @@
+* {
+  border-radius: 3px;
+  border: none;
+}
+
+window {
+  font-size: 28px;
+  font-family: "Ubuntu Regular", sans-serif;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #ffffff;
+  border-bottom: 3px solid white;
+}
+
+#entry {
+  padding: 0.25em;
+}
+
+#entry:selected {
+  color: #333333;
+  background: rgb(210, 203, 186);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 203, 186, 0.8085434857536764) 51%,
+    rgba(193, 170, 116, 0.8309524493391106) 100%
+  );
+}
+
+#text:selected {
+  color: #333333;
+}
+
+#input {
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #ffffff;
+  padding: 0.25em;
+}
+
+image {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}

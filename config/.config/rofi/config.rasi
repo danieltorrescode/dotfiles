@@ -1,0 +1,14 @@
+configuration {
+    modi: "window,drun,ssh,combi";
+    font: "hack 20";
+    combi-modi: "window,drun,ssh";
+    show-icons: true;
+    display-drun:     "Apps";
+    drun-display-format:    "{name}";
+    scroll-method:      0;
+    disable-history:      false;
+    sidebar-mode:     false;
+ }
+
+@theme "~/.config/rofi/Arc-Dark.rasi"
+

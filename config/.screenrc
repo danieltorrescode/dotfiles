@@ -1,0 +1,28 @@
+# Set shell a Zsh
+shell /bin/zsh
+
+# Set terminal a 256 colores
+term xterm-256color
+
+# Activar soporte de color de 24 bits / truecolor
+defutf8 on
+
+# Iniciar ventanas en índice 1 en lugar de 0
+defstartnum 1
+
+# Renumerar ventanas automáticamente cuando se cierra una
+zombie_timeout 1
+
+# Navegación entre paneles estilo Vim (Prefix + h/j/k/l)
+# Nota: En Screen debes presionar la tecla Prefix (Ctrl+a) antes de h, j, k o l
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+
+# Cambiar entre paneles con Alt + Flechas (sin usar la tecla Prefix)
+# Nota: \033 es la representación ASCII para la tecla Alt/Escape
+bindkey "\033[D" focus left   # Alt + Flecha Izquierda
+bindkey "\033[C" focus right  # Alt + Flecha Derecha
+bindkey "\033[A" focus up     # Alt + Flecha Arriba
+bindkey "\033[B" focus down   # Alt + Flecha Abajod

@@ -1,0 +1,544 @@
+# vim:syntax=apparmor
+# ------------------------------------------------------------------
+#
+#    Copyright (C) 2009-2011 Canonical Ltd.
+#
+#    This program is free software; you can redistribute it and/or
+#    modify it under the terms of version 2 of the GNU General Public
+#    License published by the Free Software Foundation.
+#
+# ------------------------------------------------------------------
+
+abi <abi/4.0>,
+
+include <tunables/global>
+
+# Declare some variables to help with variants
+@{MOZ_APP_NAME}=firefox{,-esr,-bin}
+@{MOZ_LIBDIR}=/usr/lib/@{MOZ_APP_NAME}{,-esr,-beta,-devedition,-nightly},opt/firefox,-[0-9]*}
+@{MOZ_ADDONDIR}=/usr/lib/{@{MOZ_APP_NAME},xulrunner}-addons
+
+# We want to confine the binaries that match:
+#  /usr/lib/firefox-4.0b8/firefox
+# but not:
+#  /usr/lib/firefox-4.0b8/firefox.sh
+
+
+profile firefox @{MOZ_LIBDIR}/@{MOZ_APP_NAME}{,*[^s][^h]} {
+  include <abstractions/audio>
+  include <abstractions/cups-client>
+  include <abstractions/dbus-strict>
+  include <abstractions/dbus-session-strict>
+  include <abstractions/dconf>
+  include <abstractions/fcitx>
+  include <abstractions/fonts>
+  include <abstractions/gnome>
+  include <abstractions/ibus>
+  include <abstractions/mesa>
+  include <abstractions/nameservice>
+  include <abstractions/openssl>
+  include <abstractions/p11-kit>
+  include <abstractions/ubuntu-unity7-base>
+  include <abstractions/ubuntu-unity7-launcher>
+  include <abstractions/vulkan>
+
+  # needed for sandbox user namespaces (see about:support#sandbox)
+  capability sys_admin,
+
+  capability sys_chroot,
+  capability sys_ptrace,
+
+  userns,
+
+  include <abstractions/dbus-accessibility-strict>
+  dbus (send)
+       bus=session
+       peer=(name=org.a11y.Bus),
+  dbus (receive)
+       bus=session
+       interface=org.a11y.atspi**,
+  dbus (receive, send)
+       bus=accessibility,
+
+  # for networking
+  network inet stream,
+  network inet6 stream,
+  @{PROC}/@{pid}/net/arp r,
+  @{PROC}/@{pid}/net/if_inet6 r,
+  @{PROC}/@{pid}/net/ipv6_route r,
+  @{PROC}/@{pid}/net/dev r,
+  @{PROC}/@{pid}/net/wireless r,
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/NetworkManager
+       member=state,
+  dbus (receive)
+       bus=system
+       path=/org/freedesktop/NetworkManager,
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/hostname1
+       interface=org.freedesktop.DBus.Properties
+       member=GetAll
+       peer=(label=unconfined),
+
+  # used by third_party/rust/audio_thread_priority
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/RealtimeKit1,
+
+  dbus (receive)
+       bus=system
+       path=/org/freedesktop/login1
+       interface=org.freedesktop.DBus.Properties
+       member=PropertiesChanged
+       peer=(label=unconfined),
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/login1
+       interface=org.freedesktop.DBus.Properties
+       member=GetAll
+       peer=(label=unconfined),
+  dbus (receive)
+       bus=system
+       path=/org/freedesktop/login1
+       interface=org.freedesktop.login1.Manager
+       member={SessionNew,SessionRemoved,UserNew}
+       peer=(label=unconfined),
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/timedate1
+       interface=org.freedesktop.DBus.Properties
+       member=GetAll
+       peer=(label=unconfined),
+
+  @{MOZ_LIBDIR}/@{MOZ_APP_NAME}{,*[^s][^h]} mr,
+
+  # should maybe be in abstractions
+  /etc/ r,
+  /etc/mime.types r,
+  /etc/mailcap r,
+  /etc/xdg/*buntu/applications/defaults.list    r, # for all derivatives
+  /etc/xfce4/defaults.list r,
+  /usr/share/xubuntu/applications/defaults.list r,
+  #owner @{HOME}/.config/mimeapps.list{,.*} rw,
+  owner @{HOME}/.local/share/applications/defaults.list r,
+  owner @{HOME}/.local/share/applications/mimeapps.list r,
+  owner @{HOME}/.local/share/applications/mimeinfo.cache r,
+  owner @{HOME}/.local/share/gvfs-metadata/** r,
+  #owner @{HOME}/.local/share/mime/ w,
+  #owner @{HOME}/.local/share/mime/packages/ w,
+  #owner @{HOME}/.local/share/mime/packages/user-extension-{htm,html,shtml,xht,xhtml}.xml{,.*} w,
+  /var/lib/snapd/desktop/applications/mimeinfo.cache r,
+  /var/lib/snapd/desktop/applications/*.desktop r,
+  owner /tmp/** m,
+  owner /var/tmp/** m,
+  owner /{dev,run,var/run}/shm/shmfd-* rw,
+  owner /{dev,run,var/run}/shm/org.{chromium,mozilla}.* rwk,
+  owner /{dev,run,var/run}/shm/wayland.mozilla.ipc.[0-9]* rw,
+  /tmp/.X[0-9]*-lock r,
+  /etc/udev/udev.conf r,
+  # Doesn't seem to be required, but noisy. Maybe allow 'r' for 'b*' if needed.
+  # Possibly move to an abstraction if anything else needs it.
+  deny @{run}/udev/data/** r,
+  # let the shell know we launched something
+  dbus (send)
+     bus=session
+     interface=org.gtk.gio.DesktopAppInfo
+     member=Launched,
+
+  /etc/{,writable/}timezone r,
+  /etc/wildmidi/wildmidi.cfg r,
+
+  # firefox specific
+  /etc/firefox*/ r,
+  /etc/firefox*/** r,
+  /etc/xul-ext/** r,
+  /etc/xulrunner{,-[0-9]*}/ r,
+  /etc/xulrunner{,-[0-9]*}/** r,
+  /etc/gre.d/ r,
+  /etc/gre.d/* r,
+
+  # noisy
+  deny @{MOZ_LIBDIR}/** w,
+  deny @{MOZ_ADDONDIR}/** w,
+  deny /usr/lib/xulrunner-*/components/*.tmp w,
+  deny /.suspended r,
+  deny /boot/initrd.img* r,
+  deny /boot/vmlinuz* r,
+  deny /etc/** w,
+  deny /var/cache/fontconfig/ w,
+  deny @{HOME}/.local/share/recently-used.xbel r,
+
+  # TODO: investigate
+  deny /usr/bin/gconftool-2 x,
+
+  # These are needed when a new user starts firefox and firefox.sh is used
+  @{MOZ_LIBDIR}/** ixr,
+  deny @{MOZ_LIBDIR}/firefox.sh x,
+  /usr/bin/basename ixr,
+  /usr/bin/dirname ixr,
+  /usr/bin/pwd ixr,
+  /{usr/,}sbin/killall5 ixr,
+  /{usr/,}bin/which ixr,
+  /usr/bin/tr ixr,
+  @{PROC}/ r,
+  owner @{PROC}/@{pid}/cmdline r,
+  owner @{PROC}/@{pid}/mountinfo r,
+  owner @{PROC}/@{pid}/stat r,
+  owner @{PROC}/@{pid}/task/@{tid}/comm r,
+  owner @{PROC}/@{pid}/task/@{tid}/stat r,
+  owner @{PROC}/@{pid}/status r,
+  owner @{PROC}/@{pid}/cgroup r,
+  owner @{PROC}/@{pid}/oom_score_adj w,
+  owner @{PROC}/@{pid}/setgroups w,
+  owner @{PROC}/@{pid}/{uid,gid}_map w,
+  @{PROC}/filesystems r,
+  @{PROC}/pressure/{cpu,io,memory} r,
+  @{PROC}/sys/vm/overcommit_memory r,
+  @{sys}/fs/cgroup/user.slice/user-[0-9]*.slice/session-{,c}[0-9]*.scope/cpu.max r,
+  # prevent crash LP: #1931602
+  /sys/devices/@{pci_bus}/**/{uevent,resource,irq,class} r,
+  /sys/devices/platform/**/uevent r,
+  /sys/devices/@{pci_bus}/**/{boot_vga,busnum,config,idVendor,idProduct,revision} r,
+  /sys/devices/@{pci_bus}/**/{,subsystem_}device r,
+  /sys/devices/@{pci_bus}/**/{,subsystem_}vendor r,
+  /sys/devices/system/node/node[0-9]*/meminfo r,
+  owner @{HOME}/.cache/thumbnails/** rw,
+
+  /etc/mtab r,
+  /etc/fstab r,
+
+  # Needed for the crash reporter
+  ptrace (trace) peer=@{profile_name},
+  owner @{PROC}/@{pid}/environ r,
+  owner @{PROC}/@{pid}/auxv r,
+  /etc/lsb-release r,
+  /usr/bin/expr ix,
+  /sys/devices/system/cpu/ r,
+  /sys/devices/system/cpu/** r,
+
+  # about:memory
+  owner @{PROC}/@{pid}/statm r,
+  owner @{PROC}/@{pid}/smaps r,
+
+  # Needed for container to work in xul builds
+  @{MOZ_LIBDIR}/plugin-container ixr,
+
+  # Make browsing directories work
+  / r,
+  /**/ r,
+
+  # allow access to documentation and other files the user may want to look
+  # at in /usr
+  /usr/{include,share,src}/** r,
+
+  # Default profile allows downloads to ~/Downloads and uploads from ~/Public
+  owner @{HOME}/ r,
+  owner @{HOME}/Public/ r,
+  owner @{HOME}/Public/** r,
+  owner @{HOME}/Downloads/ r,
+  owner @{HOME}/Downloads/** rw,
+  owner @{HOME}/.thumbnails/*/*.png r,
+
+  # per-user firefox configuration
+  owner @{HOME}/.{firefox,mozilla}/ rw,
+  owner @{HOME}/.{firefox,mozilla}/** rw,
+  owner @{HOME}/.{firefox,mozilla}/**/*.{db,parentlock,sqlite}* k,
+  owner @{HOME}/.{firefox,mozilla}/plugins/** rm,
+  owner @{HOME}/.{firefox,mozilla}/**/plugins/** rm,
+  owner @{HOME}/.gnome2/firefox* rwk,
+  owner @{HOME}/.cache/mozilla/{,@{MOZ_APP_NAME}/} rw,
+  owner @{HOME}/.cache/mozilla/@{MOZ_APP_NAME}/** rw,
+  owner @{HOME}/.cache/mozilla/@{MOZ_APP_NAME}/**/*.sqlite{,-shm} k,
+  owner @{HOME}/.config/gtk-3.0/bookmarks r,
+  owner @{HOME}/.config/dconf/user w,
+  owner @{run}/user/[0-9]*/dconf/ w,
+  owner @{run}/user/[0-9]*/dconf/user w,
+  owner @{run}/user/[0-9]*/gvfsd/socket-* rw,
+  owner @{run}/user/[0-9]*/speech-dispatcher/speechd.sock rw,
+  dbus (receive)
+       bus=session
+       path=/ca/desrt/dconf/Writer/user
+       interface=ca.desrt.dconf.Writer
+       member=Notify
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/ca/desrt/dconf/Writer/user
+       interface=ca.desrt.dconf.Writer
+       member=Change
+       peer=(name=ca.desrt.dconf),
+  dbus (send)
+       bus=session
+       path=/org/gnome/GConf/Server
+       member=GetDefaultDatabase
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gnome/GConf/Database/*
+       member={AddMatch,AddNotify,AllEntries,LookupExtended,RemoveNotify}
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gtk/Private/RemoteVolumeMonitor
+       interface=org.gtk.Private.RemoteVolumeMonitor
+       member={IsSupported,List}
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gtk/vfs/Daemon
+       interface=org.gtk.vfs.Daemon
+       member={GetConnection,ListMonitorImplementations}
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gtk/vfs/client/enumerator/[0-9]*
+       interface=org.gtk.vfs.Enumerator
+       member={Done,GotInfo}
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gtk/vfs/metadata
+       interface=org.gtk.vfs.Metadata
+       member=Set
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gtk/vfs/mount/[0-9]*
+       interface=org.gtk.vfs.Mount
+       member={CreateFileMonitor,Enumerate,QueryInfo}
+       peer=(label=unconfined),
+  dbus (receive)
+       bus=session
+       path=/org/gtk/vfs/mounttracker
+       interface=org.gtk.vfs.MountTracker
+       member=Mounted
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/gtk/vfs/mounttracker
+       interface=org.gtk.vfs.MountTracker
+       member={ListMountableInfo,ListMounts2,LookupMount}
+       peer=(label=unconfined),
+
+  # Allow access to xdg-desktop-portal and xdg-document-portal (LP: #1974449)
+  dbus (receive, send)
+       bus=session
+       interface=org.freedesktop.portal.*
+       path=/org/freedesktop/portal/{desktop,documents}{,/**}
+       peer=(label=unconfined),
+
+  dbus (receive, send)
+       bus=session
+       interface=org.freedesktop.DBus.Properties
+       path=/org/freedesktop/portal/{desktop,documents}{,/**}
+       peer=(label=unconfined),
+
+  # Allow remote control when running on Wayland
+  dbus (send)
+       bus=session
+       path=/org/freedesktop/DBus
+       interface=org.freedesktop.DBus
+       member={ReleaseName,RequestName}
+       peer=(name=org.freedesktop.DBus),
+  dbus (bind)
+       bus=session
+       name=org.mozilla.firefox.*,
+  dbus (send, receive)
+       bus=session
+       path=/org/mozilla/firefox/Remote
+       interface=org.mozilla.firefox
+       member=OpenURL
+       peer=(label=firefox),
+
+  # gnome-session
+  dbus (send)
+       bus=session
+       path=/org/gnome/SessionManager
+       interface=org.gnome.SessionManager
+       member={Inhibit,Uninhibit}
+       peer=(label=unconfined),
+
+  # unity screen API
+  dbus (send)
+       bus=system
+       interface="org.freedesktop.DBus.Introspectable"
+       path="/com/canonical/Unity/Screen"
+       member="Introspect"
+       peer=(label=unconfined),
+  dbus (send)
+       bus=system
+       interface="com.canonical.Unity.Screen"
+       path="/com/canonical/Unity/Screen"
+       member={keepDisplayOn,removeDisplayOnRequest}
+       peer=(label=unconfined),
+
+  # freedesktop.org ScreenSaver
+  dbus (send)
+       bus=session
+       path=/{,org/freedesktop/,org.gnome/}Screen{s,S}aver
+       interface=org.freedesktop.ScreenSaver
+       member={Inhibit,UnInhibit,SimulateUserActivity}
+       peer=(label=unconfined),
+  # power-management-spec is obsolete
+  deny dbus (send)
+       bus=session
+       path=/org/freedesktop/PowerManagement/Inhibit
+       interface=org.freedesktop.PowerManagement.Inhibit
+       member={Inhibit,UnInhibit}
+       peer=(label=unconfined),
+
+  # gnome, kde and cinnamon screensaver
+  dbus (send)
+       bus=session
+       path=/{,ScreenSaver}
+       interface=org.{gnome.ScreenSaver,kde.screensaver,cinnamon.ScreenSaver}
+       member=SimulateUserActivity
+       peer=(label=unconfined),
+
+  # MPRIS D-Bus Interface Specification
+  dbus (bind)
+       bus=session
+       name=org.mpris.MediaPlayer2.firefox.instance{,_}[0-9]*,
+  dbus (receive)
+       bus=session
+       path=/org/mpris/MediaPlayer2
+       interface=org.freedesktop.DBus.Properties
+       member={GetAll,Set}
+       peer=(label=unconfined),
+  dbus (send)
+       bus=session
+       path=/org/mpris/MediaPlayer2
+       interface=org.freedesktop.DBus.Properties
+       member=PropertiesChanged
+       peer=(label=unconfined),
+  dbus (receive)
+       bus=session
+       path=/org/mpris/MediaPlayer2
+       interface=org.mpris.MediaPlayer2.Player
+       member={Pause,Play,PlayPause,Stop}
+       peer=(label=unconfined),
+
+  # UPower
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/UPower
+       interface=org.freedesktop.UPower
+       member=EnumerateDevices,
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/UPower
+       interface=org.freedesktop.DBus.Properties
+       member=GetAll,
+  dbus (send)
+       bus=system
+       path=/org/freedesktop/UPower/devices/*
+       interface=org.freedesktop.DBus.Properties
+       member=GetAll,
+
+  # File browser
+  dbus (send)
+       bus=session
+       interface=org.freedesktop.FileManager1
+       path=/org/freedesktop/FileManager1
+       member=ShowItems,
+
+  #
+  # Extensions
+  # /usr/share/.../extensions/... is already covered by '/usr/.../** r', above.
+  # Allow 'x' for downloaded extensions, but inherit policy for safety
+  owner @{HOME}/.mozilla/**/extensions/** mixr,
+
+  # Widevine CDM plugin (LP: #1777070)
+  owner @{HOME}/.mozilla/firefox/*/gmp-widevinecdm/*/libwidevinecdm.so m,
+
+  deny @{MOZ_LIBDIR}/update.test w,
+  deny /usr/lib/mozilla/extensions/**/ w,
+  deny /usr/lib/xulrunner-addons/extensions/**/ w,
+  deny /usr/share/mozilla/extensions/**/ w,
+  deny /usr/share/mozilla/ w,
+
+  # Miscellaneous (to be abstracted)
+  # Ideally these would use a child profile. They are all ELF executables
+  # so running with 'Ux', while not ideal, is ok because we will at least
+  # benefit from glibc's secure execute.
+  /usr/bin/mkfifo Uxr,  # investigate
+  /bin/ps Uxr,
+  /bin/uname Uxr,
+
+  /usr/bin/lsb_release Pxr -> lsb_release,
+
+  # These should be started outside of Firefox
+  deny /usr/bin/dbus-launch x,
+  deny /usr/bin/speech-dispatcher x,
+
+
+  # Minimal Firefox AppArmor Profile
+  include <abstractions/lxc/container-base>
+
+  # --- HOME ---
+  owner @{HOME}/** r,
+  owner @{HOME}/Downloads/** rw,
+
+  # --- SECRETS ---
+  deny owner @{HOME}/.ssh/** mrwklx,
+  deny owner @{HOME}/.gnupg/** mrwklx,
+  deny owner @{HOME}/.aws/** mrwklx,
+  deny owner @{HOME}/.config/gcloud/** mrwklx,
+  deny owner @{HOME}/.docker/** mrwklx,
+  deny owner @{HOME}/.kube/** mrwklx,
+  deny owner @{HOME}/Documents/** rw,
+
+  # --- SYSTEM ---
+  deny /etc/shadow r,
+  deny /etc/sudoers r,
+  deny /etc/** w,
+
+  # --- BINARIES ---
+  /usr/bin/git ix,
+  /usr/bin/python3 ix,
+  /usr/bin/bash ix,
+  /bin/** ix,
+
+  # --- LIBS ---
+  /usr/lib/** rm,
+  /usr/share/** r,
+
+  # --- TMP HARDENED ---
+  owner /tmp/** rw,
+  owner /var/tmp/** rw,
+  deny /tmp/** x,
+  deny /var/tmp/** x,
+
+  # --- SOCKETS ---
+  deny /run/user/*/gnupg/** rw,
+  deny /run/user/*/ssh/** rw,
+
+  # --- DISPLAY ---
+  /tmp/.X11-unix/* rw,
+  owner @{HOME}/.Xauthority r,
+
+  # Sandbox support (needed by Glycin and Firefox's own sandbox)
+  capability sys_admin,
+  capability sys_ptrace,
+  capability sys_chroot,
+
+  # bubblewrap for Glycin sandbox
+  /usr/bin/bwrap Px,
+  /usr/lib/glycin-loaders/** rix,
+  /usr/bin/glycin-thumbnailer ix,
+
+  # /proc access
+  @{PROC}/ r,
+  owner @{PROC}/@{pid}/status r,
+  owner @{PROC}/@{pid}/cmdline r,
+  owner @{PROC}/@{pid}/mountinfo r,
+
+  # Addons
+  include if exists <abstractions/ubuntu-browsers.d/firefox>
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/usr.bin.firefox>
+  include if exists <local/firefox>
+}
